@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yale School of Art</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+        <!--FONT AWESOME ALL-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--MAIN CSS-->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        
+        
+    </head>
+    
+    <body>    
+        <header>
+          <img src="images/crest.png" alt="Yale Crest">
+          <h1><span class="wideYale">Yale</span>School of Art</h1>
+           <input type="checkbox" class="navToggler" id="navToggler">
+            <nav>
+                <ul>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/apply.html">Apply</a></li>
+                    <li><a href="pages/learn.html">Learn &amp; Collaborate</a></li>
+                    <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="pages/news.html">News</a></li>
+                    <li><a href="pages/works.html">Our Works</a></li>
+                    <li><a href="pages/resources.html">Student Resources</a></li>
+                </ul> 
+            </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+            <img src="images/bars-solid.svg" alt="menu icon">Menu
+            <img src="images/xmark-solid.svg" alt="close menu icon"></label>
+            <!--span class="material-icons mi menuOpen">menu</span>
+            <span class="material-icons mi menuClose">close</span></label--> 
+        </header>
+        
+        <!--NEED CAROUSEL/HERO-->
+        <main>
+            <!--article>h2+p^article>figure*4>img+figcaption^^article>h2+section*3>h3+p+a{Read More}^^article>h2+section*3>p>span^p*2+p>span^a[#]-->
+            <article class="mission">
+                <h2>Mission</h2>
+                <p>The School of Art is one of Yale’s Graduate &amp; Professional Schools conferring MFA degrees in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.</p>
+            </article>
+            
+            <!--OPTIMIZE SIZE OF IMAGES-->
+            <article>
+               <h2>MFA Specialties</h2>
+                <figure>
+                    <img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder">
+                    <figcaption>Photography</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder">
+                    <figcaption>Sculpture</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder">
+                    <figcaption id="darkBG">Print/Painting</figcaption>
+                </figure>
+                <figure class="roundBorder">
+                    <img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder">
+                    <figcaption>Digital Design</figcaption>
+                </figure>
+            </article>
+            
+            <article class="bulletin">
+                <h2>Bulletin</h2>
+                <section class="roundBorder">
+                    <h3>From our friends at the Yale Center for Environmental Justice</h3>
+                    <p>The Yale Center for Environmental Justice is in the process of planning our fourth annual Global Environmental Justice Conference, with this year focusing on the theme of “Environmental Joy.” The conference aims to explore the ways in which...</p>
+                    <a href="#" class="roundBorder">Read More</a>
+                </section>
+                <section class="roundBorder">
+                    <h3>Faculty/Alumni: Post Your Art Apprenticeship/Internship Opportunities for Undergraduates</h3>
+                    <p>The Yale Arts Apprenticeship Program is an initiative that connects Yale undergraduates, particularly those on financial aid, with professional arts practitioners of any discipline. As an option within Yale’s Summer Experience Award (SEA) funding</p>
+                    <a href="#" class="roundBorder">Read More</a>
+                </section>
+                <section class="roundBorder">
+                    <h3>Mapping public art in New Haven</h3>
+                    <p>Hey everyone! I’ve been mapping public art in New Haven as part of my nonprofit project ArtAround and I’d love to invite you to join me, or just check it out and see what you think.</p>
+                    <a href="#">New Haven map &gt;</a>
+                    <a href="#">Art around homepage &gt;</a>
+                </section>
+            </article>
+            
+            <!--EVENTS-->
+            <!--DO WE WANT A MATERIAL CALENDAR ICON FOR THE DATE?-->
+            <article class="events">
+                <h2>Events</h2>
+                <section>                    
+                    <h3>"Feedback Loop" --First-Year MFA Exhibition</h3>
+                    <p class="calDate">Nov 13</p>
+                    <p class="p1"><i class="fa-regular fa-clock"></i> 6PM - 8PM EST</p>
+                    <p class="p2"><i class="fa-solid fa-location-dot"></i> Chapel Rd, San Diego, CA 92134</p>
+                    <a href="#" class="roundBorder">More Details</a> 
+                </section>
+                <section>
+                    <h3>Info Session on U.S. Work Visas</h3>
+                    <p class="calDate">Nov 25</p>                    
+                    <p class="p1"><i class="fa-regular fa-clock"></i>9AM - 10AM EST</p>
+                    <p class="p2"><i class="fa-solid fa-location-dot"></i><a href="#">Zoom Call</a></p>
+                    <a href="#" class="roundBorder">More Details</a> 
+                </section>
+                <section>
+                    <h3>Admissions Virtual Visit 1: MFA Program, Admissions</h3>
+                    <p class="calDate">Nov 25</p>
+                    <p class="p1"><i class="fa-regular fa-clock"></i> 12:30 AM - 1:30 PM EST</p>
+                    <p class="p2"><i class="fa-solid fa-location-dot"></i> <a href="#">Zoom Call</a></p>
+                    <a href="#" class="roundBorder">More Details</a> 
+                </section>
+                <a href="#" class="roundBorder">More Events</a>
+            </article>
+            
+            <article class="roundBorder about">
+                <h3>About this Site</h3>
+                <p>This website exists as an ongoing collaborative experiment in digital publishing and information sharing. Because this website functions as a wiki, all members of the School of Art community—graduate students, faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site’s existing content. Content is the property of its various authors. When you contribute to this site, you agree to abide by Yale University academic and network use policy, and to act as a responsible member of our community.</p>
+            </article>
+
+            
+        </main>
+        
+        
+        <!--FOOTER-->
+        <footer>          
+           <a href="#" class="btt">Back to top</a>          
+           <ul class="socials">
+               <li><a href="#"><img src="images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+               <li><a href="#"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+               <li><a href="#"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+           </ul>
+           <nav>
+               <ul class="footerLinks">
+                    <li><a href="#" class="schoolName">Yale School of Art</a></li>
+                    <li><a href="#">Support the School</a></li>
+                    <li><a href="#">Visiting</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Accessibility at Yale</a></li>
+                </ul>
+            </nav>
+            <img src="images/crest.png" alt="yale crest">
+            <p>Copyright &copy; 2024 Yale University All Rights Reserved</p>
+        </footer>
+            
+    </body>
+    
+</html>

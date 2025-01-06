@@ -18,6 +18,9 @@
   font-style: normal;
 }
 */
+:root {
+    --;
+}
 html {
     font: 10px "Shippori Antique B1", sans-serif;
     
@@ -30,6 +33,7 @@ h1 {
     text-transform: uppercase;
     color: #193861;
 }
+
 h2 {
     text-align: center;
     margin-top: 2rem;
@@ -77,6 +81,8 @@ header img {
     max-height: 4em;
     padding-right: 1em; 
 }
+.wideYale {
+}
 
 /*HAMBURGER MENU CSS*/
 /*https://www.youtube.com/watch?v=oX-oLlgDEfw*/
@@ -113,16 +119,13 @@ header nav li a:hover { background-color: red; }
     /*height: 100%;*/
     display: flex;
     align-self: center;
+    
 }
 .navToggler:checked ~ .navTogglerMenu .menuClose { display: block; }
 .navToggler:checked ~ .navTogglerMenu .menuOpen { display: none; }
 
-header img {
-    max-height: 4em;
-    padding-right: 1em; 
-}
 
-article.mission p {text-align: center;}
+article.mission p { text-align: center; }
 
 /*figure/figcaption overlay*/
 figure { position: relative; margin-top: 1.5em;}
@@ -152,6 +155,7 @@ article {
     align-self: center;
 }
 
+
 /* BULLETIN SECTION */
 article.bulletin section {
     background-color: #FFC39D;
@@ -178,9 +182,7 @@ article.bulletin section h3 {
     color: #953819;
     padding-bottom: .5em;
 }
-article.bulletin section:nth-of-type(3) p {
-    padding-bottom: 0;
-}
+article.bulletin section:nth-of-type(3) p { padding-bottom: 0; }
 article.bulletin section:nth-of-type(3) a {
     padding-top: .3em;
     color: #A86A43;
@@ -235,6 +237,7 @@ article.events > a.roundBorder {
     text-decoration: none;
     align-self: end;
 }
+
 
 
 

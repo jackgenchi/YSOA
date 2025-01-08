@@ -19,26 +19,45 @@
 }
 */
 :root {
-    --;
+    /*Grey*/
+    --header-color: #ddd;
+    --legend-background: rgba(221, 221, 221, .6);
+    --text-color: #4b4b4b;
+    /*Orange*/
+    --darkaccent-color: #cb5227;
+    --brightaccent-color: #ea8b4f;
+    /*Blue*/
+    --callout-color: #1d3869;
+    --lightcallout-color: #72a4d7;
+    /*Layout*/
+    --spacer: 1rem;
+    --spacer-dbl: calc(var(--spacer)*2);
+    --corners: 8px;
+    /*Typography*/
+    --main-heading: "Notable", sans-serif;
+    --secondary-heading: "Montserrat", sans-serif;
+    --body-font: "Shippori Antique B1", sans-serif;
 }
+
 html {
-    font: 10px "Shippori Antique B1", sans-serif;
+    font: 10px var(--body-font);
     
 }
+/* HEADER AND PARAGRAPH STYLING */
 h1 {
-    font-family: "Notable", sans-serif;
+    font-family: var(--main-heading);
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #193861;
+    color: var(--callout-color);
 }
 
 h2 {
     text-align: center;
     margin-top: 2rem;
-    color: #4b4b4b;
-    font-family: "Notable", sans-serif;
+    color: var(--text-color);
+    font-family: var(--main-heading);
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
@@ -46,20 +65,22 @@ h2 {
     padding: 1rem 2rem 2rem;
     font-weight: 600;
 }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.6rem; }
+h3, h4 { font-size: 1.6rem; }
 p {
     font-size: 1.6rem;
     line-height: 1.5;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--secondary-heading);
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
+
+/* RESPONSIVE IMAGES */
 img {
     max-width: 100%;
     height: auto;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -74,53 +95,56 @@ main {
 header { 
     display: flex;
     flex-direction: row;
-    background-color: #DDDEE0;
+    background-color: var(--header-color);
     padding: 2em;
 }
 header img {
     max-height: 4em;
     padding-right: 1em; 
 }
-.wideYale {
+header h1 {
+    min-width: 9em;
 }
+
 
 /*HAMBURGER MENU CSS*/
 /*https://www.youtube.com/watch?v=oX-oLlgDEfw*/
 header nav {
     position: absolute;
-    top: 13em;
-    left: -2em;
-    width: 110%;
+    top: 8em;
+    left: 0em;
+    width: 100%;
     display: none;
 }
 header nav li {
     padding: 1rem;
     border-bottom: solid 1px #999;
-    background-color: #DDDEE0;
+    background-color: var(--header-color);
 }
 header nav li:first-of-type { border-top: solid 1px #999; }
 header nav li a { 
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #193861;
+    color: var(--callout-color);
 }
 header nav li a:hover { background-color: red; }
 .navToggler:checked ~ nav { display: block; }
-.menuClose { display: none; }
+.menuClose { display: none; align-self: flex-end;}
 .navToggler { 
     display: none; 
     align-items: center;
 }
 .navTogglerMenu {
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     height: 4em;
-    width: auto;
-    /*height: 100%;*/
+    min-width: 4em;
     display: flex;
-    align-self: center;
-    
+    flex-direction: row-reverse;
+    margin-left: auto;
+
 }
+
 .navToggler:checked ~ .navTogglerMenu .menuClose { display: block; }
 .navToggler:checked ~ .navTogglerMenu .menuOpen { display: none; }
 
@@ -190,7 +214,7 @@ article.bulletin section:nth-of-type(3) a {
 
 
 /* EVENTS SECTION */
-.events { color: #193861; display: flex; flex-direction: column; }
+.events { color: var(--callout-color); display: flex; flex-direction: column; }
 article.events section {
     background-color: #71A3D8;
     padding: 1em;
@@ -265,12 +289,12 @@ article.events > a.roundBorder {
 footer {
     display: grid;
     grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
-    background-color: #DDDEE0;
+    background-color: var(--header-color);
 }
 footer .btt {
     grid-column: 1/-1;
     grid-row: 1/2;
-    background-color: #4a4b4b;
+    background-color: var(--text-color);
     text-transform: uppercase;
     align-content: center;  
     font-size: 2em;
@@ -327,4 +351,37 @@ footer p {
     line-height: 1.2;
     padding: 1em 4em;
     text-align: center;
+}
+
+/* 500PX max width for most elements to create uniformity*/
+@media screen and (min-width: 500px) { 
+    .mfa, .bulletin, .mission, .events, .about { max-width: 50em; }
+}
+
+/* LARGE SCREEN DESIGN */
+@media screen and (min-width: 720px) {
+    article.mfa {
+        display: flex;
+        /*grid: min-content 1fr 1fr/ 1fr 1fr;*/
+    }
+    /*.mfa h2 {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }*/
+    .mission {
+        display: flex;
+        flex-direction: row;
+    }
+    .mission h2 {
+        align-self: center;
+        
+    }
+    .mission p {
+        border-left: solid 1px #999;
+        
+    }
+    .mfa, .bulletin, .mission, .events, .about { max-width: 100%; }  
+    .mission {
+        padding-top: 5em;
+    }
 }

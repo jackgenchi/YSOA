@@ -1,0 +1,450 @@
+:root {
+    /*Grey*/
+    --header-color: #ddd;
+    --legend-background: rgba(221, 221, 221, .6);
+    --text-color: #4b4b4b;
+    /*Orange*/
+    --darkaccent-color: #cb5227;
+    --brightaccent-color: #ea8b4f;
+    /*Blue*/
+    --callout-color: #1d3869;
+    --lightcallout-color: #72a4d7;
+    /*Layout*/
+    --spacer: 1rem;
+    --spacer-dbl: calc(var(--spacer)*2);
+    --corners: 8px;
+    /*Typography*/
+    --main-heading: "Notable", sans-serif;
+    --secondary-heading: "Montserrat", sans-serif;
+    --body-font: "Shippori Antique B1", sans-serif;
+}
+
+/*General Settings*/
+
+html {
+    font: 10px var(--body-font);
+    color: var(--text-color);
+}
+
+main {
+    margin: var(--spacer-dbl) auto;
+    padding: var(--spacer) var(--spacer-dbl);
+}
+
+header {
+    background-color: var(--header-color);
+    padding: var(--spacer-dbl);
+}
+
+header h1 {
+    color: var(--callout-color);
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1rem;
+}
+
+header h1 img {
+    width: 50px;
+    margin-right: var(--spacer);
+}
+
+h1 span,
+h1 img {
+    display: inline-block;
+    padding-top: .5rem;
+}
+
+#yale {
+    transform: scale(1, 2.3);
+}
+
+
+h1 {
+    font-size: 3.2rem;
+    font-family: var(--main-heading);
+    padding-top: var(--spacer-dbl);
+    padding-bottom: var(--spacer-dbl);
+}
+
+h2 {
+    font-family: var(--secondary-heading);
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-top: var(--spacer-dbl);
+    padding-bottom: var(--spacer);
+}
+
+p,
+table {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    padding-bottom: var(--spacer-dbl);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--callout-color);
+}
+
+
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--header-color);
+    text-align: center;
+
+}
+
+footer p {
+    font-size: 1.4rem;
+    padding-top: var(--spacer-dbl);
+}
+
+
+/* Our Works styles begin*/
+
+#paintingWorks,
+#graphicDesign,
+#photography,
+#sculpture {
+    position: relative;
+}
+
+#paintingWorks img,
+#photography img {
+    width: 175px;
+    height: 175px;
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 2.5rem;
+}
+
+#graphicDesign img,
+#sculpture img {
+    width: 175px;
+    height: 175px;
+    float: right;
+    shape-outside: circle(50%);
+    margin-left: 1rem;
+}
+
+#paintingWorks::after,
+#graphicDesign::after,
+#photography::after,
+#sculpture::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+#painterDan img {
+    display: block;
+    margin: .5rem auto;
+}
+
+#painterDan {
+    background-color: var(--callout-color);
+    background: radial-gradient(circle at center, white 0, white 40%, var(--callout-color) 60%);
+    border-radius: var(--corners);
+}
+
+/*Our Works Small Screen Styles End*/
+
+/*Learning and Collaboration Small Screen Page Styles Begin*/
+figure {
+    margin: calc(var(--spacer)/2);
+    position: relative;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1.6rem;
+    color: black;
+    background-color: var(--legend-background);
+    text-shadow: 1px 0 0 white,
+        -1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white;
+    padding-top: var(--spacer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+#learningOfferings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 2rem 2rem 0;
+}
+
+#wikiContributeBtn,
+#supportUsBtn {
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    color: #fff;
+    border: none;
+    background-color: var(--darkaccent-color);
+    padding: calc(var(--spacer-dbl)*1.5);
+    width: 60%;
+    margin: 1rem auto;
+    border-radius: var(--corners);
+}
+
+#fourPillars {
+    background-color: var(--callout-color);
+    color: white;
+    padding: var(--spacer-dbl);
+    border-radius: var(--corners);
+    margin-bottom: var(--spacer-dbl);
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+#fourPillars img {
+    justify-self: center;
+}
+
+#collabStory {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#supportUsBtn {
+    background-color: var(--callout-color);
+
+}
+
+#sentrees {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+#forestReflections {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#forestReflections h2,
+#forestReflections p {
+    justify-self: start;
+}
+
+#learningMain {
+    max-width: 700px;
+    margin: auto;
+}
+
+/*Learning and Collaboration Small Screen Styles End*/
+
+/*Interdisciplinary Collaborations Small Screen Page Styles Begin*/
+/*Table Styles*/
+
+table {
+    font-size: 1.6rem;
+    line-height: 1.42;
+    padding-bottom: var(--spacer-dbl);
+}
+
+td,
+th {
+    padding: 7px;
+    border: 1px dotted var(--callout-color);
+    text-align: left;
+    vertical-align: top;
+
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgba(234, 139, 79, .1);
+}
+
+tr:nth-of-type(even) {
+    background-color: rgba(114, 164, 215, .1);
+}
+
+th,
+td:nth-of-type(2),
+td:nth-of-type(1) {
+    background-color: var(--callout-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
+/*Mobile Only Table Style for Interdisciplinary Collaborations Page*/
+@media screen and (max-width: 1000px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 2px inset #fff;
+        position: relative;
+        padding-left: 45%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 7px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before {
+        content: "";
+    }
+
+    td:nth-of-type(2):before {
+        content: "";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Description:";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Collaboration Opportunities:";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Funding Source/ Availability:";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Dates/ Contact:";
+    }
+
+    td:nth-of-type(1) {
+        padding-left: 0%;
+    }
+
+    td:nth-of-type(2) {
+        padding-left: 7px;
+        text-align: center;
+    }
+
+    table img {
+        display: block;
+        margin: auto;
+    }
+
+    td:nth-of-type(6),
+    th:nth-of-type(6) {
+        padding-bottom: var(--spacer-dbl);
+    }
+
+    tr:last-of-type {
+        margin-bottom: var(--spacer);
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    table {
+        font-size: 85%;
+        min-width: 335px;
+    }
+}
+
+
+/*Large Screen Styles*/
+/*Our Works Large Screen*/
+@media screen and (min-width: 800px) {
+    #disciplinesSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+        row-gap: 1rem;
+    }
+
+    #painterDan {
+        grid-column: 1/-1;
+    }
+
+    #moreWorks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+
+
+
+}
+
+
+/*Learning and Collaboration Large Screen*/
+@media screen and (min-width: 1000px) {
+    #learningMain {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        row-gap: 2rem;
+        max-width: 1400px;
+        align-items: flex-start;
+    }
+
+    #learningMain h1,
+    #collabStory {
+        grid-column: 1/-1;
+    }
+
+    #collabStory {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #sentrees {
+        order: 2;
+        margin-left: var(--spacer-dbl);
+    }
+
+    /*Interdisciplinary Collaborations Large Screen*/
+    td:first-child {
+        width: 250px;
+    }
+
+    td:nth-of-type(6),
+    th:nth-of-type(6) {
+        border-right: 5px solid var(--callout-color);
+    }
+
+    tr:last-of-type {
+        border-bottom: 5px solid var(--callout-color);
+    }
+
+    main {
+        max-width: 1400px;
+        margin: auto;
+    }
+}

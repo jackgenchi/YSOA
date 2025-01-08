@@ -81,6 +81,7 @@ img {
     height: auto;
 }
 
+/* BODY AND MAIN FLEX FOR MOBILE DESIGN*/
 body {
     display: flex;
     flex-direction: column;
@@ -91,17 +92,19 @@ main {
 }
 
 
-/* HEADER */
+/* HEADER - FLEX, COLOR, AND PADDING*/
 header { 
     display: flex;
     flex-direction: row;
     background-color: var(--header-color);
     padding: 2em;
 }
+/* CREST SIZING */
 header img {
     max-height: 4em;
     padding-right: 1em; 
 }
+/* PREVENTS SCHOOL NAME FROM GETTING CUT OFF AT VERY SMALL WIDTHS < 300PX*/
 header h1 {
     min-width: 9em;
 }
@@ -130,28 +133,26 @@ header nav li a {
 }
 header nav li a:hover { background-color: red; }
 .navToggler:checked ~ nav { display: block; }
-.menuClose { display: none; align-self: flex-end;}
+.menuClose { display: none; align-self: flex-end; }
 .navToggler { 
     display: none; 
     align-items: center;
 }
 .navTogglerMenu {
-    /*border: solid 1px red;*/
     height: 4em;
     min-width: 4em;
     display: flex;
     flex-direction: row-reverse;
     margin-left: auto;
-
 }
-
 .navToggler:checked ~ .navTogglerMenu .menuClose { display: block; }
 .navToggler:checked ~ .navTogglerMenu .menuOpen { display: none; }
+/* END OF MOBILE NAV MENU */
 
 
 article.mission p { text-align: center; }
 
-/*figure/figcaption overlay*/
+/* FIGURE&FIGCAPTION OVERLAY */
 figure { position: relative; margin-top: 1.5em;}
 figcaption {
     background-color: rgba(232,232,232,.6);
@@ -353,7 +354,7 @@ footer p {
     text-align: center;
 }
 
-/* 500PX max width for most elements to create uniformity*/
+/* 500PX max width for most elements to create uniformity pre-large screen*/
 @media screen and (min-width: 500px) { 
     .mfa, .bulletin, .mission, .events, .about { max-width: 50em; }
 }
@@ -371,6 +372,7 @@ footer p {
     .mission {
         display: flex;
         flex-direction: row;
+        width: 90%;
     }
     .mission h2 {
         align-self: center;
@@ -384,4 +386,5 @@ footer p {
     .mission {
         padding-top: 5em;
     }
+    
 }

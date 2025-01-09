@@ -1,3 +1,25 @@
+/******************************************
+            TABLE OF CONTENTS
+------------------------------------------
+    1.  GENERAL STYLES
+    2.  HOME (Jack)
+    3.  ABOUT THE SCHOOL (Volha)
+    4.  LEARNING AND COLLABORATION (Sherry)
+    5.  EVENTS (Evelyn)
+    6.  OUR WORKS (Sherry)
+    7.  HISTORY (Volha)
+    8.  DONATE (Volha)
+    9.  WIKI (Jack)
+    10. COURSES (Evelyn)
+    11. CAREERS AND INTERNSHIPS (Evelyn)
+    11. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+*****************************************/
+
+/* ****************************************
+*******************************************
+    1. GENERAL STYLES
+*******************************************
+***************************************** */
 /*// <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
 
@@ -18,6 +40,7 @@
   font-style: normal;
 }
 */
+
 :root {
     /*Grey*/
     --header-color: #ddd;
@@ -41,9 +64,11 @@
 
 html {
     font: 10px var(--body-font);
-    
+    color: var(--text-color);
 }
-/* HEADER AND PARAGRAPH STYLING */
+
+/* HEADER AND PARAGRAPH STYLING START */
+
 h1 {
     font-family: var(--main-heading);
     font-weight: 400;
@@ -65,7 +90,12 @@ h2 {
     padding: 1rem 2rem 2rem;
     font-weight: 600;
 }
-h3, h4 { font-size: 1.6rem; }
+
+h3,
+h4 {
+    font-size: 1.6rem;
+}
+
 p {
     font-size: 1.6rem;
     line-height: 1.5;
@@ -75,7 +105,9 @@ p {
     font-style: normal;
 }
 
-/* RESPONSIVE IMAGES */
+/* HEADER AND PARAGRAPH STYLING END */
+
+/* RESPONSIVE IMAGES START */
 img {
     max-width: 100%;
     height: auto;
@@ -84,30 +116,33 @@ img {
 body {
     display: flex;
     flex-direction: column;
-}  
+}
+
 main {
     display: flex;
     flex-direction: column;
 }
+/* RESPONSIVE IMAGES END */
 
-
-/* HEADER */
-header { 
+/* HEADER START */
+header {
     display: flex;
     flex-direction: row;
     background-color: var(--header-color);
     padding: 2em;
 }
+
 header img {
     max-height: 4em;
-    padding-right: 1em; 
+    padding-right: 1em;
 }
+
 header h1 {
     min-width: 9em;
 }
+/* HEADER END */
 
-
-/*HAMBURGER MENU CSS*/
+/* HAMBURGER MENU START */
 /*https://www.youtube.com/watch?v=oX-oLlgDEfw*/
 header nav {
     position: absolute;
@@ -116,25 +151,42 @@ header nav {
     width: 100%;
     display: none;
 }
+
 header nav li {
     padding: 1rem;
     border-bottom: solid 1px #999;
     background-color: var(--header-color);
 }
-header nav li:first-of-type { border-top: solid 1px #999; }
-header nav li a { 
+
+header nav li:first-of-type {
+    border-top: solid 1px #999;
+}
+
+header nav li a {
     display: block;
     text-align: center;
     text-decoration: none;
     color: var(--callout-color);
 }
-header nav li a:hover { background-color: red; }
-.navToggler:checked ~ nav { display: block; }
-.menuClose { display: none; align-self: flex-end;}
-.navToggler { 
-    display: none; 
+
+header nav li a:hover {
+    background-color: red;
+}
+
+.navToggler:checked~nav {
+    display: block;
+}
+
+.menuClose {
+    display: none;
+    align-self: flex-end;
+}
+
+.navToggler {
+    display: none;
     align-items: center;
 }
+
 .navTogglerMenu {
     /*border: solid 1px red;*/
     height: 4em;
@@ -145,16 +197,28 @@ header nav li a:hover { background-color: red; }
 
 }
 
-.navToggler:checked ~ .navTogglerMenu .menuClose { display: block; }
-.navToggler:checked ~ .navTogglerMenu .menuOpen { display: none; }
+.navToggler:checked~.navTogglerMenu .menuClose {
+    display: block;
+}
+
+.navToggler:checked~.navTogglerMenu .menuOpen {
+    display: none;
+}
 
 
-article.mission p { text-align: center; }
+article.mission p {
+    text-align: center;
+}
+/* HAMBURGER MENU END */
 
-/*figure/figcaption overlay*/
-figure { position: relative; margin-top: 1.5em;}
+/* FIGURE/ FIGCAPTION OVERLAY START */
+figure {
+    position: relative;
+    margin-top: 1.5em;
+}
+
 figcaption {
-    background-color: rgba(232,232,232,.6);
+    background-color: rgba(232, 232, 232, .6);
     padding: .5em;
     position: absolute;
     bottom: .2rem;
@@ -168,53 +232,138 @@ figcaption {
     border-bottom-right-radius: .25em;
     text-align: center;
 }
-figcaption#darkBG { background-color: rgba(125,125,125,.2); }
-figure img { border: solid 2px rgba(0,0,0,.5); }
+
+figcaption#darkBG {
+    background-color: rgba(125, 125, 125, .2);
+}
+
+figure img {
+    border: solid 2px rgba(0, 0, 0, .5);
+}
 
 
 article {
-    border-bottom: solid 1px rgba(0,0,0,.4);
+    border-bottom: solid 1px rgba(0, 0, 0, .4);
     padding-bottom: 5em;
     width: 90%;
     align-self: center;
 }
+/* FIGURE/ FIGCAPTION OVERLAY END */
 
+/*  FOOTER START */
 
-/* BULLETIN SECTION */
-article.bulletin section {
-    background-color: #FFC39D;
-    padding: 2em;
-    margin-bottom: 1em;
+footer {
+    display: grid;
+    grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
+    background-color: var(--header-color);
+}
+
+footer .btt {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-color: var(--text-color);
+    text-transform: uppercase;
+    align-content: center;
+    font-size: 2em;
+}
+
+footer nav {
+    align-self: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer img[src$=".svg"] {
+    min-height: 65px;
+}
+
+footer .socials {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+}
+
+footer .socials li {
+    display: inline-block;
+    padding: 2em .6em;
+    font-size: 1.5em;
+}
+
+footer .footerLinks a {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+footer .footerLinks li {
+    text-align: left;
+    padding-bottom: 1em;
+    padding-left: 3rem;
+}
+
+footer .footerLinks li .schoolName {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+footer img {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    max-height: 9em;
+    align-self: center;
+    justify-self: center;
+}
+
+footer p {
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    align-content: center;
+    color: rgba(0, 0, 0, .4);
+    line-height: 1.2;
+    padding: 1em 4em;
+    text-align: center;
+}
+
+/*  FOOTER END */
+
+/* ****************************************
+*******************************************
+    2. HOME (Jack)
+*******************************************
+***************************************** */
+
+/* ABOUT SECTION START*/
+.about {
+    background-color: #1A386A;
+    color: #fff;
+    text-align: left;
+    padding: 1.5em;
+    margin: 5em 0;
+}
+
+.about h3 {
+    padding-bottom: 1em;
+}
+
+.about p {
+    line-height: 1.3;
+    font-weight: 200;
+}
+/* ABOUT SECTION END*/
+
+/* EVENTS SECTION START */
+.events {
+    color: var(--callout-color);
     display: flex;
     flex-direction: column;
 }
-article section a.roundBorder {
-    background-color: #CE4A1D;
-    color: #fff;
-    text-decoration: none;
-    padding: .7em 1.5em;
-    border-radius: .5em;
-    align-self: center;
-}
-article.bulletin section p {
-    color: #A86A43;
-    line-height: 1.2em;
-    font-size: 1.3em;
-    padding-bottom: 1.5em;
-}
-article.bulletin section h3 {
-    color: #953819;
-    padding-bottom: .5em;
-}
-article.bulletin section:nth-of-type(3) p { padding-bottom: 0; }
-article.bulletin section:nth-of-type(3) a {
-    padding-top: .3em;
-    color: #A86A43;
-}
 
-
-/* EVENTS SECTION */
-.events { color: var(--callout-color); display: flex; flex-direction: column; }
 article.events section {
     background-color: #71A3D8;
     padding: 1em;
@@ -222,37 +371,45 @@ article.events section {
     display: grid;
     grid: 1fr min-content min-content 1fr / min-content 1fr;
     border-radius: 1em;
-    
+
 }
+
 article.events section h3 {
     grid-row: 1/2;
     grid-column: 2/-1;
 }
+
 article.events section a {
     grid-row: -2/-1;
     grid-column: 2/-1;
 }
+
 article.events section a.roundBorder {
     background-color: #284E8D;
     justify-self: center;
 }
+
 article.events section p.calDate {
     grid-row: 1/2;
     grid-column: 1/2;
 }
+
 article.events section p.p1 {
     grid-row: 2/3;
     grid-column: 2/-1;
 }
+
 article.events section p.p2 {
     grid-row: 3/4;
     grid-column: 2/-1;
 }
+
 article.events i {
     padding-right: 1em;
     width: 1.6em;
 }
-article.events > a.roundBorder {
+
+article.events>a.roundBorder {
     text-align: right;
     background-color: #1A386A;
     padding: 1em 2em;
@@ -262,100 +419,63 @@ article.events > a.roundBorder {
     align-self: end;
 }
 
-
-
-
 .roundBorder {
     border-radius: 1em;
 }
+/* EVENTS SECTION END */
 
-/* ABOUT SECTION */
-.about {
-    background-color: #1A386A;
+/* BULLETIN SECTION START */
+article.bulletin section {
+    background-color: #FFC39D;
+    padding: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+article section a.roundBorder {
+    background-color: #CE4A1D;
     color: #fff;
-    text-align: left;
-    padding: 1.5em;
-    margin: 5em 0;
-}
-.about h3 {
-    padding-bottom: 1em;
-}
-.about p {
-    line-height: 1.3;
-    font-weight: 200;
-}
-
-/*  FOOTER  */
-footer {
-    display: grid;
-    grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
-    background-color: var(--header-color);
-}
-footer .btt {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    background-color: var(--text-color);
-    text-transform: uppercase;
-    align-content: center;  
-    font-size: 2em;
-}
-footer nav {
+    text-decoration: none;
+    padding: .7em 1.5em;
+    border-radius: .5em;
     align-self: center;
 }
-footer a{
-    color: #fff;
-    text-decoration: none; 
-    text-align: center;
-}
-footer img[src$=".svg"] {
-    min-height: 65px;
-}
-footer .socials {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    text-align: center;
-}
-footer .socials li {
-    display: inline-block;
-    padding: 2em .6em;
-    font-size: 1.5em;
-}
-footer .footerLinks a {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    color: rgb(0,0,0);
-    font-size: 1.5em;
-    line-height: 1.3em;
-}
-footer .footerLinks li {
-    text-align: left;
-    padding-bottom: 1em;
-    padding-left: 3rem;
-}
-footer .footerLinks li .schoolName{
-    font-weight: bold;
-    font-size: 1.5em;
-}
-footer img {
-    grid-column: 2/-1;
-    grid-row: 3/4;
-    max-height: 9em;
-    align-self: center;
-    justify-self: center;
-}
-footer p {
-    grid-column: 1/-1;
-    grid-row: -2/-1;
-    align-content: center;
-    color: rgba(0,0,0,.4);
-    line-height: 1.2;
-    padding: 1em 4em;
-    text-align: center;
+
+article.bulletin section p {
+    color: #A86A43;
+    line-height: 1.2em;
+    font-size: 1.3em;
+    padding-bottom: 1.5em;
 }
 
+article.bulletin section h3 {
+    color: #953819;
+    padding-bottom: .5em;
+}
+
+article.bulletin section:nth-of-type(3) p {
+    padding-bottom: 0;
+}
+
+article.bulletin section:nth-of-type(3) a {
+    padding-top: .3em;
+    color: #A86A43;
+}
+/* BULLETIN SECTION END */
+
+
+/*Note: I'm not sure where this goes */
 /* 500PX max width for most elements to create uniformity*/
-@media screen and (min-width: 500px) { 
-    .mfa, .bulletin, .mission, .events, .about { max-width: 50em; }
+@media screen and (min-width: 500px) {
+
+    .mfa,
+    .bulletin,
+    .mission,
+    .events,
+    .about {
+        max-width: 50em;
+    }
 }
 
 /* LARGE SCREEN DESIGN */
@@ -364,24 +484,427 @@ footer p {
         display: flex;
         /*grid: min-content 1fr 1fr/ 1fr 1fr;*/
     }
+
     /*.mfa h2 {
-        grid-column: 1/-1;
-        grid-row: 1/2;
+    grid-column: 1/-1;
+    grid-row: 1/2;
     }*/
     .mission {
         display: flex;
         flex-direction: row;
     }
+
     .mission h2 {
         align-self: center;
-        
+
     }
+
     .mission p {
         border-left: solid 1px #999;
-        
+
     }
-    .mfa, .bulletin, .mission, .events, .about { max-width: 100%; }  
+
+    .mfa,
+    .bulletin,
+    .mission,
+    .events,
+    .about {
+        max-width: 100%;
+    }
+
     .mission {
         padding-top: 5em;
     }
 }
+
+/* Note end */
+
+/* ****************************************
+*******************************************
+    3. ABOUT THE SCHOOL (Volha)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    4. LEARNING AND COLLABORATION (Sherry)
+*******************************************
+***************************************** */
+figure {
+    margin: calc(var(--spacer)/2);
+    position: relative;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1.6rem;
+    color: black;
+    background-color: var(--legend-background);
+    text-shadow: 1px 0 0 white,
+        -1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white;
+    padding-top: var(--spacer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+#learningOfferings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 2rem 2rem 0;
+}
+
+#wikiContributeBtn,
+#supportUsBtn {
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    color: #fff;
+    border: none;
+    background-color: var(--darkaccent-color);
+    padding: calc(var(--spacer-dbl)*1.5);
+    width: 60%;
+    margin: 1rem auto;
+    border-radius: var(--corners);
+}
+
+#fourPillars {
+    background-color: var(--callout-color);
+    color: white;
+    padding: var(--spacer-dbl);
+    border-radius: var(--corners);
+    margin-bottom: var(--spacer-dbl);
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+#fourPillars img {
+    justify-self: center;
+}
+
+#collabStory {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#supportUsBtn {
+    background-color: var(--callout-color);
+
+}
+
+#sentrees {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+#forestReflections {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#forestReflections h2,
+#forestReflections p {
+    justify-self: start;
+}
+
+#learningMain {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Large Screen */
+@media screen and (min-width: 1000px) {
+    #learningMain {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        row-gap: 2rem;
+        max-width: 1400px;
+        align-items: flex-start;
+    }
+
+    #learningMain h1,
+    #collabStory {
+        grid-column: 1/-1;
+    }
+
+    #collabStory {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #sentrees {
+        order: 2;
+        margin-left: var(--spacer-dbl);
+    }
+}
+
+/* ****************************************
+*******************************************
+    5. EVENTS (Evelyn)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    6. OUR WORKS (Sherry)
+*******************************************
+***************************************** */
+#paintingWorks,
+#graphicDesign,
+#photography,
+#sculpture {
+    position: relative;
+}
+
+#paintingWorks img,
+#photography img {
+    width: 175px;
+    height: 175px;
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 2.5rem;
+}
+
+#graphicDesign img,
+#sculpture img {
+    width: 175px;
+    height: 175px;
+    float: right;
+    shape-outside: circle(50%);
+    margin-left: 1rem;
+}
+
+#paintingWorks::after,
+#graphicDesign::after,
+#photography::after,
+#sculpture::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+#painterDan img {
+    display: block;
+    margin: .5rem auto;
+}
+
+#painterDan {
+    background-color: var(--callout-color);
+    background: radial-gradient(circle at center, white 0, white 40%, var(--callout-color) 60%);
+    border-radius: var(--corners);
+}
+
+/*Our Works Large Screen*/
+@media screen and (min-width: 800px) {
+    #disciplinesSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+        row-gap: 1rem;
+    }
+
+    #painterDan {
+        grid-column: 1/-1;
+    }
+
+    #moreWorks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+}
+/* ****************************************
+*******************************************
+    7. HISTORY (Volha)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    8. DONATE (Volha)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    9. WIKI (Jack)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    10. COURSES (Evelyn)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    11. CAREERS AND INTERNSHIPS (Evelyn)
+*******************************************
+***************************************** */
+
+
+/* ****************************************
+*******************************************
+    12. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+*******************************************
+***************************************** */
+    /*Table Styles*/
+    table {
+        font-size: 1.6rem;
+        line-height: 1.42;
+        padding-bottom: var(--spacer-dbl);
+    }
+
+    td,
+    th {
+        padding: 7px;
+        border: 1px dotted var(--callout-color);
+        text-align: left;
+        vertical-align: top;
+
+    }
+
+    tr:nth-of-type(odd) {
+        background-color: rgba(234, 139, 79, .1);
+    }
+
+    tr:nth-of-type(even) {
+        background-color: rgba(114, 164, 215, .1);
+    }
+
+    th,
+    td:nth-of-type(2),
+    td:nth-of-type(1) {
+        background-color: var(--callout-color);
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    /* Mobile Table Style */
+    @media screen and (max-width: 1000px) {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        td {
+            border: none;
+            border-bottom: 2px inset #fff;
+            position: relative;
+            padding-left: 45%;
+        }
+
+        td:before {
+            position: absolute;
+            left: 7px;
+            width: 40%;
+            padding-right: 10px;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        td:nth-of-type(1):before {
+            content: "";
+        }
+
+        td:nth-of-type(2):before {
+            content: "";
+        }
+
+        td:nth-of-type(3):before {
+            content: "Description:";
+        }
+
+        td:nth-of-type(4):before {
+            content: "Collaboration Opportunities:";
+        }
+
+        td:nth-of-type(5):before {
+            content: "Funding Source/ Availability:";
+        }
+
+        td:nth-of-type(6):before {
+            content: "Dates/ Contact:";
+        }
+
+        td:nth-of-type(1) {
+            padding-left: 0%;
+        }
+
+        td:nth-of-type(2) {
+            padding-left: 7px;
+            text-align: center;
+        }
+
+        table img {
+            display: block;
+            margin: auto;
+        }
+
+        td:nth-of-type(6),
+        th:nth-of-type(6) {
+            padding-bottom: var(--spacer-dbl);
+        }
+
+        tr:last-of-type {
+            margin-bottom: var(--spacer);
+        }
+
+    }
+
+    @media screen and (max-width: 575px) {
+        table {
+            font-size: 85%;
+            min-width: 335px;
+        }
+    }
+
+    /* Large Screen */
+    @media screen and (min-width: 1000px) {
+        td:first-child {
+            width: 250px;
+        }
+
+        td:nth-of-type(6),
+        th:nth-of-type(6) {
+            border-right: 5px solid var(--callout-color);
+        }
+
+        tr:last-of-type {
+            border-bottom: 5px solid var(--callout-color);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+        }
+    }
+
+        

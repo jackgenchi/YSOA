@@ -39,10 +39,8 @@
     --body-font: "Shippori Antique B1", sans-serif;
 }
 
-html {
-    font: 10px var(--body-font);
-    
-}
+html { font: 10px var(--body-font); }
+
 /* HEADER AND PARAGRAPH STYLING */
 h1 {
     font-family: var(--main-heading);
@@ -52,12 +50,7 @@ h1 {
     text-transform: uppercase;
     color: var(--callout-color);
     display: flex;
-     
 }
-/*h1 span {
-    font-size: 2em;
-}*/
-
 h2 {
     text-align: center;
     margin-top: 2rem;
@@ -98,7 +91,6 @@ main {
 /* global size restriction to keep these elements uniform in mobile design */
 .mfa, .bulletin, .mission, .events, .about { max-width: 50em; }
 
-
 /* HEADER - FLEX, COLOR, AND PADDING*/
 header { 
     display: flex;
@@ -116,6 +108,7 @@ header img {
 header h1 {
     min-width: 9em;
 }
+/* SIZING ON YSOA */
 #yale {
     font-size: 1.2em;
     transform: scale(1, 2.3);
@@ -146,7 +139,6 @@ header nav li a {
     text-decoration: none;
     color: var(--callout-color);
 }
-header nav li a:hover { background-color: red; }
 .navToggler:checked ~ nav { display: block; }
 .menuClose { display: none; align-self: flex-end; }
 .navToggler { 
@@ -168,8 +160,8 @@ header nav li a:hover { background-color: red; }
 .mission p { text-align: center; }
 
 /* FIGURE&FIGCAPTION OVERLAY */
-figure { position: relative; margin-top: 1.5em;}
-figcaption {
+figure.landingFig { position: relative; margin-top: 1.5em;}
+figure.landingFig figcaption {
     background-color: rgba(232,232,232,.6);
     padding: .5em;
     position: absolute;
@@ -185,10 +177,10 @@ figcaption {
     text-align: center;
 }
 figcaption#darkBG { background-color: rgba(125,125,125,.2); }
-figure img { border: solid 2px rgba(0,0,0,.5); }
+figure.landingFig img { border: solid 2px rgba(0,0,0,.5); }
 
 
-article {
+article.landingArt {
     border-bottom: solid 1px rgba(0,0,0,.4);
     padding-bottom: 5em;
     width: 90%;
@@ -204,7 +196,7 @@ article.bulletin section {
     display: flex;
     flex-direction: column;
 }
-article section a.roundBorder {
+article.landingArt section a.roundBorder {
     background-color: #CE4A1D;
     color: #fff;
     text-decoration: none;
@@ -371,10 +363,10 @@ footer p {
     text-align: center;
 }
 
-/* 500PX max width for most elements to create uniformity pre-large screen*/
+/* 500PX max width for most elements to create uniformity pre-large screen
 @media screen and (min-width: 500px) { 
-    /*.mfa, .bulletin, .mission, .events, .about { max-width: 50em; }*/
-}
+    .mfa, .bulletin, .mission, .events, .about { max-width: 50em; }
+}*/
 
 /* LARGE SCREEN DESIGN */
 @media screen and (min-width: 720px) {
@@ -469,7 +461,7 @@ footer p {
     footer img {
         grid-row: 2/3;
         grid-column: 2/3;
-        justify-content: start;
+        justify-self: center;
     }
     footer p {
         grid-row: -2/-1;
@@ -478,7 +470,7 @@ footer p {
     /* FOOTER LINK GRID */
     footer nav ul {
         display: grid;
-        grid: 1fr 1fr / repeat(5, max-content) ;
+        grid: 1fr 1fr / repeat(5, min-content) ;
     }
     /*footer nav ul li {
         padding: 0 1em;
@@ -487,13 +479,36 @@ footer p {
         grid-row: 1/2;
         grid-column: 1/-1;
     }
-    
+    /* LARGE SCREEN NAV */
+    header nav {
+        all: unset;
+        display: flex;
+    }
+    header input.navToggler, header label.navToggler, header img.menuOpen, header img.menuClose {
+        display: none;
+    }
+    header nav ul {
+        position: absolute;
+        top: 8em;
+        left: 0em;
+        width: 100%;
+        display: flex;
+    }
+    header nav ul li {
+        flex-grow: 1;
+        border-bottom: none;
+    }
+    header nav li:hover { 
+        border-bottom: solid 1px #999;
+        background-color: darkgray;
+    }
+    header nav li:first-of-type { border-top: none; }
 }
 
 @media screen and (min-width: 950px) {
     
     footer {
-        grid: 1fr min-content / 1fr 650px 1fr;
+        grid: 1fr min-content / 1fr min-content 1fr;
         padding: 3em 2em;
     }
     footer ul.socials {

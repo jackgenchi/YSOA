@@ -653,6 +653,223 @@ figcaption {
 *******************************************
 ***************************************** */
 
+/* added to disable some global css style effects TODO: remove once fixed */
+#events main {
+    padding: 20px;
+    max-width: 362px;
+    gap: 16px;
+}
+
+#events article {
+    padding: 0;
+    border-bottom: none;
+}
+
+#monthSelection {
+    width: 100%;
+    max-width: 402px;
+    padding: 12px;
+    border-radius: 6px;
+    border-width: 2px;
+    color: #667080;
+    font-family: var(--secondary-heading);
+    font-size: 1.6rem;
+}
+
+.calendarHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.calendarHeaderBtns {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    gap: 16px;
+    height: 40px;
+}
+
+.subscribeBtn {
+    color: white;
+    background-color: #1A386A;
+    font-size: 1.6rem;
+    font-family: var(--secondary-heading);
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 6px;
+    border-style: none;
+}
+
+a .fa-facebook {
+    font-size: 40px;
+    color: #1A386A;
+}
+
+#eventCards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.eventCardLarge {
+    background-color: #71A3D8;
+    width: 100%;
+    max-width: 362px;
+    border-radius: 1em;
+    color: #1A386A;
+}
+
+.eventCardImage {
+    display: block;
+    border-radius: 1em 1em 0 0;
+    width: 100%;
+    height: 250px;
+    background: url("../images/noImageAvailable.jpg") lightgray 50% / cover no-repeat;
+}
+
+.eventCardBody h3 {
+    line-height: 130%;
+    font-size: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event1 span { background: url("../images/feebackLoopEvent.jpg") lightgray 50% / cover no-repeat; }
+
+.event2 span {
+    background-image:
+    url("../images/virtualVisitEvent.png"),
+    url("../images/virtualVisitEvent.png");
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.event3 span {
+    background-image:
+    url("../images/virtualVisitEvent.png"),
+    url("../images/virtualVisitEvent.png");
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.event4 span {
+    background-image:
+    url("../images/virtualVisitEvent.png"),
+    url("../images/virtualVisitEvent.png");
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.event5 span {
+    background-image:
+    url("../images/virtualVisitEvent.png"),
+    url("../images/virtualVisitEvent.png");
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.event6 span {
+    background-image:
+    url("../images/virtualVisitEvent.png"),
+    url("../images/virtualVisitEvent.png");
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.eventCardBody { 
+    padding: 1.6rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.eventQuickDetails {
+    list-style: none;
+    display: flex;
+    column-gap: 8px;
+    row-gap: 4px;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    font-family: var(--secondary-heading);
+}
+
+.eventQuickDetails .fa-regular,.fa-solid {
+    font-size: 2rem;
+}
+
+.eventQuickDetails li { 
+    display: flex;
+    gap: 8px;
+    align-content: center;
+    align-items: center;
+}
+
+.moreDetails {
+    height: 4rem;
+    width: fit-content;
+    padding: 10px 24px;
+    margin: 0 auto;
+    color: white;
+    background-color: #284E8D;
+    font: var(--secondary-heading);
+    font-size: 1.4rem;
+    border-style: none;
+}
+
+.eventDescription {
+    height: 100px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.eventCardBody.showContent .eventDescription{
+    height: auto;
+    display: block;
+}
+
+@media screen and (min-width: 1200px) {
+    #events main {
+        padding: 40px 160px;
+        max-width: 1120px;
+        gap: 32px;
+    }
+
+    #events h2 {
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+        padding-bottom: 1.6rem;
+    }
+
+    .calendarHeader {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btt {
+        display: none;
+    }
+}
+
+
 
 /* ****************************************
 *******************************************

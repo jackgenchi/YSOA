@@ -58,8 +58,8 @@
     --corners: 8px;
     /*Typography*/
     --main-heading: "Notable", sans-serif;
-    --secondary-heading: "Montserrat", sans-serif;
-    --body-font: "Shippori Antique B1", sans-serif;
+    --secondary-heading: "Shippori Antique B1", sans-serif;
+    --body-font: "Montserrat", sans-serif;
 }
 html {
     font: 10px var(--body-font);
@@ -98,7 +98,7 @@ h4 {
 p {
     font-size: 1.6rem;
     line-height: 1.5;
-    font-family: var(--secondary-heading);
+    font-family: var(--body-font);
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;

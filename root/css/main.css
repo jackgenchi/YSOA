@@ -61,14 +61,12 @@
     --secondary-heading: "Montserrat", sans-serif;
     --body-font: "Shippori Antique B1", sans-serif;
 }
-
 html {
     font: 10px var(--body-font);
     color: var(--text-color);
 }
 
 /* HEADER AND PARAGRAPH STYLING START */
-
 h1 {
     font-family: var(--main-heading);
     font-weight: 400;
@@ -76,6 +74,7 @@ h1 {
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--callout-color);
+    display: flex;
 }
 
 h2 {
@@ -107,12 +106,13 @@ p {
 
 /* HEADER AND PARAGRAPH STYLING END */
 
-/* RESPONSIVE IMAGES START */
+/* RESPONSIVE IMAGES */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* BODY AND MAIN FLEX FOR MOBILE DESIGN*/
 body {
     display: flex;
     flex-direction: column;
@@ -122,28 +122,38 @@ main {
     display: flex;
     flex-direction: column;
 }
-/* RESPONSIVE IMAGES END */
 
-/* HEADER START */
-header {
+
+
+/* HEADER - FLEX, COLOR, AND PADDING*/
+header { 
     display: flex;
     flex-direction: row;
     background-color: var(--header-color);
     padding: 2em;
+    justify-items: center;
 }
-
+/* CREST SIZING */
 header img {
     max-height: 4em;
     padding-right: 1em;
 }
 
+/* PREVENTS SCHOOL NAME FROM GETTING CUT OFF AT VERY SMALL WIDTHS < 300PX*/
 header h1 {
     min-width: 9em;
 }
-/* HEADER END */
+/* SIZING ON YSOA */
+#yale {
+    font-size: 1.2em;
+    transform: scale(1, 2.3);
+    margin: .6rem .25em 0 0;
+}
+#soa { 
+    line-height: .9em;
+}
 
-/* HAMBURGER MENU START */
-/*https://www.youtube.com/watch?v=oX-oLlgDEfw*/
+/*MOBILE NAV MENU */
 header nav {
     position: absolute;
     top: 8em;
@@ -170,7 +180,7 @@ header nav li a {
 }
 
 header nav li a:hover {
-    background-color: red;
+    background-color: darkgrey;
 }
 
 .navToggler:checked~nav {
@@ -188,15 +198,13 @@ header nav li a:hover {
 }
 
 .navTogglerMenu {
-    /*border: solid 1px red;*/
     height: 4em;
     min-width: 4em;
     display: flex;
     flex-direction: row-reverse;
     margin-left: auto;
-
 }
-
+  
 .navToggler:checked~.navTogglerMenu .menuClose {
     display: block;
 }
@@ -204,21 +212,215 @@ header nav li a:hover {
 .navToggler:checked~.navTogglerMenu .menuOpen {
     display: none;
 }
+/* END OF MOBILE NAV MENU */
 
-
-article.mission p {
+/*  FOOTER  */
+footer {
+    display: grid;
+    grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
+    background-color: var(--header-color);
+}
+footer .btt {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-color: var(--text-color);
+    text-transform: uppercase;
+    align-content: center;  
+    font-size: 2em;
+}
+footer nav {
+    align-self: center;
+    justify-self: center;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
     text-align: center;
 }
-/* HAMBURGER MENU END */
+footer img[src$=".svg"] {
+    min-height: 65px;
+}
+footer .socials {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+}
+footer .socials li {
+    display: inline-block;
+    padding: 2em .6em;
+    font-size: 1.5em;
+}
+footer .footerLinks a {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+footer .footerLinks li {
+    text-align: left;
+    padding-bottom: 1em;
+    padding-left: 3rem;
+    align-self: center;
+}
+footer .footerLinks li .schoolName {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+footer p {
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    align-content: center;
+    color: rgba(0,0,0,.4);
+    line-height: 1.2;
+    padding: 1em 0;
+    text-align: center;
+}
+footer img {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    max-height: 9em;
+    align-self: center;
+    justify-self: center;
+}
+footer p {
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    align-content: center;
+    color: rgba(0, 0, 0, .4);
+    line-height: 1.2;
+    padding: 1em 4em;
+    text-align: center;
+}
+/*  FOOTER END */
 
-/* FIGURE/ FIGCAPTION OVERLAY START */
-figure {
-    position: relative;
-    margin-top: 1.5em;
+/* LARGE SCREEN LAYOUT */
+@media screen and (min-width: 720px) {
+  /* HEADER NAV */
+  header nav {
+        all: unset;
+        display: flex;
+    }
+    header input.navToggler, header label.navToggler, header img.menuOpen, header img.menuClose {
+        display: none;
+    }
+    header nav ul {
+        position: absolute;
+        top: 8em;
+        left: 0em;
+        width: 100%;
+        display: flex;
+    }
+    header nav ul li {
+        flex-grow: 1;
+        border-bottom: none;
+    }
+    header nav li:hover { 
+        border-bottom: solid 1px #999;
+        background-color: darkgray;
+    }
+    header nav li:first-of-type { border-top: none; }
+  /* END OF HEADER NAV*/
+  
+  /* FOOTER LARGE SCREEN */
+    .btt {display: none;}
+    footer {
+        grid: 1fr 1fr min-content / 1fr 1fr;
+    }
+    footer ul.socials {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: flex-end;
+    }
+    footer img[src$=".svg"] {
+         min-width: 60px;
+    }
+    footer ul.socials li {
+        padding: 0 1em;
+    }
+    footer .socials li { 
+      display: inline; 
+    }
+    footer nav {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+    footer img {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        justify-self: center;
+    }
+    footer p {
+        grid-row: -2/-1;
+        grid-column: 1/-1;
+    }
+    footer nav ul {
+        display: grid;
+        grid: 1fr 1fr / repeat(5, min-content) ;
+    }
+    /*footer nav ul li {
+        padding: 0 1em;
+    }*/
+    footer nav ul li.sN {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+    /* END OF LARGE SCREEN FOOTER NAV*/
+ 
+}
+}
+@media screen and (min-width: 950px) {
+    
+    footer {
+        grid: 1fr min-content / 1fr min-content 1fr;
+        padding: 3em 2em;
+    }
+    footer ul.socials {
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    footer nav {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    footer p {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+    footer img {
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
 }
 
-figcaption {
-    background-color: rgba(232, 232, 232, .6);
+
+/* ****************************************
+*******************************************
+    2. HOME (Jack)
+*******************************************
+***************************************** */
+
+/* global index size restriction to keep these elements uniform in mobile design */
+.mfa, .bulletin, .mission, .events, .about { 
+    max-width: 50em; 
+}
+
+article.mission p { 
+    text-align: center; 
+}
+
+/* FIGURE&FIGCAPTION OVERLAY */
+figure.landingFig { 
+    position: relative; 
+    margin-top: 1.5em;
+}
+  
+figure.landingFig figcaption {
+    background-color: rgba(232,232,232,.6);
     padding: .5em;
     position: absolute;
     bottom: .2rem;
@@ -232,111 +434,21 @@ figcaption {
     border-bottom-right-radius: .25em;
     text-align: center;
 }
-
 figcaption#darkBG {
     background-color: rgba(125, 125, 125, .2);
 }
-
-figure img {
+figure.landingFig img {
     border: solid 2px rgba(0, 0, 0, .5);
 }
 
 
-article {
+article.landingArt {
     border-bottom: solid 1px rgba(0, 0, 0, .4);
     padding-bottom: 5em;
     width: 90%;
     align-self: center;
 }
 /* FIGURE/ FIGCAPTION OVERLAY END */
-
-/*  FOOTER START */
-
-footer {
-    display: grid;
-    grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
-    background-color: var(--header-color);
-}
-
-footer .btt {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    background-color: var(--text-color);
-    text-transform: uppercase;
-    align-content: center;
-    font-size: 2em;
-}
-
-footer nav {
-    align-self: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-}
-
-footer img[src$=".svg"] {
-    min-height: 65px;
-}
-
-footer .socials {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    text-align: center;
-}
-
-footer .socials li {
-    display: inline-block;
-    padding: 2em .6em;
-    font-size: 1.5em;
-}
-
-footer .footerLinks a {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    color: rgb(0, 0, 0);
-    font-size: 1.5em;
-    line-height: 1.3em;
-}
-
-footer .footerLinks li {
-    text-align: left;
-    padding-bottom: 1em;
-    padding-left: 3rem;
-}
-
-footer .footerLinks li .schoolName {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-footer img {
-    grid-column: 2/-1;
-    grid-row: 3/4;
-    max-height: 9em;
-    align-self: center;
-    justify-self: center;
-}
-
-footer p {
-    grid-column: 1/-1;
-    grid-row: -2/-1;
-    align-content: center;
-    color: rgba(0, 0, 0, .4);
-    line-height: 1.2;
-    padding: 1em 4em;
-    text-align: center;
-}
-
-/*  FOOTER END */
-
-/* ****************************************
-*******************************************
-    2. HOME (Jack)
-*******************************************
-***************************************** */
 
 /* ABOUT SECTION START*/
 .about {
@@ -413,7 +525,7 @@ article.events>a.roundBorder {
     text-align: right;
     background-color: #1A386A;
     padding: 1em 2em;
-    margin: 0em 0;
+    margin: 0;
     color: #fff;
     text-decoration: none;
     align-self: end;
@@ -432,23 +544,12 @@ article.bulletin section {
     display: flex;
     flex-direction: column;
 }
-
-article section a.roundBorder {
-    background-color: #CE4A1D;
-    color: #fff;
-    text-decoration: none;
-    padding: .7em 1.5em;
-    border-radius: .5em;
-    align-self: center;
-}
-
 article.bulletin section p {
     color: #A86A43;
     line-height: 1.2em;
     font-size: 1.3em;
     padding-bottom: 1.5em;
 }
-
 article.bulletin section h3 {
     color: #953819;
     padding-bottom: .5em;
@@ -457,51 +558,80 @@ article.bulletin section h3 {
 article.bulletin section:nth-of-type(3) p {
     padding-bottom: 0;
 }
-
 article.bulletin section:nth-of-type(3) a {
     padding-top: .3em;
-    color: #A86A43;
+    color: #A86A43; 
 }
 /* BULLETIN SECTION END */
 
 
-/*Note: I'm not sure where this goes */
-/* 500PX max width for most elements to create uniformity*/
-@media screen and (min-width: 500px) {
 
-    .mfa,
-    .bulletin,
-    .mission,
-    .events,
-    .about {
-        max-width: 50em;
-    }
-}
-
-/* LARGE SCREEN DESIGN */
+/* LARGE SCREEN HOME PAGE DESIGN */
 @media screen and (min-width: 720px) {
-    article.mfa {
-        display: flex;
-        /*grid: min-content 1fr 1fr/ 1fr 1fr;*/
+    article.mfa { 
+        display: grid; 
+        grid: min-content min-content / repeat(4, 1fr);
     }
 
-    /*.mfa h2 {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    }*/
+    article.mfa h2 {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    /* BULLETIN LARGE SCREEN GRID SETUP */
+    article.bulletin { 
+        display: grid; 
+        grid: min-content min-content / repeat(3, 1fr);
+    }
+    article.bulletin h2 {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    /* EVENTS LARGE SCREEN GRID SETUP */
+    article.events { 
+        display: grid; 
+        grid: min-content min-content / repeat(3, 1fr);
+    }
+    article.events h2 {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    article.events > a {
+        grid-column: -2/-1;
+        grid-row: 3/4; 
+        display: block;
+    }
+    
+    
+    img.roundBorder {
+        max-height: 470px;
+    }
+    /* body grid spacing*/
+    .mfa figure {
+        margin: 0 1em;
+    }
+    .bulletin section {
+        margin: 0 1em;
+    }
+    .events section {
+        margin: 0 1em;
+    }
+    
+
     .mission {
         display: flex;
         flex-direction: row;
+        width: 90%;
+        max-width: 1080px;
+        padding-top: 5em;
     }
-
     .mission h2 {
         align-self: center;
-
     }
 
     .mission p {
         border-left: solid 1px #999;
-
+        padding-left: 1em;
+        text-align: left;
     }
 
     .mfa,
@@ -906,5 +1036,3 @@ figcaption {
             margin: auto;
         }
     }
-
-        

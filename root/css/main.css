@@ -844,12 +844,12 @@ a .fa-facebook {
 }
 
 .eventCardLarge {
-    background-color: #71A3D8;
+    background-color: var(--blue-card-bg);
     width: 100%;
     height: fit-content;
     max-width: 362px;
     border-radius: 1em;
-    color: #1A386A;
+    color: var(--dark-blue);
 }
 
 .eventCardImage {

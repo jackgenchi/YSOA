@@ -28,7 +28,7 @@
     <body>    
         <header>
           <img src="images/crest.png" alt="Yale Crest">
-          <h1>Yale School of Art</h1>
+          <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
            <input type="checkbox" class="navToggler" id="navToggler">
             <nav>
                 <ul>
@@ -49,35 +49,35 @@
         </header>
         
         <!--NEED CAROUSEL/HERO-->
-        <main>
+        <main class="landing">
             <!--article>h2+p^article>figure*4>img+figcaption^^article>h2+section*3>h3+p+a{Read More}^^article>h2+section*3>p>span^p*2+p>span^a[#]-->
-            <article class="mission">
+            <article class="mission landingArt">
                 <h2>Mission</h2>
                 <p>The School of Art is one of Yale’s Graduate &amp; Professional Schools conferring MFA degrees in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.</p>
             </article>
             
             <!--OPTIMIZE SIZE OF IMAGES-->
-            <article class="mfa">
+            <article class="mfa landingArt">
                <h2>MFA Specialties</h2>
-                <figure>
+                <figure class="landingFig">
                     <img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder">
                     <figcaption>Photography</figcaption>
                 </figure>
-                <figure>
+                <figure class="landingFig">
                     <img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder">
                     <figcaption>Sculpture</figcaption>
                 </figure>
-                <figure>
+                <figure class="landingFig">
                     <img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder">
                     <figcaption id="darkBG">Print/Painting</figcaption>
                 </figure>
-                <figure class="roundBorder">
+                <figure class="roundBorder landingFig">
                     <img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder">
                     <figcaption>Digital Design</figcaption>
                 </figure>
             </article>
             
-            <article class="bulletin">
+            <article class="bulletin landingArt">
                 <h2>Bulletin</h2>
                 <section class="roundBorder">
                     <h3>From our friends at the Yale Center for Environmental Justice</h3>
@@ -99,7 +99,7 @@
             
             <!--EVENTS-->
             <!--DO WE WANT A MATERIAL CALENDAR ICON FOR THE DATE?-->
-            <article class="events">
+            <article class="events landingArt">
                 <h2>Events</h2>
                 <section>                    
                     <h3>"Feedback Loop" --First-Year MFA Exhibition</h3>
@@ -125,7 +125,7 @@
                 <a href="#" class="roundBorder">More Events</a>
             </article>
             
-            <article class="roundBorder about">
+            <article class="roundBorder about landingArt">
                 <h3>About this Site</h3>
                 <p>This website exists as an ongoing collaborative experiment in digital publishing and information sharing. Because this website functions as a wiki, all members of the School of Art community—graduate students, faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site’s existing content. Content is the property of its various authors. When you contribute to this site, you agree to abide by Yale University academic and network use policy, and to act as a responsible member of our community.</p>
             </article>
@@ -142,9 +142,9 @@
                <li><a href="#"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
                <li><a href="#"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
            </ul>
-           <nav>
-               <ul class="footerLinks">
-                    <li><a href="#" class="schoolName">Yale School of Art</a></li>
+            <nav>
+                <ul class="footerLinks">
+                    <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
                     <li><a href="#">Support the School</a></li>
                     <li><a href="#">Visiting</a></li>
                     <li><a href="#">Contact</a></li>
@@ -153,7 +153,8 @@
                 </ul>
             </nav>
             <img src="images/crest.png" alt="yale crest">
-            <p>Copyright &copy; 2024 Yale University All Rights Reserved</p>
+           
+            <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
         </footer>
             
     </body>

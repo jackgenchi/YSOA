@@ -12,7 +12,8 @@
     9.  WIKI (Jack)
     10. COURSES (Evelyn)
     11. CAREERS AND INTERNSHIPS (Evelyn)
-    11. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+    12. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+    13. APPLY (Sherry)
 *****************************************/
 
 /* ****************************************
@@ -49,9 +50,13 @@
     /*Orange*/
     --darkaccent-color: #cb5227;
     --brightaccent-color: #ea8b4f;
+    --dark-orange: #762C13;
+    --orange-card-bg: #FFDAC2;
     /*Blue*/
     --callout-color: #1d3869;
     --lightcallout-color: #72a4d7;
+    --dark-blue: #13294E;
+    --blue-card-bg: #92BDEA;
     /*Layout*/
     --spacer: 1rem;
     --spacer-dbl: calc(var(--spacer)*2);
@@ -122,6 +127,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    padding-top: 2em;
 }
 
 
@@ -154,7 +160,7 @@ header h1 {
     line-height: .9em;
 }
 
-/*MOBILE NAV MENU */
+/* MOBILE NAV MENU */
 header nav {
     position: absolute;
     top: 8em;
@@ -295,7 +301,7 @@ footer p {
 }
 /*  FOOTER END */
 
-/* LARGE SCREEN LAYOUT */
+/* MID SCREEN LAYOUT */
 @media screen and (min-width: 720px) {
   /* HEADER NAV */
   header nav {
@@ -323,8 +329,10 @@ footer p {
     header nav li:first-of-type { border-top: none; }
   /* END OF HEADER NAV*/
   
-  /* FOOTER LARGE SCREEN */
-    .btt {display: none;}
+  /* FOOTER MID SCREEN */
+    .btt { 
+        display: none;
+    }
     footer {
         grid: 1fr 1fr min-content / 1fr 1fr;
     }
@@ -362,17 +370,13 @@ footer p {
         display: grid;
         grid: 1fr 1fr / repeat(5, min-content) ;
     }
-    /*footer nav ul li {
-        padding: 0 1em;
-    }*/
     footer nav ul li.sN {
         grid-row: 1/2;
         grid-column: 1/-1;
     }
-    /* END OF LARGE SCREEN FOOTER NAV*/
- 
+    /* END OF MID SCREEN FOOTER NAV*/
 }
-
+/* LARGE SCREEN FOOTER NAV*/
 @media screen and (min-width: 950px) {
     
     footer {
@@ -397,6 +401,7 @@ footer p {
         grid-column: 3/4;
     }
 }
+/* END OF LARGE SCREEN FOOTER NAV*/
 
 
 /* ****************************************
@@ -484,7 +489,6 @@ article.events section {
     display: grid;
     grid: 1fr min-content min-content 1fr / min-content 1fr;
     border-radius: 1em;
-
 }
 
 article.events section h3 {
@@ -1248,3 +1252,9 @@ a .fa-facebook {
             margin: auto;
         }
     }
+
+/* ****************************************
+*******************************************
+    13. APPLY (Sherry)
+*******************************************
+***************************************** */

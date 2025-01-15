@@ -12,7 +12,8 @@
     9.  WIKI (Jack)
     10. COURSES (Evelyn)
     11. CAREERS AND INTERNSHIPS (Evelyn)
-    11. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+    12. INTERDISCIPLINARY COLLABORATIONS (Sherry)
+    13. APPLY (Sherry)
 *****************************************/
 
 /* ****************************************
@@ -49,9 +50,13 @@
     /*Orange*/
     --darkaccent-color: #cb5227;
     --brightaccent-color: #ea8b4f;
+    --dark-orange: #762C13;
+    --orange-card-bg: #FFDAC2;
     /*Blue*/
     --callout-color: #1d3869;
     --lightcallout-color: #72a4d7;
+    --dark-blue: #13294E;
+    --blue-card-bg: #92BDEA;
     /*Layout*/
     --spacer: 1rem;
     --spacer-dbl: calc(var(--spacer)*2);
@@ -92,6 +97,7 @@ h2 {
 
 h3,
 h4 {
+    font-family: var(--secondary-heading);
     font-size: 1.6rem;
 }
 
@@ -1034,3 +1040,9 @@ figcaption {
             margin: auto;
         }
     }
+
+/* ****************************************
+*******************************************
+    13. APPLY (Sherry)
+*******************************************
+***************************************** */

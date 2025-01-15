@@ -414,6 +414,26 @@ article.mission p {
 }
 
 /* FIGURE&FIGCAPTION OVERLAY */
+/*figure {
+    margin: calc(var(--spacer)/2);
+    position: relative;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1.6rem;
+    color: black;
+    background-color: var(--legend-background);
+    text-shadow: 1px 0 0 white,
+        -1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white;
+    padding-top: var(--spacer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}*/
 figure.landingFig { 
     position: relative; 
     margin-top: 1.5em;
@@ -425,6 +445,7 @@ figure.landingFig figcaption {
     position: absolute;
     bottom: .2rem;
     width: 98.9%;
+    max-width: 98.9%;
     margin: 0em .05em;
     font-size: 3.5em;
     /*USED TO OUTLINE TEXT IN FIGCAPTIONS*/

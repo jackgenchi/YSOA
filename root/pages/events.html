@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Yale School of Art</title>
-        <link rel="stylesheet" href="../css/reset.css" type="text/css">
-        <!--GOOGLE FONTS-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
-        <!--FONT AWESOME ALL-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!--MAIN CSS-->
-        <link rel="stylesheet" href="../css/main.css" type="text/css">
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-    </head>
-    <!--
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yale School of Art</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap"
+        rel="stylesheet">
+    <!--FONT AWESOME ALL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<!--
     Accessibility steps:
     Use semantic HTML markup to provide a clear and logical structure to the content and navigation.
     Use ARIA (Accessible Rich Internet Applications) roles, states, and properties to describe the purpose and behavior of elements and components.
@@ -26,290 +30,324 @@
     Provide keyboard shortcuts or access keys for frequently used actions or links.
     Test the website with a keyboard-only interface or with assistive technology, such as screen readers or voice recognition software.
 -->
-    
-    <body id="events">    
-        <header>
-          <img src="../images/crest.png" alt="Yale Crest">
-          <h1>Yale School of Art</h1>
-           <input type="checkbox" class="navToggler" id="navToggler">
-            <nav>
-                <ul>
-                    <li><a href="../pages/about.html">About</a></li>
-                    <li><a href="../pages/apply.html">Apply</a></li>
-                    <li><a href="../pages/learn.html">Learn &amp; Collaborate</a></li>
-                    <li><a href="../pages/events.html">Events</a></li>
-                    <li><a href="../pages/news.html">News</a></li>
-                    <li><a href="../pages/works.html">Our Works</a></li>
-                    <li><a href="../pages/resources.html">Student Resources</a></li>
-                </ul> 
-            </nav>
-            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+
+<body id="events">
+    <header>
+        <img src="../images/crest.png" alt="Yale Crest">
+        <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
+        <input type="checkbox" class="navToggler" id="navToggler">
+        <nav>
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/apply.html">Apply</a></li>
+                <li><a href="../pages/learning.html">Learn &amp; Collaborate</a></li>
+                <li><a href="../pages/events.html">Events</a></li>
+                <li><a href="../pages/news.html">News</a></li>
+                <li><a href="../pages/works.html">Our Works</a></li>
+                <li><a href="../pages/resources.html">Student Resources</a></li>
+                <li><a href="../pages/interdisciplinary.html">Interdisc Collabs</a></li>
+                <li><a href="../pages/careers_internships.html">Careers</a></li>
+                <li><a href="../pages/courses.html">Courses</a></li>
+            </ul>
+        </nav>
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
             <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
             <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
-            <!--span class="material-icons mi menuOpen">menu</span>
-            <span class="material-icons mi menuClose">close</span></label--> 
-        </header>
-        
-        <main>
-            <section class="blurb">
-                <h2>Public Events</h2>
-                <p>Stay inspired and connected! Explore our calendar of exhibitions, lectures, workshops, and performances
-                    showcasing the talent and creativity of our community. Whether you're a student, artist, or art enthusiast,
-                    there's something for everyone. <br /> <br /> Discover what's happening now and join us in celebrating the arts!
-                </p>
-            </section>
-            
+    </header>
 
-            <section class="calendarHeader">
-                <select name="monthSelection" id="monthSelection">
-                    <option value="January2025">January 2025</option>
-                    <option value="February2025">February 2025</option>
-                    <option value="March2025">March 2025</option>
-                    <option value="April2025">April 2025</option>
-                    <option value="May2025">May 2025</option>
-                    <option value="June2025">June 2025</option>
-                    <option value="July2025">July 2025</option>
-                    <option value="August2025">August 2025</option>
-                    <option value="September2025">September 2025</option>
-                  </select>
-    
-                  <span class="calendarHeaderBtns">
-                    <button class="subscribeBtn">Subscribe</button> <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                </span>
-            </section>
-            
+    <main>
+        <section class="blurb">
+            <h2>Public Events</h2>
+            <p>Stay inspired and connected! Explore our calendar of exhibitions, lectures, workshops, and performances
+                showcasing the talent and creativity of our community. Whether you're a student, artist, or art
+                enthusiast,
+                there's something for everyone. <br /> <br /> Discover what's happening now and join us in celebrating
+                the arts!
+            </p>
+        </section>
 
-            <section id="eventCards">
-                <article class="eventCardLarge event1">
-                    <span class="eventCardImage"></span>
-                    <section class="eventCardBody">
-                        <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i>November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i>6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i>1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
 
-                <article class="eventCardLarge event2">
-                    <span class="eventCardImage" aria-hidden="true"></span>
-                    <section class="eventCardBody">
-                        <h3>Admissions Virtual Visit 1: MFA Program, Admission + Financial Aid Overview</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
+        <section class="calendarHeader">
+            <select name="monthSelection" id="monthSelection">
+                <option value="January2025">January 2025</option>
+                <option value="February2025">February 2025</option>
+                <option value="March2025">March 2025</option>
+                <option value="April2025">April 2025</option>
+                <option value="May2025">May 2025</option>
+                <option value="June2025">June 2025</option>
+                <option value="July2025">July 2025</option>
+                <option value="August2025">August 2025</option>
+                <option value="September2025">September 2025</option>
+            </select>
 
-                <article class="eventCardLarge event3">
-                    <span class="eventCardImage"></span>
-                    <section class="eventCardBody">
-                        <h3>Admissions Virtual Visit 2: Faculty Admission Committee Panel Discussion</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
+            <span class="calendarHeaderBtns">
+                <button class="subscribeBtn">Subscribe</button> <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </span>
+        </section>
 
-                <article class="eventCardLarge event4">
-                    <span class="eventCardImage"></span>
-                    <section class="eventCardBody">
-                        <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
 
-                <article class="eventCardLarge event5">
-                    <span class="eventCardImage"></span>
-                    <section class="eventCardBody">
-                        <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
+        <section id="eventCards">
+            <article class="eventCardLarge event1">
+                <span class="eventCardImage"></span>
+                <section class="eventCardBody">
+                    <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i>November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i>6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i>1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
 
-                <article class="eventCardLarge event6">
-                    <span class="eventCardImage"></span>
-                    <section class="eventCardBody">
-                        <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
-                        <ul class="eventQuickDetails">
-                            <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
-                            <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
-                            <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
-                        </ul>
-                        <p class="eventDescription">Fall 2024 1st-Year MFA Show
-                            Public reception: Friday, November 15, 6-8PM
-                            Open to the Yale community and invited, accompanied guests.
-                            Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew
-                            Warner,
-                            Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian
-                            Badach,
-                            Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch,
-                            Faye
-                            Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
-                            Hongting
-                            Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez, Kiki
-                            Serna,
-                            Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
-                            Priscilla
-                            Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang, Yuna Cho,
-                            and
-                            Yuwei Tu.
-                            Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
-                        <button class="roundBorder moreDetails">More Details</button>
-                    </section>
-                </article>
+            <article class="eventCardLarge event2">
+                <span class="eventCardImage" aria-hidden="true"></span>
+                <section class="eventCardBody">
+                    <h3>Admissions Virtual Visit 1: MFA Program, Admission + Financial Aid Overview</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
 
-            </section>
+            <article class="eventCardLarge event3">
+                <span class="eventCardImage"></span>
+                <section class="eventCardBody">
+                    <h3>Admissions Virtual Visit 2: Faculty Admission Committee Panel Discussion</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
 
-        </main>
-        
-        
-        <!--FOOTER-->
-        <footer>          
-           <a href="#" class="btt">Back to top</a>          
-           <ul class="socials">
-               <li><a href="#"><img src="../images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
-               <li><a href="#"><img src="../images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
-               <li><a href="#"><img src="../images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
-           </ul>
-           <nav>
-               <ul class="footerLinks">
-                    <li><a href="#" class="schoolName">Yale School of Art</a></li>
-                    <li><a href="#">Support the School</a></li>
-                    <li><a href="#">Visiting</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Accessibility at Yale</a></li>
-                </ul>
-            </nav>
-            <img src="../images/crest.png" alt="yale crest">
-            <p>Copyright &copy; 2024 Yale University All Rights Reserved</p>
-        </footer>
+            <article class="eventCardLarge event4">
+                <span class="eventCardImage"></span>
+                <section class="eventCardBody">
+                    <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
 
-        <script>
-            $(document).ready(function(){
-                $(".moreDetails").click(function(){
-                    $(this).parent().toggleClass("showContent");
+            <article class="eventCardLarge event5">
+                <span class="eventCardImage"></span>
+                <section class="eventCardBody">
+                    <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
 
-                    var replaceText = $(this).parent().hasClass("showContent") ? "Less Details" : "More Details";
-                    $(this).text(replaceText);
-                });
+            <article class="eventCardLarge event6">
+                <span class="eventCardImage"></span>
+                <section class="eventCardBody">
+                    <h3>"Feedback Loop" — First-Year MFA Exhibition</h3>
+                    <ul class="eventQuickDetails">
+                        <li class="calDate"><i class="fa-regular fa-calendar"></i> November 13 - December 13</li>
+                        <li class="p1"><i class="fa-regular fa-clock"></i> 6:00pm</li>
+                        <li class="p2"><i class="fa-solid fa-location-dot"></i> 1156 Chapel Rd, San Diego, CA 92134</li>
+                    </ul>
+                    <p class="eventDescription">Fall 2024 1st-Year MFA Show
+                        Public reception: Friday, November 15, 6-8PM
+                        Open to the Yale community and invited, accompanied guests.
+                        Featuring work by Alixe Turner, Amanda Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang,
+                        Andrew
+                        Warner,
+                        Aru Apaza, Bendy Sohn, Cameron Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole,
+                        Christian
+                        Badach,
+                        Christopher Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith
+                        Couch,
+                        Faye
+                        Wei Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                        Hongting
+                        Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh Vasquez,
+                        Kiki
+                        Serna,
+                        Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad Yahya, Olivia Reavey,
+                        Priscilla
+                        Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben, Wenqing Zhai, Xiwen Zhang,
+                        Yuna Cho,
+                        and
+                        Yuwei Tu.
+                        Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.</p>
+                    <button class="roundBorder moreDetails">More Details</button>
+                </section>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!--FOOTER-->
+    <footer>
+        <a href="#" class="btt">Back to top</a>
+        <ul class="socials">
+            <li><a href="#"><img src="../images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+            <li><a href="#"><img src="../images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+            <li><a href="#"><img src="../images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+        </ul>
+        <nav>
+            <ul class="footerLinks">
+                <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
+                <li><a href="#">Support the School</a></li>
+                <li><a href="#">Visiting</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Accessibility at Yale</a></li>
+            </ul>
+        </nav>
+        <img src="../images/crest.png" alt="yale crest">
+
+        <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $(".moreDetails").click(function () {
+                $(this).parent().toggleClass("showContent");
+
+                var replaceText = $(this).parent().hasClass("showContent") ? "Less Details" : "More Details";
+                $(this).text(replaceText);
             });
-            
-        </script>
-    </body>
-    
+        });
+
+    </script>
+</body>
+
 </html>

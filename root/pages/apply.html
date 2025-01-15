@@ -1,0 +1,327 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YSoA Apply</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <!--FONT AWESOME ALL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+
+    <!--This JQuery creates the interactivity for the Q&A on the Apply page.  It allows all the answers to be expanded and collapsed at once or for each drawer to be opened and closed independently of the other drawers.  It also makes an icon of a plus sign appear when the answer is collapsed and an icon of a minus sign appear when the answer is expanded. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.answers').hide();
+            $('.hide').hide();
+            $('#collapseAll').hide();
+
+            $('#expandAll').click(function() {
+                $("#collapseAll").show();
+                $(".hide").show();
+                $(".show").hide();
+                $(".answers").show();
+                $('#expandAll').hide();
+            }); //end toggle
+
+            $('#collapseAll').click(function() {
+                $("#expandAll").show();
+                $(".hide").hide();
+                $(".show").show();
+                $(".answers").hide();
+                $('#collapseAll').hide();
+            }); //end toggle
+
+            $('#question1').click(function() {
+                $("#answer1").toggle();
+                $("#hide1").toggle();
+                $("#show1").toggle();
+            }); //end toggle
+
+            $('#question2').click(function() {
+                $("#answer2").toggle();
+                $("#hide2").toggle();
+                $("#show2").toggle();
+            }); //end toggle
+
+            $('#question3').click(function() {
+                $("#answer3").toggle();
+                $("#hide3").toggle();
+                $("#show3").toggle();
+            }); //end toggle
+
+            $('#question4').click(function() {
+                $("#answer4").toggle();
+                $("#hide4").toggle();
+                $("#show4").toggle();
+            }); //end toggle
+
+            $('#question5').click(function() {
+                $("#answer5").toggle();
+                $("#hide5").toggle();
+                $("#show5").toggle();
+            }); //end toggle
+
+            $('#question6').click(function() {
+                $("#answer6").toggle();
+                $("#hide6").toggle();
+                $("#show6").toggle();
+            }); //end toggle
+
+            $('#question7').click(function() {
+                $("#answer7").toggle();
+                $("#hide7").toggle();
+                $("#show7").toggle();
+            }); //end toggle
+
+        }); //end ready function
+
+    </script>
+    <!--End of JQuery for interactive Q$A functionality-->
+
+    <style>
+        /*  _________renumber headers__________*/
+
+        #babyBlue {
+            width: 125px;
+            height: 125px;
+            float: left;
+            shape-outside: circle(50%);
+            margin-right: 2rem;
+        }
+
+        #miniPainter {
+            display: block;
+            margin: .5rem auto;
+            height: 50px;
+            filter: grayscale(100%);
+            filter: drop-shadow(5px 4px 3px grey);
+        }
+
+        #miniPainter:hover {
+            transform: translateY(-35px);
+            transition-duration: .5s;
+            animation-iteration-count: 10;
+            animation-timing-function: ease-in;
+        } /*Animation levitates the painter bulldog icon*/
+
+        .bold {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        #apply h3 {
+            font-size: 2rem;
+            background-color: #1d3869;
+            color: white;
+        }
+
+        #apply h3 span {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /*Class Selectors*/
+        .show,
+        .hide {
+            font-size: 3rem;
+            background-color: rgba(114, 164, 215, .75);
+            color: black;
+            padding-left: .75rem;
+            padding-right: .75rem;
+            border: solid 2px rgba(255, 255, 255, 0.75);
+            border-radius: 50%;
+        }
+
+        .hide {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+
+        .appQuestions {
+            padding: 4rem;
+        }
+        
+        .answers {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        
+        .answers p, #appOverview p {
+            line-height: 160%;
+        }
+        
+        #answer2 ol {
+            font-size: 1.7rem;
+        }
+        
+        #answer2 ol l1 {
+            line-height: 160%;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        #apply h4,
+        #expandAll,
+        #collapseAll {
+            background-color: rgba(234, 139, 79, .5);
+            text-align: center;
+            padding: 1rem;
+            font-size: 2rem;
+            letter-spacing: .75rem;
+        }
+        
+        #expandAll,
+        #collapseAll {
+             background-color: rgba(114, 164, 215, .5);
+        }
+
+        /*ID selector*/
+        #apply {
+            max-width: 800px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+  <header>
+          <img src="../images/crest.png" alt="Yale Crest">
+          <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
+           <input type="checkbox" class="navToggler" id="navToggler">
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="learning.html">Learn &amp; Collaborate</a></li>
+                    <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="works.html">Our Works</a></li>
+                    <li><a href="resources.html">Student Resources</a></li>
+                    <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
+                    <li><a href="careers_internships.html">Careers</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                </ul> 
+            </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+            <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
+            <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
+        </header>
+
+
+    <main id="apply">
+        <section id="appOverview">
+            <h2>Apply</h2>
+            <p><img src="../images/bulldogDan.jpg" alt="graphic of a bulldog in dark blue" id="babyBlue">Thank you for your interest in applying to the Yale School of Art. As the leading M.F.A. program in the country, the Yale School of Art remains situated within the larger research university. Our artists are drawn to the many opportunities to engage with faculty, students, and resources from all areas of the campus. Our excellent studio-based education is enhanced with courses and workshops that explore the intersections of art through cultural, social, political, and economic perspectives. Students work closely with a renowned faculty and visiting critics composed of internationally recognized artists, designers, curators, and scholars to further develop their professional practice. <span class="bold">The Frequently Asked Questions </span> below cover the details of the application process.</p>
+            <img src="../images/bulldogArtist.png" alt="graphic of a bulldog holding a paintbrush" id="miniPainter">
+        </section>
+
+        <section>
+            <p id="expandAll">+Expand All</p>
+            <p id="collapseAll">-Collapse All</p>
+            <h3 class="appQuestions"><span id="question1"><span class="show" id="show1">+</span><span class="hide" id="hide1">-</span>When is the application period for the M.F.A. Program at the Yale School of Art?</span></h3>
+            <div class="answers" id="answer1">
+                <p>Online applications for programs beginning in the 2025–2026 academic year must have been uploaded no later than 11:59 p.m. EST on Friday, January 10, 2025. For the 2026-2027 admission cycle, applications will be accepted from October to January. Applications may not be submitted past the deadline. Please expect that when many applicants are uploading simultaneously near the deadline, there may be lengthier processing times. <a href="https://apply.art.yale.edu/apply"> Online application</a> </p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question2"><span class="show" id="show2">+</span><span class="hide" id="hide2">-</span>What materials are needed to apply the Yale School of Art?</span></h3>
+            <div class="answers" id="answer2">
+                <ol>
+                    <l1>1. An <a href="https://apply.art.yale.edu/apply"> online application</a> .</l1>
+                    <l1>2. Application fee: $100 US, non-refundable as of January 11. </l1>
+                    <l1>3. Statement: A one-page (500 word) statement that addresses influences, interests, current work direction, lived experience (as it relates to art/design practice), and reasons for applying to graduate school at this time. </l1>
+                    <l1>4. References: From three persons, preferably individuals practicing/teaching in the field or who know the applicant and the work of the applicant. </l1>
+                    <l1>5. Transcripts of academic record for the bachelor degree and/or professional art schools attended. Student/unofficial copies may be uploaded to the application for the preliminary jury. Official transcripts will only be required for applicants invited to interview. </l1>
+                    <l1>Portfolio of work: The portfolio should represent images of your best work, indicate your current direction and demonstrate your ability.</l1>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question3"><span class="show" id="show3">+</span><span class="hide" id="hide3">-</span>How should I prepare my portfolio?</span></h3>
+            <div class="answers" id="answer3">
+                <h4>Graphic Design</h4>
+                <p>Submit a total of twenty still images and/or moving image files that represent your strongest work. When presenting book-related designs, show a cover and one representative spread in a single image file, at maximum. Alternatively, a short video showing a few spreads may be prepared. For websites, show just one still web page per image file, or prepare a short video showing three to four frames being clicked or scrolled. A complex, systems-related project should be edited to two or three of the strongest components. Three-dimensional works should show the surrounding space and context. Limit the use of detail images to situations where they are considered absolutely necessary. When presenting both still and moving images, please present them in two groups, with all still images followed by all moving images. Within these groups, place files in chronological order starting with the oldest and ending with the most recent work.</p>
+                <h4>Painting/Printmaking</h4>
+                <p> Submit sixteen still images and/or moving image files that represent your strongest work, ideally completed within the last two years. We recommend selecting work made in the last twelve months for at least half the total portfolio selections. The admissions committee is concerned with scale and the tactility of the work; as such, paintings and drawings should be photographed showing the edge of the work (do not digitally crop the file or mask in black to the edges of the work). Documentation of three-dimensional works should consider the surrounding space and context. Image details should only be included if considered necessary. </p>
+                <h4>Photography</h4>
+                <p>Submit a total of twenty still images and/or moving image files that represent your strongest work and indicate subject matter(s) of interest. We recommend selecting work made in the last twelve months for at least half the total portfolio selections. Indicate the photographic format used to make your pictures. If you are presenting both still and moving images, group still images first, followed by time-based files.</p>
+                <h4>Sculpture</h4>
+                <p>Submit a total of twenty examples of work, ideally completed within the last two years. We recommend selecting work made in the last twelve months for at least half the portfolio selections. The admissions committee is concerned with scale and the tactility of the work, as well as fabrication techniques. Documentation of three-dimensional works should consider the surrounding space and context. Detail photos of works may be included if considered necessary; limit to no more than two details. If you are presenting both still and moving images, group still images first, followed by time-based files.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question4"><span class="show" id="show4">+</span><span class="hide" id="hide4">-</span>Is financial aid available for students?</span></h3>
+            <div class="answers" id="answer4">
+                <p>Financial aid is available in a combination of work-study, education loans, and scholarship to assist students in financing their education. In conformity with university policy, financial assistance is determined only after a student has been accepted for admission and is awarded solely on the basis of demonstrated financial need and available resources within the Yale School of Art. The school determines financial need in accordance with formulas established by federal and institutional methodologies. At present, more than 80 percent of students in the School receive some form of financial aid. There are no scholarships based on merit or any criteria other than financial need. </p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question5"><span class="show" id="show5">+</span><span class="hide" id="hide5">-</span>What housing options are available?</span></h3>
+            <div class="answers" id="answer5">
+                <p>The Yale Graduate Housing Office has dormitory and apartment units available for graduate and professional students. Dormitories are single-occupancy and two bedroom units of varying sizes and prices. They are located across the campus, from Edward S. Harkness Memorial Hall, serving the medical campus, to 254 and 276 Prospect Street and 272 Elm Street, serving the central/science campus. Unfurnished apartments consisting of efficiencies and one-, two-, and three-bedroom apartments for singles and families are also available. Family housing is available in Whitehall and Esplanade Apartments. </p>
+                <p>The <a href="https://housing.yale.edu">Graduate Housing Website</a> is the venue for graduate housing information and includes dates, procedures, facility descriptions, floor plans, and rates. The Yale Graduate Housing Office also manages the <a href="http://offcampusliving.yale.edu">Off Campus Living Listing Service</a>, which is the exclusive Yale service for providing off-campus rental and sales listings from New Haven landlords. This secure system allows members of the Yale community to search rental listings, review landlord/property ratings, and search for a roommate in the New Haven area.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question6"><span class="show" id="show6">+</span><span class="hide" id="hide6">-</span>Where do I find information about accessibility?</span></h3>
+            <div class="answers" id="answer6">
+                <p><a href="https://sas.yale.edu">Student Accessibility Services</a> (SAS) engages in an interactive process with Yale students, including undergraduate, graduate, and professional-school students with permanent conditions and/or temporary injuries, to determine reasonable and appropriate accommodations on a case-by-case basis. Registration with SAS is confidential, and faculty/staff are notified of approved accommodations on a need-to-know basis only, except when required by law for health and safety reasons. Students may upload supporting documentation regarding their condition and request for accommodations with their accommodation request form.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="appQuestions"><span id="question7"><span class="show" id="show7">+</span><span class="hide" id="hide7">-</span>What resources are available for international students?</span></h3>
+            <div class="answers" id="answer7">
+                <p><a href="http://oiss.yale.edu">The Office of International Students and Scholars</a> (OISS) coordinates services and support for more than 6,300 international students, faculty, staff, and their dependents at Yale. OISS assists international students and scholars with issues related to employment, immigration, personal and cultural adjustment, and serves as a source of general information about living at Yale and in New Haven. As the representative for immigration concerns, OISS helps students and scholars obtain and maintain legal nonimmigrant status in the United States.</p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!--FOOTER-->
+ <footer>          
+           <a href="#" class="btt">Back to top</a>          
+           <ul class="socials">
+               <li><a href="#"><img src="../images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+               <li><a href="#"><img src="../images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+               <li><a href="#"><img src="../images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+           </ul>
+            <nav>
+                <ul class="footerLinks">
+                    <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
+                    <li><a href="#">Support the School</a></li>
+                    <li><a href="#">Visiting</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Accessibility at Yale</a></li>
+                </ul>
+            </nav>
+            <img src="../images/crest.png" alt="yale crest">
+           
+            <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
+        </footer>
+
+</body>
+
+</html>

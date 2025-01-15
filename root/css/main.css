@@ -842,6 +842,7 @@ a .fa-facebook {
 .eventCardLarge {
     background-color: #71A3D8;
     width: 100%;
+    height: fit-content;
     max-width: 362px;
     border-radius: 1em;
     color: #1A386A;
@@ -888,8 +889,8 @@ a .fa-facebook {
 
 .event4 span {
     background-image:
-    url("../images/virtualVisitEvent.png"),
-    url("../images/virtualVisitEvent.png");
+    url("../images/threshold.jpg"),
+    url("../images/threshold.jpg");
     background-color: lightgray;
     background-position: 50%;
     background-size: contain, cover;
@@ -898,8 +899,8 @@ a .fa-facebook {
 
 .event5 span {
     background-image:
-    url("../images/virtualVisitEvent.png"),
-    url("../images/virtualVisitEvent.png");
+    url("../images/imageAsCritique.jpg"),
+    url("../images/imageAsCritique.jpg");
     background-color: lightgray;
     background-position: 50%;
     background-size: contain, cover;
@@ -908,8 +909,8 @@ a .fa-facebook {
 
 .event6 span {
     background-image:
-    url("../images/virtualVisitEvent.png"),
-    url("../images/virtualVisitEvent.png");
+    url("../images/visitingArtist.jpg"),
+    url("../images/visitingArtist.jpg");
     background-color: lightgray;
     background-position: 50%;
     background-size: contain, cover;
@@ -926,8 +927,8 @@ a .fa-facebook {
 .eventQuickDetails {
     list-style: none;
     display: flex;
-    column-gap: 8px;
-    row-gap: 4px;
+    column-gap: 16px;
+    row-gap: 8px;
     flex-wrap: wrap;
     font-size: 1.4rem;
     font-family: var(--body-font);
@@ -976,7 +977,7 @@ a .fa-facebook {
 
 @media screen and (min-width: 940px) {
     #events main {
-        padding: 40px 160px;
+        padding: 70px 160px 40px;
         max-width: 1120px;
         gap: 32px;
     }

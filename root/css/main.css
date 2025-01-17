@@ -706,7 +706,7 @@ article.bulletin section:nth-of-type(3) a {
         align-self: center;
     }
 
-    .mission p {
+    article.mission p {
         border-left: solid 1px #999;
         padding-left: 1em;
         text-align: left;

@@ -140,14 +140,18 @@ header {
     padding: 2em;
     justify-items: center;
 }
+header a {
+    display: flex;
+    text-decoration: none;
+}
 /* CREST SIZING */
-header img {
+header a img {
     max-height: 4em;
     padding-right: 1em;
 }
 
 /* PREVENTS SCHOOL NAME FROM GETTING CUT OFF AT VERY SMALL WIDTHS < 300PX*/
-header h1 {
+header a h1 {
     min-width: 9em;
 }
 /* SIZING ON YSOA */

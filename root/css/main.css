@@ -938,7 +938,6 @@ article.bulletin section:nth-of-type(3) a {
 #fourPillars h3,
 #forestReflections h3 {
     font-weight: bold;
-    font-size: 
     text-align: center;
     margin: 2rem 0 1rem;
 }
@@ -1375,7 +1374,103 @@ a .fa-facebook {
 *******************************************
 ***************************************** */
 
+#courses main {
+    padding: 20px;
+    gap: 16px;
+    padding-bottom: 2rem;
+}
 
+#courses section {
+    border-bottom: solid 1px rgba(0, 0, 0, .4);
+    padding-bottom: 5em;
+}
+
+#courses section:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+#courses h2 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+#courses table {
+    padding-bottom: 0px;
+}
+
+#courses td:nth-of-type(2),
+#courses td:nth-of-type(1) {
+    background-color: transparent;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+    border-right: solid 2px white;
+}
+
+#courses .showMore {
+    all: unset;
+    display: block;
+    background-color: rgba(114, 164, 215, .5);
+    padding: 1rem;
+    font-size: 2rem;
+    letter-spacing: .75rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 720px){
+    #courses main {
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    #courses main {
+        max-width: 1120px;
+        margin: 0px 160px;
+        align-self: center;
+    }
+
+    #courses h2 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    #courses tr:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #courses td {
+        font-size: 1.6rem;
+        border: none;
+        border-bottom: 2px inset white;
+    }
+
+    #courses td:nth-of-type(1) {
+        text-align: center;
+    }
+
+    #courses td:nth-of-type(2) {
+        padding-left: 45%;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    #courses td:nth-of-type(2):before {
+        text-align: start;
+        content: "Instructor:";
+    }
+
+    #courses td:nth-of-type(3):before {
+        content: "Dates:";
+    }
+
+    #courses td:nth-of-type(4):before {
+        content: "Description:";
+    }
+}
 /* ****************************************
 *******************************************
     11. CAREERS AND INTERNSHIPS (Evelyn)
@@ -1383,30 +1478,30 @@ a .fa-facebook {
 ***************************************** */
 
 /* General page styles */
-#careers_internships main {
+#careersInternships main {
+    padding: 20px;
     gap: 16px;
     flex-wrap: wrap;
     align-content: center;
     max-width: 402px;
     margin: auto;
-    padding: 20px;
 
 }
 
-#careers_internships h2 {
+#careersInternships h2 {
     padding-top: 0;
 }
 
-#careers_internships .opportunitiesSection {
+#careersInternships .opportunitiesSection {
     border-bottom: solid 1px rgba(0, 0, 0, .4);
     padding-bottom: 5em;
 }
 
-#careers_internships strong {
+#careersInternships strong {
     font-weight: bold;
 }
 
-#careers_internships .bulletinCards {
+#careersInternships .bulletinCards {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1415,7 +1510,7 @@ a .fa-facebook {
 }
 
 /* Styles for bulletin cards with no image */
-#careers_internships .bulletinCard {
+#careersInternships .bulletinCard {
     padding: 1.6rem;
     display: flex;
     flex-direction: column;
@@ -1423,13 +1518,12 @@ a .fa-facebook {
     background-color: var(--orange-card-bg);
     width: 100%;
     height: fit-content;
-    /* max-width: 362px; */
     border-radius: 1em;
     color: var(--dark-orange);
 }
 
-#careers_internships .bulletinCard h3,
-#careers_internships .bulletinCardWithImage h3 {
+#careersInternships .bulletinCard h3,
+#careersInternships .bulletinCardWithImage h3 {
     line-height: 130%;
     font-size: 2rem;
     display: -webkit-box;
@@ -1438,7 +1532,7 @@ a .fa-facebook {
     overflow: hidden;
 }
 
-#careers_internships .bulletinDescription {
+#careersInternships .bulletinDescription {
     height: fit-content;
     width: 100%;
     display: -webkit-box;
@@ -1447,12 +1541,12 @@ a .fa-facebook {
     overflow: hidden;
 }
 
-#careers_internships .bulletinCard .bulletinDescription {
+#careersInternships .bulletinCard .bulletinDescription {
     -webkit-line-clamp: 14;
 }
 
-#careers_internships .bulletinCard .moreDetails,
-#careers_internships .bulletinCardWithImage .moreDetails {
+#careersInternships .bulletinCard .moreDetails,
+#careersInternships .bulletinCardWithImage .moreDetails {
     height: 4rem;
     width: fit-content;
     padding: 10px 24px;
@@ -1464,32 +1558,31 @@ a .fa-facebook {
     border-style: none;
 }
 
-#careers_internships .bulletinCard.showContent h3,
-#careers_internships .bulletinCard.showContent .bulletinDescription,
-#careers_internships .bulletinCardWithImage .bulletinCardBody.showContent h3,
-#careers_internships .bulletinCardWithImage .bulletinCardBody.showContent .bulletinDescription {
+#careersInternships .bulletinCard.showContent h3,
+#careersInternships .bulletinCard.showContent .bulletinDescription,
+#careersInternships .bulletinCardWithImage .bulletinCardBody.showContent h3,
+#careersInternships .bulletinCardWithImage .bulletinCardBody.showContent .bulletinDescription {
     height: auto;
     display: block;
 }
 
 /* Styles for bulletin card WITH image */
-#careers_internships .bulletinCardWithImage {
+#careersInternships .bulletinCardWithImage {
     background-color: var(--orange-card-bg);
     width: 100%;
     height: fit-content;
-    /* max-width: 362px; */
     border-radius: 1em;
     color: var(--dark-orange);
 }
 
-#careers_internships .bulletinCardWithImage .bulletinCardBody {
+#careersInternships .bulletinCardWithImage .bulletinCardBody {
     padding: 1.6rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
 }
 
-#careers_internships .bulletinCardImage {
+#careersInternships .bulletinCardImage {
     display: block;
     border-radius: 1em 1em 0 0;
     width: 100%;
@@ -1502,44 +1595,42 @@ a .fa-facebook {
     background-repeat: no-repeat;
 }
 
-#careers_internships .ourHouse .bulletinCardImage {
+#careersInternships .ourHouse .bulletinCardImage {
     background-image:
         url("../images/careers-OurHouse.jpg"),
         url("../images/careers-OurHouse.jpg");
 }
 
-#careers_internships .textile .bulletinCardImage {
+#careersInternships .textile .bulletinCardImage {
     background-image:
         url("../images/careers-Textile.jpg"),
         url("../images/careers-Textile.jpg");
 }
 
-#careers_internships .newHaven .bulletinCardImage {
+#careersInternships .newHaven .bulletinCardImage {
     background-image:
         url("../images/careers-NewHaven.jpg"),
         url("../images/careers-NewHaven.jpg");
 }
 
-#careers_internships .japanParade .bulletinCardImage {
+#careersInternships .japanParade .bulletinCardImage {
     background-image:
         url("../images/careers-JapanParade.jpg"),
         url("../images/careers-JapanParade.jpg");
 }
 
-#careers_internships .mixMaster .bulletinCardImage {
+#careersInternships .mixMaster .bulletinCardImage {
     background-image:
         url("../images/careers-MixMaster.jpg"),
         url("../images/careers-MixMaster.jpg");
 }
 
 /* Contact Form Styles */
-
 #contactForm {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     margin: 0 1rem;
-
 }
 
 fieldset {
@@ -1563,13 +1654,14 @@ legend {
     font-size: 1.6rem;
 }
 
-#contactForm ul {
+#contactFormContents {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
-#contactForm .text-input {
+#contactForm .textInput, #areaOfStudy {
     width: 100%;
     height: 35px;
     border: 1px solid #ccc;
@@ -1580,72 +1672,115 @@ legend {
     font-size: 1.6rem;
 }
 
+#contactForm .radioInput {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.radioInput li {
+    height: 25px;
+    width: 40%;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+#yearOptions.radioInput li {
+    width: fit-content;
+}
+
+.radioInput input {
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+}
+
 #contactForm #message {
     height: 180px;
 }
 
+#contactForm input[type="submit"]{
+    height: 4rem;
+    width: fit-content;
+    padding: 10px 24px;
+    margin: 0 auto;
+    color: white;
+    background-color: var(--dark-orange);
+    font: var(--body-font);
+    font-size: 1.4rem;
+    border-style: none;
+    border-radius: var(--corners);
+}
+
 /* Mid-Screen Styles */
 @media screen and (min-width: 720px) {
-    #careers_internships main {
+    #careersInternships main {
         margin: 0px auto;
         max-width: 100%;
         gap: 32px;
     }
 
-    #careers_internships .bulletinCard,
-    #careers_internships .bulletinCardWithImage {
+    #careersInternships .bulletinCard,
+    #careersInternships .bulletinCardWithImage {
         width: 48%;
     }
 
-    #careers_internships h2 {
+    #careersInternships h2 {
         margin-top: 40px;
         padding-top: 10px;
     }
 
-    #contactForm ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
+    #contactFormContents {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto) 2fr;
     }
 
     #contactForm li {
-        width: 48%;
+        width: 100%;
+    }
+  
+    #areaOfStudySection {
+        grid-row:4;
     }
 
-    #contactForm input[type="submit"] {
-        height: 4rem;
+    #availabilitySection {
+        grid-area: 3/2/5/-1;
+    }
+
+    #contactForm .radioInput li {
+        width: 40%;
+    }
+    
+    #yearOptions.radioInput li {
         width: fit-content;
-        padding: 10px 24px;
-        margin: 0 auto;
-        color: white;
-        background-color: var(--dark-orange);
-        font: var(--body-font);
-        font-size: 1.4rem;
-        border-style: none;
-        border-radius: var(--corners);
     }
 
     #contactForm .messageBox {
-        width: 98%;
+        grid-area: 5/1/6/-1;
     }
 }
 
 /* Large Screen Styles */
 @media screen and (min-width: 940px) {
-    #careers_internships main {
+    #careersInternships main {
         margin: 0px 160px;
         align-self: center;
         max-width: 1120px;
     }
 
-    #careers_internships h2 {
+    #careersInternships h2 {
         text-align: left;
         padding-left: 0;
     }
 
-    #careers_internships .bulletinCard,
-    #careers_internships .bulletinCardWithImage {
+    #careersInternships .bulletinCard,
+    #careersInternships .bulletinCardWithImage {
         max-width: 362px;
     }
 }

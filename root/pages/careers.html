@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yale School of Art</title>
+    <title>Yale School of Art | Careers</title>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     Test the website with a keyboard-only interface or with assistive technology, such as screen readers or voice recognition software.
 -->
 
-<body id="careers_internships">
+<body id="careersInternships">
     <header>
           <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
           <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1></a>
@@ -41,12 +41,12 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="apply.html">Apply</a></li>
                     <li><a href="learning.html">Learn &amp; Collaborate</a></li>
-                    <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="events.html">Events</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="works.html">Our Works</a></li>
                     <li><a href="resources.html">Student Resources</a></li>
                     <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
-                    <li><a href="careers_internships.html">Careers</a></li>
+                    <li><a href="careers.html">Careers</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="wiki.html">Wiki</a></li>
                 </ul> 
@@ -101,7 +101,7 @@
                         <br><br>
                         As an ambassador for CCAM, the inaugural CCAM x Currents New Media Fellow will have a unique
                         opportunity to showcase their project to a global audience of media artists and innovators at
-                        one of the world’s preeminent new media festivals. The fellowship will fund travel (within the
+                        one of the world's preeminent new media festivals. The fellowship will fund travel (within the
                         U.S. to Santa Fe, NM) and housing costs during the festival.
                         <br><br>
                         The application is open to all current Yale students, including those graduating in Spring 2025.
@@ -710,30 +710,86 @@
 
             <form action="#" method="post" id="saveForm">
                 <!-- Basic Information Section -->
-                <fieldset id="basic-info">
+                <fieldset id="basicInfo">
                     <legend>Contact Form</legend>
 
-                    <ul>
+                    <ul id="contactFormContents">
                         <li>
                             <label for="firstName">First name *</label>
-                            <input type="text" name="firstName" id="firstName" value="" class="text-input" required aria>
+                            <input type="text" name="firstName" id="firstName" value="" class="textInput" required aria>
                         </li>
                         <li>
                             <label for="lastName">Last name *</label>
-                            <input type="text" name="lastName" id="lastName" value="" class="text-input" required>
+                            <input type="text" name="lastName" id="lastName" value="" class="textInput" required>
                         </li>
                         <li>
                             <label for="email">Email *</label>
-                            <input type="email" name="email" id="email" value="" class="text-input" required>
+                            <input type="email" name="email" id="email" value="" class="textInput" required>
                         </li>
                         <li>
-                            <label for="phone-number">Phone number (optional)</label>
-                            <input type="tel" name="phone-number" id="phone-number" value="" class="text-input"
-                                required>
+                            <label for="phoneNumber">Phone number (optional)</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" value="" class="textInput">
+                        </li>
+                        <li id="yearSection">
+                            <label for="year">Year</label>
+                            <ul id="yearOptions" class="radioInput">
+                                <li>
+                                    <input type="radio" name="year" id="yearOne" value="yearOne">
+                                    <label for="yearOne">Year 1 MFA</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="year" id="yearTwo" value="yearTwo">
+                                    <label for="yearTwo">Year 2 MFA</label>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="areaOfStudySection">
+                            <label for="areaOfStudy">Area of Study</label>
+                            <select name="areaOfStudy" id="areaOfStudy">
+                                <option value="photography">Photography</option>
+                                <option value="sculpture">Sculpture</option>
+                                <option value="printPainting">Print/Painting</option>
+                                <option value="digitalDesign">Digital Design</option>
+                            </select>
+                        </li>
+
+                        <li id="availabilitySection">
+                            <label for="availability">Availability</label>
+                            <ul id="availabilityOptions" class="radioInput">
+                                <li>
+                                    <input type="checkbox" name="availability" id="sunday" value="sunday">
+                                    <label for="sunday">Sunday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="monday" value="monday">
+                                    <label for="monday">Monday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="tuesday" value="tuesday">
+                                    <label for="tuesday">Tuesday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="wednesday" value="wednesday">
+                                    <label for="wednesday">Wednesday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="thursday" value="thursday">
+                                    <label for="thursday">Thursday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="friday" value="friday">
+                                    <label for="friday">Friday</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="availability" id="saturday" value="saturday">
+                                    <label for="saturday">Saturday</label>
+                                </li>
+                            </ul>
                         </li>
                         <li class="messageBox">
                             <label for="message">Your message</label>
-                            <textarea name="message" id="message" class="text-input" required></textarea>
+                            <textarea name="message" id="message" class="textInput" required></textarea>
                         </li>
                     </ul>
                     <input type="submit" value="Submit">

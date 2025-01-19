@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yale School of Art</title>
+    <title>Yale School of Art | Courses</title>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--MAIN CSS-->
     <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 </head>
 <!--
     Accessibility steps:
@@ -29,34 +31,595 @@
     Test the website with a keyboard-only interface or with assistive technology, such as screen readers or voice recognition software.
 -->
 
-<body>
+<body id="courses">
     <header>
-          <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
-          <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1></a>
-           <input type="checkbox" class="navToggler" id="navToggler">
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="learning.html">Learn &amp; Collaborate</a></li>
-                    <li><a href="pages/events.html">Events</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="works.html">Our Works</a></li>
-                    <li><a href="resources.html">Student Resources</a></li>
-                    <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
-                    <li><a href="careers_internships.html">Careers</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="wiki.html">Wiki</a></li>
-                </ul> 
-            </nav>
-            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+        <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
+            <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
+        </a>
+        <input type="checkbox" class="navToggler" id="navToggler">
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="learning.html">Learn &amp; Collaborate</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="works.html">Our Works</a></li>
+                <li><a href="resources.html">Student Resources</a></li>
+                <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+            </ul>
+        </nav>
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
             <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
             <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
-        </header>
+    </header>
 
-    <!--NEED CAROUSEL/HERO-->
     <main>
+        <section class="blurb">
+            <h2>Courses</h2>
+            <p>Courses numbered 001 through 099 are offered only to first-year Yale College students. Courses numbered
+                110 through 499 are studio electives offered to students from Yale College, the graduate school, and the
+                professional schools. Permission of the instructor is required for enrollment in all courses. Graduate
+                students of the School of Art who wish to broaden their experience outside their area of concentration
+                have priority in enrollment.
+                <br><br>
+                Courses numbered 500 and above are offered only to graduate students of the School of Art, the graduate
+                school, and the professional schools. Permission of the instructor is required for enrollment in all
+                courses. In exceptional cases, qualified Yale College students may enroll in a graduate course with the
+                permission of both the instructor and the director of undergraduate studies. Please refer to the section
+                on Academic Regulations for further pertinent details. Faculty members teach on both the graduate and
+                undergraduate levels, although the degree and the nature of contact may vary.
+                <br><br>
+                Tutorials, which are special courses that cannot be obtained through regular class content, require a
+                proposal written by the student and the faculty member concerned, defining both content and
+                requirements. Proposals must be presented to the Academic Subcommittee for approval.
+            </p>
+        </section>
 
+        <section id="graphicDesign">
+            <h2>Graphic Design</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Instructor</th>
+                        <th>Dates</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>ART 132a or b, Introduction to Graphic Design</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>A studio introduction to visual communication, with emphasis on the visual organization of
+                            design elements as a means to transmit meaning and values. Topics include shape, color, visual
+                            hierarchy, word-image relationships, and typography. Development of a verbal and visual
+                            vocabulary to discuss and critique the designed world.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 145b, Introduction to Digital Video</td>
+                        <td>Neil Goldberg</td>
+                        <td>M 1:30pm-5:20pm</td>
+                        <td>Introduction to the formal principles and basic tools of digital video production. Experimental
+                            techniques taught alongside traditional HD camera operation and sound capture, using the Adobe
+                            production suite for editing and manipulation. Individual and collaborative assignments explore
+                            the visual language and conceptual framework for digital video. Emphasis on the spatial and
+                            visual aspects of the medium rather than the narrative. Screenings from video art, experimental
+                            film, and traditional cinema. </td>
+                    </tr>
+                    <tr>
+                        <td>ART 264a, Typography!</td>
+                        <td>Alice Chung</td>
+                        <td>MW 10:30am-12:20pm</td>
+                        <td>An intermediate graphic-design course in the fundamentals of typography, with emphasis on ways
+                            in which typographic form and visual arrangement create and support content. Focus on designing
+                            and making books, employing handwork, and computer technology. Typographic history and theory
+                            discussed in relation to course projects. Prerequisite: ART 132.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 266a, Graphic Design Histories</td>
+                        <td>Geoff Kaplan</td>
+                        <td>W 3:30pm-5:20pm</td>
+                        <td>This three-part course examines the role of alternative and underground media in the formation
+                            of social movements in the United States from the mid- to late 20th century, specifically
+                            focusing on graphic design. Our animating question throughout the term is: “can graphic design
+                            be understood as a form of activism or protest?” Looking to histories of graphic innovation
+                            linked to diverse social interests (among them, Black power, women’s liberation, queer activism,
+                            environmentalism, the antiwar movement, independence movements, etc.), we will study the ways in
+                            which collective practices fashion the image of a culture in times of pronounced political
+                            change: as a vehement challenge to the dominance of official media and a critical form of
+                            self-representation. One goal is to consider the implications of such work in the present, a
+                            moment in which corporate media, misinformation campaigns, and algorithmic capitalism has
+                            exerted decisive control over public discourse. </td>
+                    </tr>
+                    <tr>
+                        <td>ART 294b, Technology and the Promise of Transformation</td>
+                        <td>Staff</td>
+                        <td>W 8:25am-12:20pm</td>
+                        <td>Inherent transformative qualities are embedded within technology; it transforms our lives, the way we perceive or make art, and conversely, art can reflect on these transformations. Students explore the implementation of technologies in their art making from pneumatic kinetics, bioengineering, AR, VR, and works assisted by artificial intelligence—modes of production that carry movement, degradation, and displacement of authorship. The student practice is supported by readings, independent research, and essays on diverse artists and designers who make use of technology in their work or, on the contrary, totally avoid it. This course is a curricular collaboration with The Center for Collaborative Arts and Media at Yale (CCAM).</td>
+                    </tr>
+                    <tr>
+                        <td>ART 368b, Graphic Design Methodologies</td>
+                        <td>Pamela Hovland</td>
+                        <td>F 1:30pm-5:20pm</td>
+                        <td>Various ways that design functions; how visual communication takes form and is recognized by an audience. Core issues inherent in design: word and image, structure, and sequence. Analysis and refinement of an individual design methodology. Attention to systematic procedures, techniques, and modes of inquiry that lead to a particular result. Prerequisites: ART 132 and 264, or permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 369a or b, Interactive Design and the Internet: Software for People</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>In this studio course, students create work within the web browser to explore where the internet comes from, where it is today, and where it’s going—recognizing that there is no singular history, present, or future, but many happening in parallel. The course in particular focuses on the internet’s impact on art—and vice versa—and how technological advance often coincides with artistic development. Students will learn foundational, front-end languages HTML, CSS, and JavaScript in order to develop unique graphic forms for the web that are considered alongside navigation, pacing, and adapting to variable screen sizes and devices. Open to Art majors. No prior programming experience required. Prerequisite: ART 132 or permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 468b, Advanced Graphic Design: Ad Hoc Series and Systems</td>
+                        <td>Julian Bittiner</td>
+                        <td>M 1:30pm-5:20pm</td>
+                        <td>Much of the field of design concerns itself with devising systems in an attempt to create aesthetic coherence and reduce creative uncertainties, seeking efficiencies with respect to time, production and materials. However this strategy always comes up against each individual set of circumstances; the materials and content at hand, a particular cast of collaborators, a given timeframe. There is an element of the ad hoc in every piece of design; a need to improvise, interpret, adapt, make exceptions. A second thematic concern of this class is the exploration of medium-specificity and medium-porosity as they relate to such systems. The course is comprised of a series of interconnected prompts across distinct formats in print, motion, and interactive, at a wide variety of scales. A third and final thread is the cultivation of greater awareness of the evolving social and aesthetic functions of design processes, artifacts, and channels of engagement and distribution, within increasingly complex cultural contexts. Prerequisites: ART 264 or 265, and 367 or 368, or permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 469a, Advanced Graphic Design: Interpretation, Translation</td>
+                        <td>Henk Van Assen</td>
+                        <td>Th 8:25am-12:20pm</td>
+                        <td>A probe into questions such as how artists can be present as idiosyncratic individuals in their work, and how that work can still communicate on its own to a broad audience. Concentration on making graffiti, i.e., the design of a set of outdoor marks and tours for New Haven. A technological component is included, both in the metaphor of designing outdoor interaction as a way to learn about screen-based interaction and in the final project to design an interface for a handheld computer. Prerequisites: ART 264 or 265, and 367 or 368, or permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 710a and ART 711b, Preliminary Studio: Graphic Design</td>
+                        <td>Barbara Glauber and Scott Stowell</td>
+                        <td>F 1:30pm-5:30pm</td>
+                        <td>For students entering the three-year program. This preliminary-year studio offers an intensive course of study in the fundamentals of graphic design and visual communication. Emphasis is on developing a strong formal foundation and conceptual skills. Broad issues such as typography, color, composition, letterforms, interactive and motion graphics skills, and production technology are addressed through studio assignments.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 738a and ART 739b, Degree Presentation in Graphic Design</td>
+                        <td>Andrew Walsh-Lister and Julian Bittiner</td>
+                        <td>HTBA</td>
+                        <td>For second-year students. Resolution of the design of the independent project fitting the appropriate medium to content and audience. At the end of the second term, two library copies of a catalogue raisonné with all independent project work are submitted by each student, one of which is retained by the University and the other returned to the student. The independent project or “thesis” is expected to represent a significant body of work accomplished over the course of two years, culminating in the design of an exhibition of the work.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 743b, Letterform Design</td>
+                        <td>Nina Stoessinger</td>
+                        <td>F 2pm-5pm</td>
+                        <td>Designing typefaces means building systems of recombinable letterforms. It is therefore distinct from other letter-making disciplines in that it necessarily calls for a systematic approach. Besides optical and aesthetic issues presented by individual letters, the course focuses on building a consistent typeface design by way of a structured and systematic process. Students create their own digital typefaces, working on individual projects chosen in consultation with the main instructor. The project definition necessarily includes aesthetic as well as functional goals; with the problems of type design so deeply interconnected, a clear project definition is needed to establish relevant criteria for testing and evaluating the work.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 770b, Motion</td>
+                        <td>Shira Inbar</td>
+                        <td>M 10am-1pm</td>
+                        <td>An impactful communication method, motion is inseparable from design process and practice. This course combines studio work with an examination of histories and theories to explore the possibilities and value of time-based design. Focusing on each student's evolving body of work, the course introduces methods and principles including sequential thinking, time and transition comprehension, linear and non-linear narratives, iteration and translation, and behavioral fine-tuning and aims to expand each student's ability to work and think in motion in an integrated, intuitive way.</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <a href="#graphicDesign" class="showMore">+ Show More</a>
+        </section>
+
+        <section id="paintingPrintmaking">
+            <h2>Painting/Printmaking</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Instructor</th>
+                        <th>Dates</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ART 111a or b, Visual Thinking</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>An introduction to the language of visual expression, using studio projects to explore the fundamental principles of visual art. Students acquire a working knowledge of visual syntax applicable to the study of art history, popular culture, and art. Projects address all four major concentrations (graphic design, printing/printmaking, photography, and sculpture). No prior drawing experience necessary. Open to all undergraduates. Required for Art majors.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 114a or b, Basic Drawing</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>An introduction to drawing, emphasizing articulation of space and pictorial syntax. Class work is based on observational study. Assigned projects address fundamental technical and conceptual problems suggested by historical and recent artistic practice. No prior drawing experience required. Open to all undergraduates. Required for Art majors.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 116a, Color Practice</td>
+                        <td>Halsey Rodman</td>
+                        <td>MW 10:30am-12:20pm</td>
+                        <td>Study of the interactions of color, ranging from fundamental problem solving to individually initiated expression. The collage process is used for most class assignments.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 130a or b, Painting Basics</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>A broad formal introduction to basic painting issues, including the study of composition, value, color, and pictorial space. Emphasis on observational study. Course work introduces students to technical and historical issues central to the language of painting. Recommended for non-majors and art majors.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 225b, Adventures in Self-Publishing</td>
+                        <td>Alexander Valentine</td>
+                        <td>TTh 10:30am-12:20pm</td>
+                        <td>This course introduces students to a wide range of directions and legacies within arts publishing, including the development of fanzines, artists' books, small press comics, exhibition catalogues, “just in time” publications, and social media. Students are given instruction in the Yale School of Art's Print Shop on various printing and binding methods leading to the production of their own publications both individually and in collaboration.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 245b, Digital Drawing</td>
+                        <td>Anahita Vossoughi</td>
+                        <td>TTh 3:30pm-5:20pm</td>
+                        <td>Digital techniques and concepts as they expand the possibilities of traditional drawing. The structure of the digital image; print, video, and projected media; creative and critical explorations of digital imaging technologies.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 331b, Intermediate Painting</td>
+                        <td>Kern Samuel</td>
+                        <td>MW 3:30pm-5:20pm</td>
+                        <td>Further exploration of concepts and techniques in painting, emphasizing the individuation of students’ pictorial language. Various approaches to representational and abstract painting. Studio work is complemented by in-depth discussion of issues in historical and contemporary painting.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 332a, Painting Time</td>
+                        <td>Caitlin Keogh</td>
+                        <td>M 1:30pm-5:20pm</td>
+                        <td>Painting techniques paired with conceptual ideas that explore how painting holds time both metaphorically and within the process of creating a work.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 355a, Silkscreen Printing</td>
+                        <td>Alexander Valentine</td>
+                        <td>TTh 1:30pm-3:20pm</td>
+                        <td>Presentation of a range of techniques in silkscreen and photo-silkscreen, from hand-cut stencils to prints using four-color separation. Students create individual projects in a workshop environment.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 356a, Printmaking I</td>
+                        <td>Hasabie Kidanu</td>
+                        <td>MW 10:30am-12:20pm</td>
+                        <td>An introductory course on the historical, material, and collaborative nature of printmaking. Through studio projects, lectures, and critiques, we explore a personal and technological understanding of the print medium.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 421b, Advanced Drawing</td>
+                        <td>Sophy Naess</td>
+                        <td>MW 3:30pm-5:20pm</td>
+                        <td>Further instruction in drawing related to all four disciplines taught in the Art major. Emphasis on the development of students’ conceptual thinking in the context of the physical reality of the drawing process.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 514b, Colorspace</td>
+                        <td>Kern Samuel</td>
+                        <td>M 10am-1pm</td>
+                        <td>Exploration of color systems, visual and psychological qualities of color, and its relationship to language and culture through assignments, critiques, and historical readings.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 537a, Form as Feeling</td>
+                        <td>Jennifer Pranolo</td>
+                        <td>M 2pm-5pm</td>
+                        <td>This course explores the relationship between form and feeling in art, questioning how aesthetic experience intervenes in social, cultural, and political realities.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 552a, The Matrix: Textures and Densities of the Grid</td>
+                        <td>Sophy Naess</td>
+                        <td>W 3:30pm-6:30pm</td>
+                        <td>This print-focused course is intended for M.F.A. students who wish to explore the grid as a principle in their work. The course contextualizes grid-based operations through historical examples and weekly critiques.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 562b, Artists, Teaching</td>
+                        <td>Miranda Samuels</td>
+                        <td>Th 10am-1pm</td>
+                        <td>This course considers approaches to teaching and learning from the perspective of artists, exploring theories, frameworks, and pedagogical models relevant to artistic education.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 586a, Weaving the Moments</td>
+                        <td>Vamba Bility</td>
+                        <td>W 10am-1pm</td>
+                        <td>This course focuses on the techniques of weaving, fiber engagement, and their poetic processes, encouraging students to explore material engagement in relation to their artistic pursuits.</td>
+                    </tr>
+                </tbody>                
+
+            </table>
+            <a href="#paintingPrintmaking" class="showMore">+ Show More</a>
+        </section>
+
+        <section id="photography">
+            <h2>Photography</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Instructor</th>
+                        <th>Dates</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ART 136a, Black & White Photography Capturing Light</td>
+                        <td>Staff</td>
+                        <td>TTh 10:30am-12:20pm</td>
+                        <td>An introductory course in black-and-white photography concentrating on the use of 35mm cameras. Topics include the lensless techniques of photograms and pinhole photography; fundamental printing procedures; and the principles of film exposure and development. Assignments encourage the variety of picture-forms that 35mm cameras can uniquely generate. Student work is discussed in regular critiques. Readings examine the invention of photography and the flâneur tradition of small-camera photography as exemplified in the work of artists such as Henri Cartier-Bresson, Helen Levitt, Robert Frank, and Garry Winogrand.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 138a or b, Digital Photography Seeing in Color</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>The focus of this class is the digital making of still color photographs with particular emphasis on the potential meaning of images in an overly photo-saturated world. Through picture-making, students develop a personal visual syntax using color for effect, meaning, and psychology. Students produce original work using a required digital SLR camera.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 236a, Picturing at the Peabody</td>
+                        <td>Lisa Kereszi</td>
+                        <td>WF 10:30am-12:20pm</td>
+                        <td>A photography course taught at both the School of Art and the Peabody Museum, making use of the museum’s collections for subject matter and inspiration. Students research a specific subject, theme, or collection and investigate it photographically, culminating in an exhibition.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 337b, Picturing Us: Representation in Digital Photography</td>
+                        <td>Tommy Kha</td>
+                        <td>WF 10:30am-12:20pm</td>
+                        <td>Photographic investigation of the politics of visibility and intersectionality. Students explore concepts of identity, visibility, and representation through digital photography. Prerequisite: ART 136, ART 138, or equivalent.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 338a, Contemporary Problems in Color with Digital Photography</td>
+                        <td>Tommy Kha</td>
+                        <td>MW 10:30am-12:20pm</td>
+                        <td>Explores the art of portraiture in digital photography, addressing questions of consent, representation, and observation. Students use digital tools to create original portraiture work.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 379b, Form For Content in Large Format</td>
+                        <td>Benjamin Donaldson</td>
+                        <td>TTh 10:30am-12:20pm</td>
+                        <td>A course for experienced photography students focusing on analog view cameras, lighting, and advanced printing techniques. Includes archival printing of negatives.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 401b, Photography Project Seminar</td>
+                        <td>Lisa Kereszi</td>
+                        <td>MW 10:30am-12:20pm</td>
+                        <td>Students execute a sustained, singular project over the semester. Critiques, artist statements, and guest lectures help frame students' aesthetic concerns.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 812b, The Assignment: Photography, Context, and Response</td>
+                        <td>John Pilson</td>
+                        <td>W 10am-1pm</td>
+                        <td>Explores historical and contemporary examples of photographic “call and response,” looking at artistic integrity, self-reflectivity, and convention-defying approaches.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 821a, Core Curriculum II</td>
+                        <td>Elle Pérez</td>
+                        <td>M 2pm-5pm</td>
+                        <td>A seminar exploring the relationship between form and content in photography through close looking, writing, and student-led discussions.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 822a, Practice and Production</td>
+                        <td>Benjamin Donaldson</td>
+                        <td>Th 1:30pm-4:30pm</td>
+                        <td>For first-year photography students. Covers digital workflow from capture to print, including film scanning, raw image processing, and color management.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 823a, Critical Perspectives in Photography</td>
+                        <td>Staff</td>
+                        <td>Th 3:30pm-6:30pm</td>
+                        <td>For second-year photography students. A team-taught course examining contemporary photography issues through curatorial and critical perspectives.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 825b, What Makes a Book Work?</td>
+                        <td>Lesley Martin</td>
+                        <td>Th 3:30pm-6:30pm</td>
+                        <td>Open to second-year students. Surveys contemporary photobooks with a focus on producing a class book.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 828a and ART 829b, This Means Something: Picture Makers Discuss Their Work and Practice</td>
+                        <td>Staff</td>
+                        <td>W 3:30pm-5:30pm</td>
+                        <td>Guest artists from various disciplines share insights, experiences, and career trajectories with students.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 831b, Picture Show: Thesis in Photography</td>
+                        <td>Lisa Kereszi</td>
+                        <td>M 2pm-5pm</td>
+                        <td>Supports the M.F.A. Photography thesis exhibition, covering logistics, documentation, editing, and artist statements.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 844a and ART 845b, Critique Panel</td>
+                        <td>Staff</td>
+                        <td>T 3:30pm-7:30pm</td>
+                        <td>Weekly open reviews where students present work for critique by rotating faculty panels of artists, curators, and critics.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 887b, The Edit, With Kathy Ryan</td>
+                        <td>Kathleen Ryan</td>
+                        <td>F 2pm-5pm</td>
+                        <td>Explores editorial visual storytelling with Kathy Ryan, director of photography at the New York Times Magazine.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 891a, Eye and Ear</td>
+                        <td>Vinson Cunningham</td>
+                        <td>W 10am-1pm</td>
+                        <td>A seminar designed to help M.F.A. students incorporate writing into their practice and develop language for presenting their work.</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <a href="#photography" class="showMore">+ Show More</a>
+        </section>
+
+        <section id="sculpture">
+            <h2>Scultpure</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Instructor</th>
+                        <th>Dates</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ART 110b, Sculpture Basics</td>
+                        <td>Sandra Burns</td>
+                        <td>MW 1:30pm-3:20pm</td>
+                        <td>Concepts of space, form, weight, mass, and design in sculpture are explored and applied through basic techniques of construction and material, including gluing and fastening, mass/weight distribution, hanging/mounting, and surface/finishing. Hands-on application of sculptural techniques and review of sculptural ideas, from sculpture as a unified object to sculpture as a fragmentary process. The shops and classroom studio are available during days and evenings throughout the week. Enrollment limited to 12. Recommended to be taken before ART 120–125.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 120a, Introduction to Sculpture: Wood</td>
+                        <td>Sae Jun Kim</td>
+                        <td>Th 1:30pm-5:20pm</td>
+                        <td>Introduction to wood and woodworking technology through the use of hand tools and woodworking machines. The construction of singular objects; strategies for installing those objects in order to heighten the aesthetic properties of each work. How an object works in space and how space works upon an object.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 122b, Introduction to Sculpture: Video Installation</td>
+                        <td>Ben Hagari</td>
+                        <td>Th 1:30pm-5:20pm</td>
+                        <td>Exploration of time-based, three-dimensional works through such mediums as performance, video, installation, and sound, with consideration of how they inform contemporary practice. Emphasis on the integration and manipulation of mediums and materials to broaden historical context. Critiques, readings, video screenings, artist lectures, and frequent workshops to complement studio work both during and outside of scheduled class time. Enrollment limited to 12.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 123, How Things Meet</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>This introductory studio course uses the joint or juncture as a literal and metaphorical point of departure for exploring wood and metal fabrication techniques and themes in contemporary art. Through fabrication-based assignments, shop time, discussions, readings, critiques, and field trips, students develop a modular skillset for making parallel to investigating the narrative nature of material, sustainability, and social issues as a foundation for a holistic art practice.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 346b, Dematerial/Material</td>
+                        <td>Desmond Lewis</td>
+                        <td>W 1:30pm-5:20pm</td>
+                        <td>Exploration of questions and topics pertinent to contemporary sculpture through making, writing, reading, looking, critique, discussions, and field trips. Projects become increasingly self-directed as students develop relationships to materials, techniques, and ideas both familiar and new. Limited enrollment. Prerequisite: ART 120, 121, 122, or equivalent; or with permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 348a, Body, Space, and Time</td>
+                        <td>Kameelah Rasheed</td>
+                        <td>Th 1:30pm-5:20pm</td>
+                        <td>Exploration of time-based art mediums such as moving-image work, performance, sound, and installation, with emphasis on the integration and manipulation of different mediums and materials. Ways in which the history of time-based works informs contemporary practice. Individual studio projects as well as workshops in the use of various processes, practices, and techniques. Prerequisite: ART 122 or permission of instructor.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 623b, Hostile Environments</td>
+                        <td>Joseph Buckley</td>
+                        <td>M 10am-1pm</td>
+                        <td>What is a hostile environment? How have environments designed to humiliate, terrorize, and destroy differed in physical, institutional, and psychic contexts? What does it mean for artists today to contend with such conditions—real and imagined? Through readings and discussion in this seminar class, we consider and unpack unpopular and repulsive works and ideas. Together, we work through politics, history, science fiction, and horror, in order to question: How it is that we can continue to exist in these incoming (or already present) hostile environments, as people and as artists?</td>
+                    </tr>
+                    <tr>
+                        <td>ART 630a and ART 631b, Studio Seminar: Sculpture</td>
+                        <td>Staff</td>
+                        <td>T 12pm-3:30pm</td>
+                        <td>Limited to M.F.A. sculpture students. Critique of sculpture, time-based media, and ungainly projects. Students present their work in several venues in the sculpture building. Throughout the year a full ensemble of the sculpture faculty and students meet weekly for critiques in which each student’s work is reviewed at least once per term. During the spring term the format slightly changes to include evaluating work-in-progress, especially the thesis work of second-year students.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 632a and ART 633b, Sculpture Thesis</td>
+                        <td>Staff</td>
+                        <td>F 10am-1pm</td>
+                        <td>The course supports the Sculpture Thesis projects. In the fall term, students develop programmatic contents through the production of a zine. This zine is published as a pdf file as the thesis exhibitions open. The class also focuses on making compelling and feasible proposals for the thesis exhibitions by closely examining spatial, logistical, and technological aspects of individual projects. In the spring term, students continue to meet as a group to prepare for installation and documentation of the exhibitions.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 644a and ART 645b, Individual Criticism: Sculpture</td>
+                        <td>Aki Sasamoto</td>
+                        <td>HTBA</td>
+                        <td>Limited to M.F.A. sculpture students. Criticism of individual projects.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 669a, X-Critique</td>
+                        <td>Aki Sasamoto and Sandra Burns</td>
+                        <td>Th 6pm-9pm</td>
+                        <td>Limited to M.F.A. sculpture students. A critique course focusing on time-based and other ungainly works. Students present their work during class time and have the opportunity for an in-depth critique and discussion about their pieces. There is no singular focus in this critique, as the balance of pragmatic and conceptual considerations surrounding the work is examined and discussed in a fluid way depending on the work at hand and the intent of the artist.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 685, First-Person (Voices Arise from the Seance of Media)</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>In this course: We read, listen to, and watch interviews with various makers of culture that we then discuss to glean content in the hope of gaining knowledge about ourselves, our art, and the lives of others in our surrounding world. Participants also undertake interviews amongst themselves to be broadcast via a low-power radio station (fingers crossed).</td>
+                    </tr>                    
+                </tbody>                
+
+            </table>
+            <a href="#sculpture" class="showMore">+ Show More</a>
+        </section>
+        
+        <section id="filmVideo">
+            <h2>Interdepartmental/Film/Video</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Instructor</th>
+                        <th>Dates</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ART 142a or b / FILM 162a or b, Introductory Documentary Filmmaking</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>The art and craft of documentary filmmaking. Basic technological and creative tools for capturing and editing moving images. The processes of research, planning, interviewing, writing, and gathering of visual elements to tell a compelling story with integrity and responsibility toward the subject. The creation of nonfiction narratives. Issues include creative discipline, ethical questions, space, the recreation of time, and how to represent "the truth."</td>
+                    </tr>
+                    <tr>
+                        <td>ART 241a / FILM 161a, Introductory Film Writing and Directing</td>
+                        <td>Sahraa Karimi</td>
+                        <td>T 1:30pm-5:20pm</td>
+                        <td>Problems and aesthetics of film studied in practice as well as in theory. In addition to exploring movement, image, montage, point of view, and narrative structure, students photograph and edit their own short videotapes. Emphasis on the writing and production of short dramatic scenes. Priority to majors in Art and in Film & Media Studies.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 285b, Digital Animation</td>
+                        <td>Michael Rader</td>
+                        <td>M 1:30pm-5:20pm</td>
+                        <td>Introduction to the principles, history, and practice of animation in visual art and film. Historical and theoretical developments in twentieth- and twenty-first-century animation used as a framework for making digital animation. Production focuses on digital stop-motion and compositing, as well as 2-D and 3-D computer-generated animation. Workshops in relevant software. Prerequisites: ART 111, 114, or 145, and familiarity with Macintosh-based platforms.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 341b / FILM 355b, Intermediate Film Writing and Directing</td>
+                        <td>Jonathan Andrews</td>
+                        <td>T 1:30pm-5:20pm</td>
+                        <td>In the first half of the term, students write three-scene short films and learn the tools and techniques of staging, lighting, and capturing and editing the dramatic scene. In the second half of the term, students work collaboratively to produce their films. Focus on using the tools of cinema to tell meaningful dramatic stories. Priority to majors in Art and in Film & Media Studies. Prerequisites: ART 241.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 342b / FILM 356b, Intermediate Documentary Filmmaking</td>
+                        <td>Michel Auder</td>
+                        <td>W 8:25am-12:20pm</td>
+                        <td>Students explore the storytelling potential of the film medium by making documentaries an art form. The class concentrates on finding and capturing intriguing, complex scenarios in the world and then adapting them to the film form. Questions of truth, objectivity, style, and the filmmaker's ethics are considered by using examples of students' work. Exercises in storytelling principles and screenings of a vast array of films mostly made by independent filmmakers. Limited enrollment. Priority to majors in Art and in Film & Media Studies. Prerequisites: ART 141 or 142.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 384a, Intermediate Stop Motion Puppet Animation</td>
+                        <td>Ben Hagari</td>
+                        <td>M 8:25am-12:20pm</td>
+                        <td>This interdisciplinary studio class explores the life of puppets in stop motion animations. Sculptural objects, photographs, and performances are set into motion through integrated assignments. Exploring materials and ideas from shadow puppet theater; claymation and puppets with movable joints; paper toy theater sets; and stop motion “pixilation” in which real human beings are turned into puppets. The course is designed for hands-on interaction with various collections from Yale centers. Prerequisite: ART 185 or prior experience in animation.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 395a or b, Junior Seminar</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>Ongoing visual projects addressed in relation to historical and contemporary issues. Readings, slide presentations, critiques by School of Art faculty, and gallery and museum visits. Critiques address all four areas of study in the Art major. Prerequisite: at least four courses in Art.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 442a and ART 443b / FILM 483a and FILM 484b, Advanced Film Writing and Directing</td>
+                        <td>Jonathan Andrews</td>
+                        <td>HTBA</td>
+                        <td>A yearlong workshop designed primarily for majors in Art and in Film & Media Studies making senior projects. Each student writes and directs a short fiction film. The first term focuses on the screenplay, production schedule, storyboards, casting, budget, and locations. In the second term students rehearse, shoot, edit, and screen the film. Priority to majors in Art and in Film & Media Studies. Prerequisite: ART 341.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 471a and ART 472b, Independent Projects</td>
+                        <td>Alexandria Smith</td>
+                        <td>HTBA</td>
+                        <td>Independent work that would not ordinarily be accomplished within existing courses, designed by the student in conjunction with a School of Art faculty member. A course proposal must be submitted for approval. Expectations include regular meetings, end-of-term critiques, and a graded evaluation.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 495a or b, Senior Project I</td>
+                        <td>Staff</td>
+                        <td>T 3:30pm-5:20pm</td>
+                        <td>A project of creative work formulated and executed by the student under the supervision of an adviser. Proposals for senior projects are submitted for review and approval. An exhibition of selected work done in the project is expected. Projects are reviewed by an interdisciplinary faculty committee.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 496a or b, Senior Project II</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>A project of creative work formulated and executed by the student under the supervision of an adviser. Proposals for senior projects are submitted for review and approval. An exhibition of selected work done in the project is expected. Projects are reviewed by an interdisciplinary faculty committee.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 949a, Critical & Professional Practices</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>This course is required for all first-year graduate students in the School of Art. Students are enrolled in one of four thematic sections in their first term and receive three credits for completion. Each section focuses on professional skill development and critical studies, culminating in a collaborative final project.</td>
+                    </tr>
+                    <tr>
+                        <td>ART 975a or b, Interdepartmental Group Critique</td>
+                        <td>Staff</td>
+                        <td>HTBA</td>
+                        <td>The four departments in the School of Art have critique opportunities for members of their individual areas. The course is designed for those who are interested in pushing medium orthodoxy aside to explore new understandings. Enrollment is limited. Permission of instructor required.</td>
+                    </tr>
+                </tbody>          
+
+            </table>
+            <a href="#filmVideo" class="showMore">+ Show More</a>
+        </section>
     </main>
 
 
@@ -83,6 +646,26 @@
         <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
     </footer>
 
+    <script>
+        $(document).ready(function () {
+            $("#graphicDesign tbody tr:gt(2), #paintingPrintmaking tbody tr:gt(2), #photography tbody tr:gt(2), #sculpture tbody tr:gt(2), #filmVideo tbody tr:gt(2)").hide();
+
+            $(".showMore").click(function() {
+                var hiddenRows = $(this).parent().find("tbody tr:hidden");
+                var rowsToHide = $(this).parent().find("tbody tr:gt(2)");
+
+                if(hiddenRows.length > 0) {
+                    hiddenRows.slideDown();
+                    $(this).text("- Show Less");
+                } else {
+                    rowsToHide.slideUp();
+                    $(this).text("+ Show More");
+                    var parentId= $(this).parent().attr('id');
+                }
+            })
+        });
+
+    </script>
 </body>
 
 </html>

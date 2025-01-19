@@ -66,6 +66,7 @@
     --secondary-heading: "Shippori Antique B1", sans-serif;
     --body-font: "Montserrat", sans-serif;
 }
+
 html {
     font: 10px var(--body-font);
     color: var(--text-color);
@@ -93,6 +94,7 @@ h2 {
     line-height: 1.4;
     padding: 1rem 2rem 2rem;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 
 h3,
@@ -133,7 +135,7 @@ main {
 
 
 /* HEADER - FLEX, COLOR, AND PADDING*/
-header { 
+header {
     display: flex;
     flex-direction: row;
     background-color: var(--header-color);
@@ -154,13 +156,15 @@ header a img {
 header a h1 {
     min-width: 9em;
 }
+
 /* SIZING ON YSOA */
 #yale {
     font-size: 1.2em;
     transform: scale(1, 2.3);
     margin: .6rem .25em 0 0;
 }
-#soa { 
+
+#soa {
     line-height: .9em;
 }
 
@@ -216,7 +220,7 @@ header nav li a:hover {
     flex-direction: row-reverse;
     margin-left: auto;
 }
-  
+
 .navToggler:checked~.navTogglerMenu .menuClose {
     display: block;
 }
@@ -224,6 +228,7 @@ header nav li a:hover {
 .navToggler:checked~.navTogglerMenu .menuOpen {
     display: none;
 }
+
 /* END OF MOBILE NAV MENU */
 
 /*  FOOTER  */
@@ -232,14 +237,16 @@ footer {
     grid: .8fr .8fr 1.5fr min-content / 1fr 1fr;
     background-color: var(--header-color);
 }
+
 footer .btt {
     grid-column: 1/-1;
     grid-row: 1/2;
     background-color: var(--text-color);
     text-transform: uppercase;
-    align-content: center;  
+    align-content: center;
     font-size: 2em;
 }
+
 footer nav {
     align-self: center;
     justify-self: center;
@@ -249,19 +256,23 @@ footer a, header a.login{
     text-decoration: none;
     text-align: center;
 }
+
 footer img[src$=".svg"] {
     min-height: 65px;
 }
+
 footer .socials {
     grid-column: 1/-1;
     grid-row: 2/3;
     text-align: center;
 }
+
 footer .socials li {
     display: inline-block;
     padding: 2em .6em;
     font-size: 1.5em;
 }
+
 footer .footerLinks a {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -269,25 +280,29 @@ footer .footerLinks a {
     font-size: 1.5em;
     line-height: 1.3em;
 }
+
 footer .footerLinks li {
     text-align: left;
     padding-bottom: 1em;
     padding-left: 3rem;
     align-self: center;
 }
+
 footer .footerLinks li .schoolName {
     font-weight: bold;
     font-size: 1.5em;
 }
+
 footer p {
     grid-column: 1/-1;
     grid-row: -2/-1;
     align-content: center;
-    color: rgba(0,0,0,.4);
+    color: rgba(0, 0, 0, .4);
     line-height: 1.2;
     padding: 1em 0;
     text-align: center;
 }
+
 footer img {
     grid-column: 2/-1;
     grid-row: 3/4;
@@ -295,6 +310,7 @@ footer img {
     align-self: center;
     justify-self: center;
 }
+
 footer p {
     grid-column: 1/-1;
     grid-row: -2/-1;
@@ -304,18 +320,25 @@ footer p {
     padding: 1em 4em;
     text-align: center;
 }
+
 /*  FOOTER END */
 
 /* MID SCREEN LAYOUT */
 @media screen and (min-width: 720px) {
-  /* HEADER NAV */
-  header nav {
+
+    /* HEADER NAV */
+    header nav {
         all: unset;
         display: flex;
     }
-    header input.navToggler, header label.navToggler, header img.menuOpen, header img.menuClose {
+
+    header input.navToggler,
+    header label.navToggler,
+    header img.menuOpen,
+    header img.menuClose {
         display: none;
     }
+
     header nav ul {
         position: absolute;
         top: 8em;
@@ -323,24 +346,32 @@ footer p {
         width: 100%;
         display: flex;
     }
+
     header nav ul li {
         flex-grow: 1;
         border-bottom: none;
     }
-    header nav li:hover { 
+
+    header nav li:hover {
         border-bottom: solid 1px #999;
         background-color: darkgray;
     }
-    header nav li:first-of-type { border-top: none; }
-  /* END OF HEADER NAV*/
-  
-  /* FOOTER MID SCREEN */
-    .btt { 
+
+    header nav li:first-of-type {
+        border-top: none;
+    }
+
+    /* END OF HEADER NAV*/
+
+    /* FOOTER MID SCREEN */
+    .btt {
         display: none;
     }
+
     footer {
         grid: 1fr 1fr min-content / 1fr 1fr;
     }
+
     footer ul.socials {
         grid-row: 2/3;
         grid-column: 1/2;
@@ -349,63 +380,78 @@ footer p {
         align-self: center;
         justify-content: flex-end;
     }
+
     footer img[src$=".svg"] {
-         min-width: 60px;
+        min-width: 60px;
     }
+
     footer ul.socials li {
         padding: 0 1em;
     }
-    footer .socials li { 
-      display: inline; 
+
+    footer .socials li {
+        display: inline;
     }
+
     footer nav {
         grid-row: 1/2;
         grid-column: 1/-1;
     }
+
     footer img {
         grid-row: 2/3;
         grid-column: 2/3;
         justify-self: center;
     }
+
     footer p {
         grid-row: -2/-1;
         grid-column: 1/-1;
     }
+
     footer nav ul {
         display: grid;
-        grid: 1fr 1fr / repeat(5, min-content) ;
+        grid: 1fr 1fr / repeat(5, min-content);
     }
+
     footer nav ul li.sN {
         grid-row: 1/2;
         grid-column: 1/-1;
     }
+
     /* END OF MID SCREEN FOOTER NAV*/
 }
+
 /* LARGE SCREEN FOOTER NAV*/
 @media screen and (min-width: 950px) {
-    
+
     footer {
         grid: 1fr min-content / 1fr min-content 1fr;
         padding: 3em 2em;
     }
+
     footer ul.socials {
         justify-content: center;
         grid-row: 1/2;
         grid-column: 1/2;
     }
+
     footer nav {
         grid-row: 1/2;
         grid-column: 2/3;
     }
+
     footer p {
         grid-row: 2/3;
         grid-column: 1/-1;
     }
+
     footer img {
         grid-row: 1/2;
         grid-column: 3/4;
     }
 }
+
 /* END OF LARGE SCREEN FOOTER NAV*/
 
 
@@ -416,23 +462,27 @@ footer p {
 ***************************************** */
 
 /* global index size restriction to keep these elements uniform in mobile design */
-.mfa, .bulletin, .mission, .events, .about { 
-    max-width: 50em; 
+.mfa,
+.bulletin,
+.mission,
+.events,
+.about {
+    max-width: 50em;
 }
 
-article.mission p { 
-    text-align: center; 
+article.mission p {
+    text-align: center;
 }
 
 /* FIGURE&FIGCAPTION OVERLAY */
-figure.landingFig { 
-    position: relative; 
+figure.landingFig {
+    position: relative;
     margin-top: 1.5em;
 }
-  
+
 figure.landingFig figcaption {
     font-family: var(--secondary-heading);
-    background-color: rgba(232,232,232,.6);
+    background-color: rgba(232, 232, 232, .6);
     padding: .5em;
     position: absolute;
     bottom: .3rem;
@@ -448,6 +498,7 @@ figure.landingFig figcaption {
     border-bottom-right-radius: .25em;
     text-align: center;
 }
+
 @media screen and (min-width: 350px) {
     figure.landingFig figcaption {
         width: 99.2%;
@@ -475,12 +526,12 @@ article.landingArt {
 }
 
 article.landingArt section a.roundBorder {
-  background-color: #CE4A1D;
-  color: #fff;
-  text-decoration: none;
-  padding: .7em 1.5em;
-  border-radius: .5em;
-  align-self: center;
+    background-color: #CE4A1D;
+    color: #fff;
+    text-decoration: none;
+    padding: .7em 1.5em;
+    border-radius: .5em;
+    align-self: center;
 }
 
 /* ABOUT SECTION START*/
@@ -500,6 +551,7 @@ article.landingArt section a.roundBorder {
     line-height: 1.3;
     font-weight: 200;
 }
+
 /* ABOUT SECTION END*/
 
 /* EVENTS SECTION START */
@@ -547,10 +599,11 @@ article.events section p.calDate {
     line-height: 1.2;
     margin-right: 1em;
 }
+
 article.events section p.calDate .numFont {
     font-family: var(--main-heading);
     font-size: 1.5em;
-    
+
 }
 
 article.events section p.p1 {
@@ -581,6 +634,7 @@ article.events>a.roundBorder {
 .roundBorder {
     border-radius: 1em;
 }
+
 /* EVENTS SECTION END */
 
 /* BULLETIN SECTION START */
@@ -610,90 +664,97 @@ article.bulletin section:nth-of-type(3) p {
 
 article.bulletin section:nth-of-type(3) a {
     padding-top: .3em;
-    color: #A86A43; 
+    color: #A86A43;
 }
+
 /* BULLETIN SECTION END */
 
 /* LARGE SCREEN HOME PAGE DESIGN */
 
 @media screen and (min-width: 720px) {
-    article.mfa { 
-        display: grid; 
+    article.mfa {
+        display: grid;
         grid: min-content min-content min-content / repeat(2, 1fr);
         gap: 1em;
-        max-width: 775px; 
+        max-width: 775px;
     }
 
     article.mfa h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
     }
-    
+
     /* BULLETIN LARGE SCREEN GRID SETUP */
-    article.bulletin { 
-        display: grid; 
+    article.bulletin {
+        display: grid;
         grid: repeat(3, min-content)/ repeat(4, 1fr);
     }
-    
+
     article.bulletin h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
     }
+
     article.bulletin section:nth-of-type(1) {
         grid-column: 1/3;
         grid-row: 2/3;
 
     }
+
     article.bulletin section:nth-of-type(2) {
         grid-column: 3/-1;
         grid-row: 2/3;
         /*justify-self: center;
         max-width: */
     }
+
     article.bulletin section:nth-of-type(3) {
         grid-column: 2/4;
         grid-row: -2/-1;
     }
 
     /* EVENTS LARGE SCREEN GRID SETUP */
-    article.events { 
-        display: grid; 
+    article.events {
+        display: grid;
         grid: repeat(3, min-content)/ repeat(4, 1fr);
     }
-    
+
     article.events h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
     }
+
     article.events section:nth-of-type(1) {
         grid-column: 1/3;
         grid-row: 2/3;
 
     }
+
     article.events section:nth-of-type(2) {
         grid-column: 3/-1;
         grid-row: 2/3;
     }
+
     article.events section:nth-of-type(3) {
         grid-column: 2/4;
         grid-row: -2/-1;
     }
-    
-    article.events > a.roundBorder {
+
+    article.events>a.roundBorder {
         grid-column: -2/-1;
-        grid-row: 3/4; 
+        grid-row: 3/4;
         display: block;
         justify-self: end;
         margin-right: 1em;
     }
-    
-    
+
+
     img.roundBorder {
         max-height: 470px;
     }
-    
-    .bulletin section, 
-    .events section, 
+
+    .bulletin section,
+    .events section,
     .mfa figure {
         margin: 0 1em;
     }
@@ -706,7 +767,7 @@ article.bulletin section:nth-of-type(3) a {
         max-width: 1080px;
         padding-top: 5em;
     }
-    
+
     .mission h2 {
         align-self: center;
     }
@@ -721,7 +782,9 @@ article.bulletin section:nth-of-type(3) a {
     .bulletin,
     /*.mission,*/
     .events
-    /*.about*/ {
+
+    /*.about*/
+        {
         max-width: 100%;
     }
 
@@ -729,61 +792,72 @@ article.bulletin section:nth-of-type(3) a {
         padding-top: 5em;
     }
 }
+
 @media screen and (min-width: 1080px) {
-    article.bulletin { 
-        display: grid; 
+    article.bulletin {
+        display: grid;
         grid: repeat(2, min-content) / repeat(3, 1fr);
     }
+
     article.bulletin h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
     }
+
     article.bulletin.landingArt section:nth-of-type(1) {
         grid-column: 1/2;
         grid-row: -2/-1;
     }
+
     article.bulletin.landingArt section:nth-of-type(2) {
         grid-column: 2/3;
         grid-row: -2/-1;
     }
+
     article.bulletin.landingArt section:nth-of-type(3) {
         grid-column: 3/4;
         grid-row: -2/-1;
     }
-    
-    
-    
-    article.events {  
+
+
+
+    article.events {
         grid: min-content min-content / repeat(3, 1fr);
     }
+
     article.events h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
-    } 
+    }
+
     article.events.landingArt section:nth-of-type(1) {
         grid-column: 1/2;
         grid-row: -2/-1;
     }
+
     article.events.landingArt section:nth-of-type(2) {
         grid-column: 2/3;
         grid-row: -2/-1;
     }
+
     article.events.landingArt section:nth-of-type(3) {
         grid-column: 3/4;
         grid-row: -2/-1;
     }
-    
-    article.events > a.roundBorder {
+
+    article.events>a.roundBorder {
         grid-column: -2/-1;
-        grid-row: 3/4; 
+        grid-row: 3/4;
     }
 }
+
 @media screen and (min-width: 1350px) {
-    article.mfa { 
-        display: grid; 
+    article.mfa {
+        display: grid;
         grid: min-content min-content / repeat(4, 1fr);
         max-width: 100%;
     }
+
     article.mfa h2 {
         grid-column: 1/-1;
         grid-row: 1/2;
@@ -926,11 +1000,15 @@ figcaption {
 *******************************************
 ***************************************** */
 
-/* added to disable some global css style effects TODO: remove once fixed */
 #events main {
     padding: 20px;
     gap: 16px;
+    align-content: center;
+    max-width: 402px;
+    margin: auto;
 }
+
+#events h2 { padding-top: 0px;}
 
 #monthSelection {
     width: 100%;
@@ -985,7 +1063,6 @@ a .fa-facebook {
     background-color: var(--blue-card-bg);
     width: 100%;
     height: fit-content;
-    max-width: 362px;
     border-radius: 1em;
     color: var(--dark-blue);
 }
@@ -995,9 +1072,13 @@ a .fa-facebook {
     border-radius: 1em 1em 0 0;
     width: 100%;
     height: 250px;
-    background: url("../images/noImageAvailable.jpg") lightgray 50% / cover no-repeat;
+    background-image:
+        url("../images/events-VirtualVisit.png"),
+        url("../images/events-VirtualVisit.png");
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
 }
-
 .eventCardBody h3 {
     line-height: 130%;
     font-size: 2rem;
@@ -1007,60 +1088,44 @@ a .fa-facebook {
     overflow: hidden;
 }
 
-.event1 span { background: url("../images/feebackLoopEvent.jpg") lightgray 50% / cover no-repeat; }
-
-.event2 span {
+.event1 .eventCardImage {
     background-image:
-    url("../images/virtualVisitEvent.png"),
-    url("../images/virtualVisitEvent.png");
-    background-color: lightgray;
-    background-position: 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat;
+        url("../images/events-FeebackLoop.jpg"),
+        url("../images/events-FeebackLoop.jpg");
 }
 
-.event3 span {
+.event2 .eventCardImage {
     background-image:
-    url("../images/virtualVisitEvent.png"),
-    url("../images/virtualVisitEvent.png");
-    background-color: lightgray;
-    background-position: 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat;
+        url("../images/events-VirtualVisit.png"),
+        url("../images/events-VirtualVisit.png");
 }
 
-.event4 span {
+.event3 .eventCardImage {
     background-image:
-    url("../images/threshold.jpg"),
-    url("../images/threshold.jpg");
-    background-color: lightgray;
-    background-position: 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat;
+        url("../images/events-VirtualVisit.png"),
+        url("../images/events-VirtualVisit.png");
 }
 
-.event5 span {
+.event4 .eventCardImage {
     background-image:
-    url("../images/imageAsCritique.jpg"),
-    url("../images/imageAsCritique.jpg");
-    background-color: lightgray;
-    background-position: 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat;
+        url("../images/events-Threshold.jpg"),
+        url("../images/events-Threshold.jpg");
 }
 
-.event6 span {
+.event5 .eventCardImage {
     background-image:
-    url("../images/visitingArtist.jpg"),
-    url("../images/visitingArtist.jpg");
-    background-color: lightgray;
-    background-position: 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat;
+        url("../images/events-ImageAsCritique.jpg"),
+        url("../images/events-ImageAsCritique.jpg");
 }
 
-.eventCardBody { 
-    padding: 1.6rem; 
+.event6 .eventCardImage {
+    background-image:
+        url("../images/events-VisitingArtist.jpg"),
+        url("../images/events-VisitingArtist.jpg");
+}
+
+.eventCardBody {
+    padding: 1.6rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -1076,18 +1141,19 @@ a .fa-facebook {
     font-family: var(--body-font);
 }
 
-.eventQuickDetails .fa-regular,.fa-solid {
+.eventQuickDetails .fa-regular,
+.fa-solid {
     font-size: 2rem;
 }
 
-.eventQuickDetails li { 
+.eventQuickDetails li {
     display: flex;
     gap: 8px;
     align-content: center;
     align-items: center;
 }
 
-.moreDetails {
+.eventCardLarge .moreDetails {
     height: 4rem;
     width: fit-content;
     padding: 10px 24px;
@@ -1108,32 +1174,46 @@ a .fa-facebook {
     overflow: hidden;
 }
 
-.eventCardBody.showContent .eventDescription{
+.eventCardBody.showContent .eventDescription {
     height: auto;
     display: block;
 }
 
 @media screen and (min-width: 720px) {
-    
-}
-
-@media screen and (min-width: 940px) {
     #events main {
-        padding: 70px 160px 40px;
-        max-width: 1120px;
+        max-width: 100%;
         gap: 32px;
-    }
-
-    #events h2 {
-        padding: 0px;
-        margin: 0px;
-        text-align: left;
-        padding-bottom: 1.6rem;
     }
 
     .calendarHeader {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    #events .eventCardLarge {
+        width: 48%;
+    }
+
+    #events h2 { 
+        margin-top: 40px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    #events main {
+        max-width: 1120px;
+        margin: 0px 160px;
+        align-self: center;
+    }
+
+    #events h2 {
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    #events .eventCardLarge {
+        max-width: 362px;
     }
 }
 
@@ -1207,6 +1287,7 @@ a .fa-facebook {
         column-gap: 3rem;
     }
 }
+
 /* ****************************************
 *******************************************
     7. HISTORY (Volha)
@@ -1268,155 +1349,422 @@ a .fa-facebook {
 *******************************************
 ***************************************** */
 
+/* General page styles */
+#careers_internships main {
+    gap: 16px;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 402px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+#careers_internships h2 {
+    padding-top: 0;
+}
+
+#careers_internships .opportunitiesSection {
+    border-bottom: solid 1px rgba(0, 0, 0, .4);
+    padding-bottom: 5em;
+}
+
+#careers_internships strong {
+    font-weight: bold;
+}
+
+#careers_internships .bulletinCards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+/* Styles for bulletin cards with no image */
+#careers_internships .bulletinCard {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: var(--orange-card-bg);
+    width: 100%;
+    height: fit-content;
+    /* max-width: 362px; */
+    border-radius: 1em;
+    color: var(--dark-orange);
+}
+
+#careers_internships .bulletinCard h3,
+#careers_internships .bulletinCardWithImage h3 {
+    line-height: 130%;
+    font-size: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#careers_internships .bulletinDescription {
+    height: fit-content;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#careers_internships .bulletinCard .bulletinDescription {
+    -webkit-line-clamp: 14;
+}
+
+#careers_internships .bulletinCard .moreDetails,
+#careers_internships .bulletinCardWithImage .moreDetails {
+    height: 4rem;
+    width: fit-content;
+    padding: 10px 24px;
+    margin: 0 auto;
+    color: white;
+    background-color: var(--dark-orange);
+    font: var(--body-font);
+    font-size: 1.4rem;
+    border-style: none;
+}
+
+#careers_internships .bulletinCard.showContent h3,
+#careers_internships .bulletinCard.showContent .bulletinDescription,
+#careers_internships .bulletinCardWithImage .bulletinCardBody.showContent h3,
+#careers_internships .bulletinCardWithImage .bulletinCardBody.showContent .bulletinDescription {
+    height: auto;
+    display: block;
+}
+
+/* Styles for bulletin card WITH image */
+#careers_internships .bulletinCardWithImage {
+    background-color: var(--orange-card-bg);
+    width: 100%;
+    height: fit-content;
+    /* max-width: 362px; */
+    border-radius: 1em;
+    color: var(--dark-orange);
+}
+
+#careers_internships .bulletinCardWithImage .bulletinCardBody {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+#careers_internships .bulletinCardImage {
+    display: block;
+    border-radius: 1em 1em 0 0;
+    width: 100%;
+    height: 240px;
+    background-image:
+        url("../images/noImageAvailable.jpg"),
+        url("../images/noImageAvailable.jpg");
+    background-position: 50%;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+#careers_internships .ourHouse .bulletinCardImage {
+    background-image:
+        url("../images/careers-OurHouse.jpg"),
+        url("../images/careers-OurHouse.jpg");
+}
+
+#careers_internships .textile .bulletinCardImage {
+    background-image:
+        url("../images/careers-Textile.jpg"),
+        url("../images/careers-Textile.jpg");
+}
+
+#careers_internships .newHaven .bulletinCardImage {
+    background-image:
+        url("../images/careers-NewHaven.jpg"),
+        url("../images/careers-NewHaven.jpg");
+}
+
+#careers_internships .japanParade .bulletinCardImage {
+    background-image:
+        url("../images/careers-JapanParade.jpg"),
+        url("../images/careers-JapanParade.jpg");
+}
+
+#careers_internships .mixMaster .bulletinCardImage {
+    background-image:
+        url("../images/careers-MixMaster.jpg"),
+        url("../images/careers-MixMaster.jpg");
+}
+
+/* Contact Form Styles */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin: 0 1rem;
+
+}
+
+fieldset {
+    padding: 2.4rem 1.6rem;
+    border-radius: var(--corners);
+    border: dashed 1px var(--dark-blue);
+    width: 100%;
+}
+
+legend {
+    font-size: 1.8rem;
+    font-family: var(--secondary-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: var(--dark-blue);
+}
+
+#contactForm label {
+    display: block;
+    font-size: 1.6rem;
+}
+
+#contactForm ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm .text-input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 8px 0 12px;
+    padding: 5px 10px;
+    color: #6b6b6b;
+    font-size: 1.6rem;
+}
+
+#contactForm #message {
+    height: 180px;
+}
+
+/* Mid-Screen Styles */
+@media screen and (min-width: 720px) {
+    #careers_internships main {
+        margin: 0px auto;
+        max-width: 100%;
+        gap: 32px;
+    }
+
+    #careers_internships .bulletinCard,
+    #careers_internships .bulletinCardWithImage {
+        width: 48%;
+    }
+
+    #careers_internships h2 {
+        margin-top: 40px;
+        padding-top: 10px;
+    }
+
+    #contactForm ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    #contactForm li {
+        width: 48%;
+    }
+
+    #contactForm input[type="submit"]{
+        height: 4rem;
+        width: fit-content;
+        padding: 10px 24px;
+        margin: 0 auto;
+        color: white;
+        background-color: var(--dark-orange);
+        font: var(--body-font);
+        font-size: 1.4rem;
+        border-style: none;
+        border-radius: var(--corners);
+    }
+    
+    #contactForm .messageBox {
+        width: 98%;
+    }
+}
+
+/* Large Screen Styles */
+@media screen and (min-width: 940px) {
+    #careers_internships main {
+        margin: 0px 160px;
+        align-self: center;
+        max-width: 1120px;
+    }
+
+    #careers_internships h2 {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    #careers_internships .bulletinCard,
+    #careers_internships .bulletinCardWithImage {
+        max-width: 362px;
+    }
+}
 
 /* ****************************************
 *******************************************
     12. INTERDISCIPLINARY COLLABORATIONS (Sherry)
 *******************************************
 ***************************************** */
-    /*Table Styles*/
-    table {
-        font-size: 1.6rem;
-        line-height: 1.42;
+/*Table Styles*/
+table {
+    font-size: 1.6rem;
+    line-height: 1.42;
+    padding-bottom: var(--spacer-dbl);
+}
+
+td,
+th {
+    padding: 7px;
+    border: 1px dotted var(--callout-color);
+    text-align: left;
+    vertical-align: top;
+
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgba(234, 139, 79, .1);
+}
+
+tr:nth-of-type(even) {
+    background-color: rgba(114, 164, 215, .1);
+}
+
+th,
+td:nth-of-type(2),
+td:nth-of-type(1) {
+    background-color: var(--callout-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Mobile Table Style */
+@media screen and (max-width: 1000px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 2px inset #fff;
+        position: relative;
+        padding-left: 45%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 7px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before {
+        content: "";
+    }
+
+    td:nth-of-type(2):before {
+        content: "";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Description:";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Collaboration Opportunities:";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Funding Source/ Availability:";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Dates/ Contact:";
+    }
+
+    td:nth-of-type(1) {
+        padding-left: 0%;
+    }
+
+    td:nth-of-type(2) {
+        padding-left: 7px;
+        text-align: center;
+    }
+
+    table img {
+        display: block;
+        margin: auto;
+    }
+
+    td:nth-of-type(6),
+    th:nth-of-type(6) {
         padding-bottom: var(--spacer-dbl);
     }
 
-    td,
-    th {
-        padding: 7px;
-        border: 1px dotted var(--callout-color);
-        text-align: left;
-        vertical-align: top;
-
+    tr:last-of-type {
+        margin-bottom: var(--spacer);
     }
 
-    tr:nth-of-type(odd) {
-        background-color: rgba(234, 139, 79, .1);
+}
+
+@media screen and (max-width: 575px) {
+    table {
+        font-size: 85%;
+        min-width: 335px;
+    }
+}
+
+/* Large Screen */
+@media screen and (min-width: 1000px) {
+    td:first-child {
+        width: 250px;
     }
 
-    tr:nth-of-type(even) {
-        background-color: rgba(114, 164, 215, .1);
+    td:nth-of-type(6),
+    th:nth-of-type(6) {
+        border-right: 5px solid var(--callout-color);
     }
 
-    th,
-    td:nth-of-type(2),
-    td:nth-of-type(1) {
-        background-color: var(--callout-color);
-        color: #fff;
-        font-weight: bold;
-        font-size: 2rem;
+    tr:last-of-type {
+        border-bottom: 5px solid var(--callout-color);
     }
 
-    /* Mobile Table Style */
-    @media screen and (max-width: 1000px) {
-
-        table,
-        thead,
-        tbody,
-        th,
-        td,
-        tr {
-            display: block;
-        }
-
-        thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-
-        td {
-            border: none;
-            border-bottom: 2px inset #fff;
-            position: relative;
-            padding-left: 45%;
-        }
-
-        td:before {
-            position: absolute;
-            left: 7px;
-            width: 40%;
-            padding-right: 10px;
-            white-space: nowrap;
-            font-weight: bold;
-        }
-
-        td:nth-of-type(1):before {
-            content: "";
-        }
-
-        td:nth-of-type(2):before {
-            content: "";
-        }
-
-        td:nth-of-type(3):before {
-            content: "Description:";
-        }
-
-        td:nth-of-type(4):before {
-            content: "Collaboration Opportunities:";
-        }
-
-        td:nth-of-type(5):before {
-            content: "Funding Source/ Availability:";
-        }
-
-        td:nth-of-type(6):before {
-            content: "Dates/ Contact:";
-        }
-
-        td:nth-of-type(1) {
-            padding-left: 0%;
-        }
-
-        td:nth-of-type(2) {
-            padding-left: 7px;
-            text-align: center;
-        }
-
-        table img {
-            display: block;
-            margin: auto;
-        }
-
-        td:nth-of-type(6),
-        th:nth-of-type(6) {
-            padding-bottom: var(--spacer-dbl);
-        }
-
-        tr:last-of-type {
-            margin-bottom: var(--spacer);
-        }
-
+    main {
+        max-width: 1400px;
+        margin: auto;
     }
-
-    @media screen and (max-width: 575px) {
-        table {
-            font-size: 85%;
-            min-width: 335px;
-        }
-    }
-
-    /* Large Screen */
-    @media screen and (min-width: 1000px) {
-        td:first-child {
-            width: 250px;
-        }
-
-        td:nth-of-type(6),
-        th:nth-of-type(6) {
-            border-right: 5px solid var(--callout-color);
-        }
-
-        tr:last-of-type {
-            border-bottom: 5px solid var(--callout-color);
-        }
-
-        main {
-            max-width: 1400px;
-            margin: auto;
-        }
-    }
+}
 
 /* ****************************************
 *******************************************

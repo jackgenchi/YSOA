@@ -142,10 +142,12 @@ header {
     padding: 2em;
     justify-items: center;
 }
+
 header a {
     display: flex;
     text-decoration: none;
 }
+
 /* CREST SIZING */
 header a img {
     max-height: 4em;
@@ -198,7 +200,7 @@ header nav li a:hover {
     background-color: darkgrey;
 }
 
-.navToggler:checked~nav {
+.navToggler:checked ~ nav {
     display: block;
 }
 
@@ -220,11 +222,11 @@ header nav li a:hover {
     margin-left: auto;
 }
 
-.navToggler:checked~.navTogglerMenu .menuClose {
+.navToggler:checked ~ .navTogglerMenu .menuClose {
     display: block;
 }
 
-.navToggler:checked~.navTogglerMenu .menuOpen {
+.navToggler:checked ~ .navTogglerMenu .menuOpen {
     display: none;
 }
 
@@ -621,7 +623,7 @@ article.events i {
     width: 1.6em;
 }
 
-article.events>a.roundBorder {
+article.events > a.roundBorder {
     text-align: right;
     background-color: #1A386A;
     padding: 1em 2em;
@@ -740,7 +742,7 @@ article.bulletin section:nth-of-type(3) a {
         grid-row: -2/-1;
     }
 
-    article.events>a.roundBorder {
+    article.events > a.roundBorder {
         grid-column: -2/-1;
         grid-row: 3/4;
         display: block;
@@ -845,7 +847,7 @@ article.bulletin section:nth-of-type(3) a {
         grid-row: -2/-1;
     }
 
-    article.events>a.roundBorder {
+    article.events > a.roundBorder {
         grid-column: -2/-1;
         grid-row: 3/4;
     }
@@ -878,20 +880,21 @@ article.bulletin section:nth-of-type(3) a {
     4. LEARNING AND COLLABORATION (Sherry)
 *******************************************
 ***************************************** */
-figure {
+#learningMain section figure {
     margin: calc(var(--spacer)/2);
     position: relative;
 }
 
-figcaption {
+#learningMain section figcaption {
     text-align: center;
-    font-size: 1.6rem;
-    color: black;
+    font-size: 2.5rem;
+    color: white;
     background-color: var(--legend-background);
-    text-shadow: 1px 0 0 white,
-        -1px 0 0 white,
-        0 1px 0 white,
-        0 -1px 0 white;
+    text-shadow: 0 0 3px black,
+        1px 0 0 #4b4b4b,
+        -1px 0 0 #4b4b4b,
+        0 1px 0 #4b4b4b,
+        0 -1px 0 #4b4b4b;
     padding-top: var(--spacer);
     position: absolute;
     bottom: 0;
@@ -913,10 +916,12 @@ figcaption {
     color: #fff;
     border: none;
     background-color: var(--darkaccent-color);
+    text-decoration: none;
     padding: calc(var(--spacer-dbl)*1.5);
     width: 60%;
     margin: 1rem auto;
     border-radius: var(--corners);
+    text-align: center;
 }
 
 #fourPillars {
@@ -928,6 +933,14 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr;
 
+}
+
+#fourPillars h3,
+#forestReflections h3 {
+    font-weight: bold;
+    font-size: 
+    text-align: center;
+    margin: 2rem 0 1rem;
 }
 
 #fourPillars img {
@@ -957,14 +970,24 @@ figcaption {
     justify-items: center;
 }
 
-#forestReflections h2,
+#forestReflections h3,
 #forestReflections p {
     justify-self: start;
 }
 
+#learningMain p {
+    margin-bottom: 1rem;
+}
+
+#learningMain,
+#collabMain,
+#apply, #worksMain {
+    margin: auto;
+    padding: 2em 2rem 2rem;
+}
+
 #learningMain {
     max-width: 700px;
-    margin: auto;
 }
 
 /* Large Screen */
@@ -977,7 +1000,7 @@ figcaption {
         align-items: flex-start;
     }
 
-    #learningMain h1,
+    #learningMain h2,
     #collabStory {
         grid-column: 1/-1;
     }
@@ -1008,7 +1031,9 @@ figcaption {
     margin: auto;
 }
 
-#events h2 { padding-top: 0px;}
+#events h2 {
+    padding-top: 0px;
+}
 
 #monthSelection {
     width: 100%;
@@ -1079,6 +1104,7 @@ a .fa-facebook {
     background-size: contain, cover;
     background-repeat: no-repeat;
 }
+
 .eventCardBody h3 {
     line-height: 130%;
     font-size: 2rem;
@@ -1194,7 +1220,7 @@ a .fa-facebook {
         width: 48%;
     }
 
-    #events h2 { 
+    #events h2 {
         margin-top: 40px;
         padding-top: 10px;
     }
@@ -1223,6 +1249,13 @@ a .fa-facebook {
     6. OUR WORKS (Sherry)
 *******************************************
 ***************************************** */
+
+#worksMain h3 {
+    padding: 2rem 0 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 #paintingWorks,
 #graphicDesign,
 #photography,
@@ -1330,7 +1363,7 @@ a .fa-facebook {
     max-width: 402px;
     margin: auto;
     padding: 20px;
-    
+
 }
 
 #careers_internships h2 {
@@ -1548,12 +1581,12 @@ legend {
         justify-content: center;
         gap: 2rem;
     }
-    
+
     #contactForm li {
         width: 48%;
     }
 
-    #contactForm input[type="submit"]{
+    #contactForm input[type="submit"] {
         height: 4rem;
         width: fit-content;
         padding: 10px 24px;
@@ -1565,7 +1598,7 @@ legend {
         border-style: none;
         border-radius: var(--corners);
     }
-    
+
     #contactForm .messageBox {
         width: 98%;
     }
@@ -1604,8 +1637,8 @@ table {
 
 td,
 th {
-    padding: 7px;
-    border: 1px dotted var(--callout-color);
+    padding: 7px 10px;
+    /*border: 1px dotted var(--callout-color);*/
     text-align: left;
     vertical-align: top;
 
@@ -1732,6 +1765,10 @@ td:nth-of-type(1) {
     tr:last-of-type {
         border-bottom: 5px solid var(--callout-color);
     }
+    
+    td:nth-of-type(3), td:nth-of-type(4), td:nth-of-type(5) {
+        border-right: solid 2px white;
+    }
 
     main {
         max-width: 1400px;
@@ -1744,3 +1781,115 @@ td:nth-of-type(1) {
     13. APPLY (Sherry)
 *******************************************
 ***************************************** */
+
+#babyBlue {
+    width: 125px;
+    height: 125px;
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 2rem;
+}
+
+#miniPainter {
+    display: block;
+    margin: .5rem auto;
+    height: 50px;
+    filter: grayscale(100%);
+    filter: drop-shadow(5px 4px 3px grey);
+}
+
+#miniPainter:hover {
+    transform: translateY(-35px);
+    transition-duration: .5s;
+    animation-iteration-count: 10;
+    animation-timing-function: ease-in;
+}
+
+/*Animation levitates the painter bulldog icon*/
+
+.bold {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#apply h3 {
+    font-size: 2rem;
+    background-color: #1d3869;
+    color: white;
+}
+
+#apply h3 span {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*Class Selectors*/
+.show,
+.hide {
+    font-size: 3rem;
+    background-color: rgba(114, 164, 215, .75);
+    color: black;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    border: solid 2px rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+}
+
+.hide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.appQuestions {
+    padding: 4rem;
+    margin-bottom: 2rem;
+}
+
+.answers {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.answers p,
+#appOverview p {
+    line-height: 160%;
+    padding-bottom: 1rem;
+}
+
+.answers p {
+   padding: 2rem;
+}
+
+#answer2 ol {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--body-font);
+}
+
+#answer2 ol li {
+    display: block;
+    padding: 1rem 2rem;
+}
+
+#apply h4,
+#expandAll,
+#collapseAll {
+    background-color: rgba(234, 139, 79, .5);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    letter-spacing: .75rem;
+}
+
+#expandAll,
+#collapseAll {
+    background-color: rgba(114, 164, 215, .5);
+}
+
+/*ID selector*/
+#apply {
+    max-width: 800px;
+}

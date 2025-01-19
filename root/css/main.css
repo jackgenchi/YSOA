@@ -175,6 +175,7 @@ header nav {
     left: 0em;
     width: 100%;
     display: none;
+    z-index: 2;
 }
 
 header nav li {
@@ -250,8 +251,7 @@ footer nav {
     align-self: center;
     justify-self: center;
 }
-
-footer a {
+footer a, header a.login{
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -1307,6 +1307,33 @@ a .fa-facebook {
     9. WIKI (Jack)
 *******************************************
 ***************************************** */
+.login {
+    background-color: var(--text-color);
+    text-transform: uppercase;
+    align-content: center;  
+    font-size: 2em;
+    display: inline-block;
+    position: absolute;
+    top: 4em;
+    left: 0em;
+    width: 100%;
+    padding: 2em 0;
+}
+.login img {
+    max-height: 1em;
+}
+.wikiMain {
+    margin-top: 10em;
+}
+.searchFilt{
+    padding: 1em;
+    background-image: linear-gradient(to top, var(--callout-color), var(--lightcallout-color) );
+}
+.searchInp {
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    justify-self: center;
+}
 
 
 /* ****************************************

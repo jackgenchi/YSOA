@@ -45,6 +45,7 @@
 :root {
     /*Grey*/
     --header-color: #ddd;
+    --header-contrast-color: #C0C0C0;
     --legend-background: rgba(221, 221, 221, .6);
     --text-color: #4b4b4b;
     /*Orange*/
@@ -181,7 +182,6 @@ header nav {
 }
 
 header nav li {
-    padding: 1rem;
     border-bottom: solid 1px #999;
     background-color: var(--header-color);
 }
@@ -192,13 +192,14 @@ header nav li:first-of-type {
 
 header nav li a {
     display: block;
+    padding: 1em;
     text-align: center;
     text-decoration: none;
     color: var(--callout-color);
 }
 
-header nav li a:hover {
-    background-color: darkgrey;
+header nav li:hover {
+    border-bottom: 2px solid black;
 }
 
 .navToggler:checked ~ nav {
@@ -231,6 +232,58 @@ header nav li a:hover {
     display: none;
 }
 
+/* SECOND TIER NAVIGATION */
+
+li.secondLevel input { 
+    display: none;
+}
+
+li.secondLevel input:checked  ~ ul.subMenu {
+    display: block; 
+    transition: all .5s;
+}
+
+li.secondLevel input:checked  ~ a  label .menuSecondOpen {
+   display: block; 
+}
+
+li.secondLevel input:checked  ~ a label .menuSecondClose {
+   display: none; 
+}
+
+label.secondMenu { /* style the menu item with a second tier option */
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+}
+.menuSecondClose, .menuSecondOpen { /* style the open and close arrows */
+    font-size: 2.6rem;
+    color: var(--callout-color)
+}
+.menuSecondOpen { /* initially set the open arrow (pointing down one) to not be visible */
+    display: none;
+}
+header nav li.secondLevel {
+    padding: 0;
+}
+ul.subMenu{ /* hide the sub menu initially (until that link is clicked) */
+    display: none; 
+    background-color: #556c89;
+}
+ul.subMenu a { /* indent 2nd tier menu items */
+    padding-left: 10rem;
+}
+ul.subMenu li {
+    /*background-color: var(--header-contrast-color);*/
+}
+ul.subMenu li:last-child { /* remove extra border on last li, these double up without this rule */
+    border-bottom: none;
+}
+ul.subMenu:last-child:hover { /* remove extra border on last li, these double up without this rule */
+    border-bottom: none;
+}
 /* END OF MOBILE NAV MENU */
 
 /*  FOOTER  */
@@ -355,14 +408,43 @@ footer p {
     }
 
     header nav li:hover {
-        border-bottom: solid 1px #999;
-        background-color: darkgray;
+        border-bottom: solid 2px black;
+        background-color: var(--header-contrast-color);
+    }
+    header nav li:last-of-type:hover {
+        border-bottom: solid 2px black;
     }
 
     header nav li:first-of-type {
         border-top: none;
     }
-
+    label.secondMenu { 
+        align-items: start;
+        padding-left: 0;
+        /*padding-right: 10rem;*/
+    }
+    ul.subMenu li:first-of-type {
+        border-top: solid 1px #999;
+    }
+    ul.subMenu li:last-child  { 
+        border-bottom: solid 1px #999;
+    }
+    ul.subMenu li { 
+        border-top: solid 1px #999;;
+    }
+    label.secondMenu i {
+        position: relative;
+        bottom: .5rem;
+    }
+    header nav ul li.secondLevel input:checked  ~ ul.subMenu{;
+        max-height: 100vh; /* nudge menu down a little at large screen*/
+        top: 4em;
+        left: 29em;
+        width: auto;
+    }
+    ul.subMenu a {
+        padding-left: 1em;
+    }
     /* END OF HEADER NAV*/
 
     /* FOOTER MID SCREEN */

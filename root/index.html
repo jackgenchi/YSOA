@@ -1,22 +1,28 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-   
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Yale School of Art</title>
-        <link rel="stylesheet" href="css/reset.css" type="text/css">
-        <!--GOOGLE FONTS-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
-        <!--FONT AWESOME ALL-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!--MAIN CSS-->
-        <link rel="stylesheet" href="css/main.css" type="text/css">   
-    </head>
-    <!--
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yale School of Art</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap"
+        rel="stylesheet">
+    <!--FONT AWESOME ALL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<!--
     Accessibility steps:
     Use semantic HTML markup to provide a clear and logical structure to the content and navigation.
     Use ARIA (Accessible Rich Internet Applications) roles, states, and properties to describe the purpose and behavior of elements and components.
@@ -24,148 +30,233 @@
     Provide keyboard shortcuts or access keys for frequently used actions or links.
     Test the website with a keyboard-only interface or with assistive technology, such as screen readers or voice recognition software.
 -->
-    <!--Landing (index) page in version 1.0. All components have been touched upon. Variable sizing at every resolution using grid. Fixed MFA fig and figcaptions. 
+<!--Landing (index) page in version 1.0. All components have been touched upon. Variable sizing at every resolution using grid. Fixed MFA fig and figcaptions. 
     Still need: 
     2 layer header nav
     fixed links
     jquery for "more events" 
     hero carousel
     block display for all links-->
-    
-    <body>    
-        <header>
-          <a href="#"><img src="images/crest.png" alt="Yale Crest">
-          <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1></a>
-           <input type="checkbox" class="navToggler" id="navToggler">
-            <nav>
-                <ul>
-                    <li><a href="pages/about.html">About</a></li>
-                    <li><a href="pages/apply.html">Apply</a></li>
-                    <li><a href="pages/learning.html">Learn &amp; Collaborate</a></li>
-                    <li><a href="pages/events.html">Events</a></li>
-                    <li><a href="pages/news.html">News</a></li>
-                    <li><a href="pages/works.html">Our Works</a></li>
-                    <li><a href="pages/resources.html">Student Resources</a></li>
-                    <li><a href="pages/interdisciplinary.html">Interdisc Collabs</a></li>
-                    <li><a href="pages/careers_internships.html">Careers</a></li>
-                    <li><a href="pages/courses.html">Courses</a></li>
-                    <li><a href="pages/wiki.html">Wiki</a></li>
-                </ul> 
-            </nav>
-            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+
+<body>
+    <header>
+        <a href="#"><img src="images/crest.png" alt="Yale Crest">
+            <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
+        </a>
+        <input type="checkbox" class="navToggler" id="navToggler">
+        <nav>
+            <ul>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/apply.html">Apply</a></li>
+                <li><a href="pages/learning.html">Learn &amp; Collaborate</a></li>
+                <li><a href="pages/events.html">Events</a></li>
+                <li><a href="pages/news.html">News</a></li>
+                <li><a href="pages/works.html">Our Works</a></li>
+                <li><a href="pages/resources.html">Student Resources</a></li>
+                <li><a href="pages/interdisciplinary.html">Interdisc Collabs</a></li>
+                <li><a href="pages/careers.html">Careers</a></li>
+                <li><a href="pages/courses.html">Courses</a></li>
+                <li><a href="pages/wiki.html">Wiki</a></li>
+            </ul>
+        </nav>
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
             <img src="images/bars-solid.svg" class="menuOpen" alt="menu icon">
             <img src="images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
-        </header>
-        
-        <!--NEED CAROUSEL/HERO-->
-        <main class="landing">
-            <!--article>h2+p^article>figure*4>img+figcaption^^article>h2+section*3>h3+p+a{Read More}^^article>h2+section*3>p>span^p*2+p>span^a[#]-->
-            <article class="mission landingArt">
-                <h2>Mission</h2>
-                <p>The School of Art is one of Yale’s Graduate &amp; Professional Schools conferring MFA degrees in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.</p>
-            </article>
-            
-            <!--OPTIMIZE SIZE OF IMAGES-->
-            <article class="mfa landingArt">
-               <h2>MFA Specialties</h2>
-                <figure class="landingFig">
-                    <img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder">
-                    <figcaption>Photography</figcaption>
-                </figure>
-                <figure class="landingFig">
-                    <img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder">
-                    <figcaption>Sculpture</figcaption>
-                </figure>
-                <figure class="landingFig">
-                    <img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder">
-                    <figcaption id="darkBG">Print/Painting</figcaption>
-                </figure>
-                <figure class="roundBorder landingFig">
-                    <img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder">
-                    <figcaption>Digital Design</figcaption>
-                </figure>
-            </article>
-            
-            <article class="bulletin landingArt">
-                <h2>Bulletin</h2>
-                <section class="roundBorder">
-                    <h3>From our friends at the Yale Center for Environmental Justice</h3>
-                    <p>The Yale Center for Environmental Justice is in the process of planning our fourth annual Global Environmental Justice Conference, with this year focusing on the theme of “Environmental Joy.” The conference aims to explore the ways in which...</p>
-                    <a href="#" class="roundBorder">Read More</a>
-                </section>
-                <section class="roundBorder">
-                    <h3>Faculty/Alumni: Post Your Art Apprenticeship/Internship Opportunities for Undergraduates</h3>
-                    <p>The Yale Arts Apprenticeship Program is an initiative that connects Yale undergraduates, particularly those on financial aid, with professional arts practitioners of any discipline. As an option within Yale’s Summer Experience Award (SEA) funding</p>
-                    <a href="#" class="roundBorder">Read More</a>
-                </section>
-                <section class="roundBorder">
-                    <h3>Mapping public art in New Haven</h3>
-                    <p>Hey everyone! I’ve been mapping public art in New Haven as part of my nonprofit project ArtAround and I’d love to invite you to join me, or just check it out and see what you think.</p>
-                    <a href="#">New Haven map &gt;</a>
-                    <a href="#">Art around homepage &gt;</a>
-                </section>
-            </article>
-            
-            <!--EVENTS-->
-            <!--DO WE WANT A MATERIAL CALENDAR ICON FOR THE DATE?-->
-            <article class="events landingArt">
-                <h2>Events</h2>
-                <section>                    
-                    <h3>"Feedback Loop" --First-Year MFA Exhibition</h3>
-                    <p class="calDate">Nov<br><span class="numFont">13</span></p>
-                    <p class="p1"><i class="fa-regular fa-clock"></i> 6PM - 8PM EST</p>
-                    <p class="p2"><i class="fa-solid fa-location-dot"></i> Chapel Rd, San Diego, CA 92134</p>
-                    <a href="#" class="roundBorder">More Details</a> 
-                </section>
-                <section>
-                    <h3>Info Session on U.S. Work Visas</h3>
-                    <p class="calDate">Nov<br><span class="numFont">25</span></p>                    
-                    <p class="p1"><i class="fa-regular fa-clock"></i>9AM - 10AM EST</p>
-                    <p class="p2"><i class="fa-solid fa-location-dot"></i><a href="#">Zoom Call</a></p>
-                    <a href="#" class="roundBorder">More Details</a> 
-                </section>
-                <section>
-                    <h3>Admissions Virtual Visit 1: MFA Program, Admissions</h3>
-                    <p class="calDate">Nov<br><span class="numFont">25</span></p>
-                    <p class="p1"><i class="fa-regular fa-clock"></i> 12:30 AM - 1:30 PM EST</p>
-                    <p class="p2"><i class="fa-solid fa-location-dot"></i> <a href="#">Zoom Call</a></p>
-                    <a href="#" class="roundBorder">More Details</a> 
-                </section>
-                <a href="#" class="roundBorder">More Events</a>
-            </article>
-            
-            <article class="roundBorder about landingArt">
-                <h3>About this Site</h3>
-                <p>This website exists as an ongoing collaborative experiment in digital publishing and information sharing. Because this website functions as a wiki, all members of the School of Art community—graduate students, faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site’s existing content. Content is the property of its various authors. When you contribute to this site, you agree to abide by Yale University academic and network use policy, and to act as a responsible member of our community.</p>
-            </article>
 
-            
-        </main>
-        
-        
-        <!--FOOTER-->
-        <footer>          
-           <a href="#" class="btt">Back to top</a>          
-           <ul class="socials">
-               <li><a href="#"><img src="images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
-               <li><a href="#"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
-               <li><a href="#"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
-           </ul>
-            <nav>
-                <ul class="footerLinks">
-                    <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
-                    <li><a href="#">Support the School</a></li>
-                    <li><a href="#">Visiting</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Accessibility at Yale</a></li>
-                </ul>
-            </nav>
-            <img src="images/crest.png" alt="yale crest">
-           
-            <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
-        </footer>
-            
-    </body>
-    
+    </header>
+
+    <!--NEED CAROUSEL/HERO-->
+    <main class="landing">
+
+        <!--article>h2+p^article>figure*4>img+figcaption^^article>h2+section*3>h3+p+a{Read More}^^article>h2+section*3>p>span^p*2+p>span^a[#]-->
+        <article class="mission landingArt">
+            <h2>Mission</h2>
+            <p>The School of Art is one of Yale's Graduate &amp; Professional Schools conferring MFA degrees in Graphic
+                Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to
+                Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing
+                and information sharing. It functions as a wiki—all members of the School of Art community have the
+                ability to add new, and edit most existing content.</p>
+        </article>
+
+        <!--OPTIMIZE SIZE OF IMAGES-->
+        <article class="mfa landingArt">
+            <h2>MFA Specialties</h2>
+            <figure class="landingFig">
+                <img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder">
+                <figcaption>Photography</figcaption>
+            </figure>
+            <figure class="landingFig">
+                <img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder">
+                <figcaption>Sculpture</figcaption>
+            </figure>
+            <figure class="landingFig">
+                <img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder">
+                <figcaption id="darkBG">Print/Painting</figcaption>
+            </figure>
+            <figure class="roundBorder landingFig">
+                <img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder">
+                <figcaption>Digital Design</figcaption>
+            </figure>
+        </article>
+
+        <article class="bulletin landingArt">
+            <h2>Bulletin</h2>
+            <section class="roundBorder">
+                <h3>From our friends at the Yale Center for Environmental Justice</h3>
+                <p class="truncateText">The Yale Center for Environmental Justice is in the process of planning our
+                    fourth annual Global Environmental Justice Conference, with this year focusing on the theme of
+                    “Environmental Joy.” The conference aims to explore the ways in which environmental and climate
+                    justice and the communities engaged in that work generate joy. Guided by the notion that the
+                    ultimate goal of most environmental and climate work is to alleviate suffering and increase
+                    wellbeing, Environmental Joy will explore and celebrate the diverse ways that environmental justice
+                    achieves this goal.</p>
+                <button class="roundBorder readMore">Read More</button>
+            </section>
+            <section class="roundBorder">
+                <h3>Faculty/Alumni: Post Your Art Apprenticeship/Internship Opportunities for Undergraduates</h3>
+                <p class="truncateText">The Yale Arts Apprenticeship Program is an initiative that connects Yale
+                    undergraduates, particularly those on financial aid, with professional arts practitioners of any
+                    discipline. As an option within Yale's Summer Experience Award (SEA) funding model, the Arts
+                    Apprenticeship must fulfill the same basic requirements. Additional details, as well as those
+                    specific to the Arts Apprenticeship are included below. Yale faculty, alumni, or other arts
+                    practitioners interested in featuring positions through the program should contact Yale's Creative
+                    Careers advisor. Which Opportunities are Eligible? Must be at least 30 hours/week, for at least
+                    8-weeks over the summer months. Those 8-weeks do not have to be continuous if the mentoring Arts
+                    Practitioner agrees on a different schedule. The time commitment need not all be in direct contact
+                    with the Arts Practitioner. Independent projects, tasks, research, etc. can comprise much of the
+                    experience, as long as the Arts Practitioner is checking in regularly with the student to provide
+                    oversight and career-based context. The opportunity cannot be with a for-profit organization. The
+                    engagement for an Arts Apprenticeship should be directly with an individual Arts Practitioner and
+                    not with a company. The only exception to this would be if the company overseeing the apprenticeship
+                    were a registered non-profit organization. For more information:
+                    https://ocs.yale.edu/channels/arts-apprenticeship/ To post a job, contact:
+                    https://ocs.yale.edu/staff-list/#derek-i-webster</p>
+                <button class="roundBorder readMore">Read More</button>
+            </section>
+            <section class="roundBorder">
+                <h3>Mapping public art in New Haven</h3>
+                <p>Hey everyone! I've been mapping public art in New Haven as part of my nonprofit project ArtAround and
+                    I'd love to invite you to join me, or just check it out and see what you think. <br>
+                    <a href="#">New Haven map &gt;</a><br>
+                    <a href="#">Art around homepage &gt;</a><br>
+                    &lt;3 Lindsey
+                </p>
+
+            </section>
+        </article>
+
+        <!--EVENTS-->
+        <!--DO WE WANT A MATERIAL CALENDAR ICON FOR THE DATE?-->
+        <article class="events landingArt">
+            <h2>Events</h2>
+            <section>
+                <h3>"Feedback Loop" --First-Year MFA Exhibition</h3>
+                <p class="calDate">Nov<br><span class="numFont">13</span></p>
+                <p class="p1"><i class="fa-regular fa-clock"></i> 6PM - 8PM EST</p>
+                <p class="p2"><i class="fa-solid fa-location-dot"></i>Chapel Rd, San Diego, CA 92134</p>
+                <p class="eventDescription">Fall 2024 1st-Year MFA Show<br>
+                    Public reception: Friday, November 15, 6-8PM <br>
+                    Open to the Yale community and invited, accompanied guests. Featuring work by Alixe Turner, Amanda
+                    Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew Warner, Aru Apaza, Bendy Sohn, Cameron
+                    Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian Badach, Christopher
+                    Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch, Faye Wei
+                    Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                    Hongting Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh
+                    Vasquez, Kiki Serna, Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad
+                    Yahya, Olivia Reavey, Priscilla Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben,
+                    Wenqing Zhai, Xiwen Zhang, Yuna Cho, and Yuwei Tu.
+                    <br> Exhibition identity by Amy Fang and Camille Jen-Mei Gwise, Graphic Design MFAs '26.
+                </p>
+                <button class="roundBorder moreDetails">More Details</button>
+            </section>
+            <section>
+                <h3>Admissions Virtual Visit 1: MFA Program, Admission + Financial Aid Overview</h3>
+                <p class="calDate">Nov<br><span class="numFont">25</span></p>
+                <p class="p1"><i class="fa-regular fa-clock"></i> 12:30 AM - 1:30 PM EST</p>
+                <p class="p2"><i class="fa-solid fa-location-dot"></i><a href="#">Zoom Call</a></p>
+                <p class="eventDescription">Learn more about Yale School of Art MFA Programs and preparing to apply for
+                    study beginning Fall 2025 by registering for our Admission Virtual Visit led by our admission and
+                    financial aid team. The main November 25th session will be followed by two supplemental online panel
+                    discussions in December; one featuring faculty jury members, and the other with current MFA
+                    students.
+                    All events will focus on admission advisement and be held on zoom; register for the Virtual Visit
+                    series HERE >
+                    Graphic identity by Heejae Kim, Graphic Design MFA '26.</p>
+                <button class="roundBorder moreDetails">More Details</button>
+            </section>
+
+            <section>
+                <h3>Admissions Virtual Visit 2: Faculty Admission Committee Panel Discussion</h3>
+                <p class="calDate">Nov<br><span class="numFont">25</span></p>
+                <p class="p1"><i class="fa-regular fa-clock"></i> 9AM - 10AM EST</p>
+                <p class="p2"><i class="fa-solid fa-location-dot"></i><a href="#">Zoom Call</a></p>
+                <p class="eventDescription">Learn more about Yale School of Art MFA Programs and preparing to apply for
+                    study beginning Fall 2025 by registering for our Admission Virtual Visit led by our admission and
+                    financial aid team. The main November 25th session will be followed by two supplemental online panel
+                    discussions in December; one featuring faculty jury members, and the other with current MFA
+                    students.</p>
+                <button class="roundBorder moreDetails">More Details</button>
+            </section>
+            <a href="pages/events.html" class="roundBorder">More Events</a>
+        </article>
+
+        <article class="roundBorder about landingArt">
+            <h3>About this Site</h3>
+            <p>This website exists as an ongoing collaborative experiment in digital publishing and information sharing.
+                Because this website functions as a wiki, all members of the School of Art community—graduate students,
+                faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site's
+                existing content. Content is the property of its various authors. When you contribute to this site, you
+                agree to abide by Yale University academic and network use policy, and to act as a responsible member of
+                our community.</p>
+        </article>
+
+
+    </main>
+
+
+    <!--FOOTER-->
+    <footer>
+        <a href="#" class="btt">Back to top</a>
+        <ul class="socials">
+            <li><a href="#"><img src="images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+            <li><a href="#"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+            <li><a href="#"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+        </ul>
+        <nav>
+            <ul class="footerLinks">
+                <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
+                <li><a href="#">Support the School</a></li>
+                <li><a href="#">Visiting</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Accessibility at Yale</a></li>
+            </ul>
+        </nav>
+        <img src="images/crest.png" alt="yale crest">
+
+        <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("section .eventDescription").hide();
+
+            $(".moreDetails").click(function () {
+                var element = $(this).prev();
+                element.toggle();
+                var replaceText = element.is(":hidden") ? "More Details" : "Less Details";
+                $(this).text(replaceText);
+            });
+
+            $(".readMore").click(function () {
+                $(this).parent().toggleClass("showContent");
+
+                var replaceText = $(this).parent().hasClass("showContent") ? "Less Details" : "More Details";
+                $(this).text(replaceText);
+            });
+        });
+
+    </script>
+</body>
+
 </html>

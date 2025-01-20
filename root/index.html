@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name =”description” content=“Yale-School-of-Art-landing-page.Contents-include-mission-specialties-bulletins-events-and-about-the-page.-Includes-headers-nav-and-footer-links.”>
     <title>Yale School of Art</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
     <!--FONT AWESOME ALL-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -21,6 +20,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    
 </head>
 <!--
     Accessibility steps:
@@ -33,8 +33,6 @@
 <!--Landing (index) page in version 1.0. All components have been touched upon. Variable sizing at every resolution using grid. Fixed MFA fig and figcaptions. 
     Still need: 
     2 layer header nav
-    fixed links
-    jquery for "more events" 
     hero carousel
     block display for all links-->
 
@@ -82,19 +80,19 @@
         <article class="mfa landingArt">
             <h2>MFA Specialties</h2>
             <figure class="landingFig">
-                <img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder">
+                <a href="pages/works.html"><img src="images/buildingLarge.jpg" alt="brick building with fall leaves" class="roundBorder"></a>
                 <figcaption>Photography</figcaption>
             </figure>
             <figure class="landingFig">
-                <img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder">
+                <a href="pages/works.html"><img src="images/insectLarge.jpg" alt="large insect sculpture" class="roundBorder"></a>
                 <figcaption>Sculpture</figcaption>
             </figure>
             <figure class="landingFig">
-                <img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder">
+                <a href="pages/works.html"><img src="images/bulldogsLarge.png" alt="4 color sketches of bulldogs" class="roundBorder"></a>
                 <figcaption id="darkBG">Print/Painting</figcaption>
             </figure>
             <figure class="roundBorder landingFig">
-                <img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder">
+                <a href="pages/works.html"><img src="images/octopusLarge.jpg" alt="3D octopus wearing glasses" class="roundBorder"></a>
                 <figcaption>Digital Design</figcaption>
             </figure>
         </article>
@@ -137,8 +135,8 @@
                 <h3>Mapping public art in New Haven</h3>
                 <p>Hey everyone! I've been mapping public art in New Haven as part of my nonprofit project ArtAround and
                     I'd love to invite you to join me, or just check it out and see what you think. <br>
-                    <a href="#">New Haven map &gt;</a><br>
-                    <a href="#">Art around homepage &gt;</a><br>
+                    <a href="pages/sitemap.html">New Haven map &gt;</a><br>
+                    <a href="pages/wiki.html">Art around homepage &gt;</a><br>
                     &lt;3 Lindsey
                 </p>
 
@@ -218,18 +216,18 @@
     <footer>
         <a href="#" class="btt">Back to top</a>
         <ul class="socials">
-            <li><a href="#"><img src="images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
-            <li><a href="#"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
-            <li><a href="#"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+            <li><a href="https://www.instagram.com/yaleschoolofart/" target="_blank"><img src="images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCDwJT0mYodTSodcpH-hGmdA" target="_blank"><img src="images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+            <li><a href="https://www.facebook.com/YaleSchoolofArt/" target="_blank"><img src="images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
         </ul>
         <nav>
             <ul class="footerLinks">
-                <li class="sN"><a href="#" class="schoolName">Yale School of Art</a></li>
-                <li><a href="#">Support the School</a></li>
-                <li><a href="#">Visiting</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Accessibility at Yale</a></li>
+                <li class="sN"><a href="#" class="schoolName" target="_blank">Yale School of Art</a></li>
+                <li><a href="https://www.art.yale.edu/about/support-the-school" target="_blank">Support the School</a></li>
+                <li><a ref="https://www.art.yale.edu/about/visiting" target="_blank">Visiting</a></li>
+                <li><a href="pages/about.html" target="_blank">Contact</a></li>
+                <li><a href="https://www.art.yale.edu/sitemap" target="_blank">Sitemap</a></li>
+                <li><a href="https://your.yale.edu/policies-procedures/policies/1605-web-accessibility-policy" target="_blank">Accessibility at Yale</a></li>
             </ul>
         </nav>
         <img src="images/crest.png" alt="yale crest">

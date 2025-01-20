@@ -1417,6 +1417,33 @@ a .fa-facebook {
     border-bottom: 1px solid grey;
     justify-self: center;
 }
+.wikiMain section article img {
+    box-shadow: (1em 1em .4em rgba(0,0,0,0.5));
+}
+.wikiMain section nav {
+    display: flex;
+    flex-direction: row;
+}
+.wikiMain .flexFold {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+.wikiMain .flexFold img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.wikiMain section nav img[src$=".svg"] {
+    max-height: 1em;
+    margin: auto;
+}
+.wikiMain > section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    
+}
 
 
 /* ****************************************

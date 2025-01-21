@@ -1344,14 +1344,17 @@ p.aboutBlurb{
 }
 
 .subscribeBtn {
+    display: table-cell;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
     color: white;
     background-color: #1A386A;
-    font-size: 1.6rem;
-    font-family: var(--body-font);
-    font-weight: 600;
+    font: 600 1.6rem var(--body-font);
     padding: 10px 24px;
     border-radius: 6px;
     border-style: none;
+    text-decoration: none;
 }
 
 a .fa-facebook {

@@ -15,6 +15,33 @@
     12. INTERDISCIPLINARY COLLABORATIONS (Sherry)
     13. APPLY (Sherry)
 *****************************************/
+/******************************************
+Types of Selectors Used in Our Project
+(Examples provided are all from the general styles)
+1.	Element selector
+Example: h1 
+
+2.	Grouping selector
+Example: h3, h4 
+
+3.	Descendant selector
+Example: header a 
+
+4.	Class selector
+Example: .navToggler 
+
+5.	ID selector
+Example: #soa 
+
+6.	Attribute selector
+Example:  footer img[src$=".svg"]
+
+7.	Pseudo-class selector 
+Example header nav li:hover
+
+8.	General Sibling Selector
+Example: .navToggler:checked ~ .navTogglerMenu .menuClose
+*****************************************/
 
 /* ****************************************
 *******************************************
@@ -1980,7 +2007,6 @@ table {
 td,
 th {
     padding: 7px 10px;
-    /*border: 1px dotted var(--callout-color);*/
     text-align: left;
     vertical-align: top;
 

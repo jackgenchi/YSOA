@@ -1054,6 +1054,93 @@ article.bulletin section:nth-of-type(3) a {
 *******************************************
 ***************************************** */
 
+p.aboutBlurb{
+    margin: 0 2rem; 
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.6rem; 
+    padding: 2rem 1rem;
+}
+
+.AboutCard {
+    background-color: var(--blue-card-bg); 
+    border-radius: var(--corners); 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 0 2rem 0;
+    text-align: center;
+}
+
+
+  .AboutCard img {
+    width: 100%; 
+    height: auto; 
+    max-height: 250px;
+    object-fit: cover;
+    display: block; 
+    border-radius: var(--corners) var(--corners) 0 0; 
+    margin: 0; 
+    padding: 0; 
+}  
+
+
+.AboutCard h3, .AboutCard p, .AboutCard button {
+    padding: 0 2.5rem; 
+}
+
+.AboutCard h3 {
+    font-size: 2.2rem; 
+    text-align: left;
+    color: var(--dark-blue); 
+    margin: 2rem 0 1.6rem; 
+}
+
+.AboutCard p {
+    color: var(--dark-blue); 
+    margin-bottom: 1.6rem; 
+    text-align: left;
+}
+
+.AboutCard button {
+    display: inline-block; 
+    background-color: var(--callout-color); 
+    color: white; 
+    font-size: 1.6rem; 
+    padding: 1rem .5rem; 
+    margin: auto 5rem 0;
+    border: none; 
+    border-radius: var(--corners); 
+    cursor: pointer; 
+    text-align: center;
+}
+
+.AboutCard button:hover {
+    background-color: var(--lightcallout-color);
+}
+
+/*****Large screen ABOUT THE SCHOOL******/
+  @media screen and (min-width: 768px) {
+    #about .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #contact p {
+        margin: 1.6rem 0;
+    }
+
+    #about h2 {
+        text-align: left;
+    }
+
+    p.aboutBlurb{
+        margin-bottom: 1.2rem; 
+    }
+}
 
 /* ****************************************
 *******************************************

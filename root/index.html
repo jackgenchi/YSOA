@@ -13,9 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
     <!--FONT AWESOME ALL-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--MAIN CSS-->
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -33,8 +31,7 @@
 <!--Landing (index) page in version 1.0. All components have been touched upon. Variable sizing at every resolution using grid. Fixed MFA fig and figcaptions. 
     Still need: 
     2 layer header nav
-    hero carousel
-    block display for all links-->
+    hero carousel-->
 
 <body>
     <header>
@@ -47,14 +44,30 @@
                 <li><a href="pages/about.html">About</a></li>
                 <li><a href="pages/apply.html">Apply</a></li>
                 <li><a href="pages/learning.html">Learn &amp; Collaborate</a></li>
+                <li class="secondLevel">
+                        <input type="checkbox" id="locationSubMenu"> 
+                         <a href="#">
+                           <label for="locationSubMenu" class="secondMenu">
+                               More
+                               <i class="fa-solid fa-caret-right menuSecondClose"></i>
+                               <i class="fa-solid fa-sort-down menuSecondOpen"></i>
+                            </label>
+                         </a>
+                          <ul class="subMenu">
+                              <li><a href="pages/careers.html">Careers</a></li>
+                              <li><a href="pages/courses.html">Courses</a></li>
+                              <li><a href="pages/interdisciplinary.html">Interdisc Collabs</a></li>
+                              <li><a href="pages/wiki.html">Wiki</a></li>
+                          </ul>
+                </li>
                 <li><a href="pages/events.html">Events</a></li>
                 <li><a href="pages/news.html">News</a></li>
                 <li><a href="pages/works.html">Our Works</a></li>
                 <li><a href="pages/resources.html">Student Resources</a></li>
-                <li><a href="pages/interdisciplinary.html">Interdisc Collabs</a></li>
+                
                 <li><a href="pages/careers.html">Careers</a></li>
-                <li><a href="pages/courses.html">Courses</a></li>
-                <li><a href="pages/wiki.html">Wiki</a></li>
+                
+                
             </ul>
         </nav>
         <label for="navToggler" class="navTogglerMenu" name="navToggler">
@@ -158,7 +171,7 @@
                     Atria, Ambrose Murray, Amy Chasse, Amy Fang, Amy Wang, Andrew Warner, Aru Apaza, Bendy Sohn, Cameron
                     Patricia Downey, Camille Gwise, Chen Xiangyun, Chris Cole, Christian Badach, Christopher
                     Postlewaite, Cierra Peters, David Jung, Denzel Boyd, Ellen Fabini, Em Wall, Faith Couch, Faye Wei
-                    Wei, Gabriella N. Báez, Hana Jelovšek & Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
+                    Wei, Gabriella N. Báez, Hana Jelovšek &amp; Gal Šnajder, Hasti Kasraei, Hazal Ozgur, Heejae Kim,
                     Hongting Zhu, Ian Faden, Inkpa Mani, Izza Alyssa, Jasmine Clarke, John Shen, Josh Rabineau, Josh
                     Vasquez, Kiki Serna, Kimberly Heard, Leyla Tonak, Mar Figueroa, Michael Stevens, Nabla Mohammad
                     Yahya, Olivia Reavey, Priscilla Young, Rebecca Cheng, Sok Song, Taisha Carrington, Vernando Reuben,

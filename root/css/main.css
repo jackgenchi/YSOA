@@ -1116,7 +1116,7 @@ p.aboutBlurb{
     text-align: left;
 }
 
-.AboutCard button {
+.AboutCard .button {
     display: inline-block; 
     background-color: var(--callout-color); 
     color: white; 
@@ -1129,7 +1129,7 @@ p.aboutBlurb{
     text-align: center;
 }
 
-.AboutCard button:hover {
+.AboutCard .button:hover {
     background-color: var(--lightcallout-color);
 }
 
@@ -1305,7 +1305,7 @@ p.aboutBlurb{
     5. EVENTS (Evelyn)
 *******************************************
 ***************************************** */
-
+/* mobile size styles */
 #events main {
     padding: 20px;
     gap: 16px;
@@ -1488,6 +1488,7 @@ a .fa-facebook {
     display: block;
 }
 
+/* mid screen size */
 @media screen and (min-width: 720px) {
     #events main {
         max-width: 100%;
@@ -1509,6 +1510,7 @@ a .fa-facebook {
     }
 }
 
+/* large screen size */
 @media screen and (min-width: 940px) {
     #events main {
         max-width: 1120px;

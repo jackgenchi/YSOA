@@ -482,8 +482,9 @@ footer p {
     header nav ul li.secondLevel input:checked  ~ ul.subMenu{;
         max-height: 100vh; 
         top: 4em;
-        left: 35%;
+        left: 88%;
         width: auto;
+        margin: 0 1em;
     }
     
     ul.subMenu a {
@@ -549,8 +550,12 @@ footer p {
 
     /* END OF MID SCREEN FOOTER NAV*/
 }
-@media screen and (min-width: 1350px) { /* resets position for dropdown on larger screen sizes*/
-    header nav ul li.secondLevel input:checked  ~ ul.subMenu{ left: 37%; } 
+@media screen and (min-width: 1050px) { 
+    header nav ul li.secondLevel input:checked  ~ ul.subMenu{ left: 90%; } 
+}
+
+@media screen and (min-width: 1350px) { 
+    header nav ul li.secondLevel input:checked  ~ ul.subMenu{ left: 93%; } 
 }
 
 /* LARGE SCREEN FOOTER NAV*/

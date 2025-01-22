@@ -53,16 +53,87 @@
           </header>
         
         <main class="wikiMain">
-            <!--Section*3>h2+article*6>img+h3+p^nav{}>img+label>input[type="number" name="page$" min="1" max="20"]^p+img--> 
             <section class="searchFilt">
-                <form action="">
+                <form action="#" method="get">
                     <label for="search"></label>
-                    <input class="searchInp" type="text" id="search" name="searchName" value="Search our gallery">
+                    <input 
+                    class="searchInp" 
+                    type="text" id="search" 
+                    name="searchName" 
+                    placeholder="Search our gallery"
+                    aria-label="Search through our wiki art">
+                    <!--button--><img src="../images/magnifying-glass-solid.svg" alt="magniyfing glass icon" class="mag"><!--/button-->
                 </form>
+                
+                <section id="filteringDropDown">
+                        <input type="checkbox" id="filterSubMenu" class="navToggler"> 
+                         <a href="#">
+                           <label for="filterSubMenu" >
+                               Filter
+                               <!--i class="fa-solid fa-caret-right menuSecondClose"></i-->
+                               <i class="fa-solid fa-chevron-right menuFilterOpen" style="color: #ffffff;"></i>
+                               <!--i class="fa-solid fa-sort-down menuSecondOpen"></i-->
+                               <i class="fa-solid fa-chevron-down menuFilterClose" style="color: #ffffff;"></i>
+                            </label>
+                         </a>
+                        <form action="#" method="post" id="filterDrop">
+                            <!-- Filters -->
+                            <!--fieldset-->
+                               <ul >
+                                    <li>
+                                        <label for="category" class="filtLabel">Category</label>
+                                        <ul class="radioInput">
+                                            <li>
+                                                <input type="checkbox" name="category" value="news">
+                                                <label for="news">Art News (3)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="category"  value="piece">
+                                                <label for="piece">Art Pieces (105)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="category" value="history">
+                                                <label for="history">Art History (64)</label>
+                                            </li>                              
+                                         </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <label for="submitted" class="filtLabel">Submitted by:</label>
+                                        <ul class="radioInput">
+                                            <li>
+                                                <input type="checkbox" name="faculty" value="faculty">
+                                                <label for="faculty">Faculty (17)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="submitted"  value="student">
+                                                <label for="piece">Student (99)</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="submitted" value="community">
+                                                <label for="community">Community (02)</label>
+                                            </li>                              
+                                         </ul>
+                                    </li>
+                                    <li>
+                                        <label for="date" class="filtLabel">Date Submitted: <span id="demo" ></span></label>
+                                        <ul>
+                                            <li>
+                                                <input type="range" name="date" min="1869" max="2024" step="1" id="myRange">
+                                            </li>                               
+                                         </ul>
+                                    </li>                            
+                                </ul>
+                                <input type="submit" value="Submit" class="filterButtons darkSub">
+                                <input type="reset" value="Reset" class="filterButtons lightRes">
+                            <!--/fieldset-->
+                        </form>
+                    </section>
             </section>
-            <section>
+            
+            <section class="wikiGrids maxWidth">
                 <h2>Art News</h2>
-                <section class="flexFold">
+                
                     <article>
                         <img src="../images/news1_low.jpg" alt="girl holding burning newspaper">
                         <h3>Hot Topics</h3>
@@ -93,18 +164,18 @@
                         <h3>Type Face</h3>
                         <p>Jamie</p>
                     </article> 
-                </section>
+                
                 <nav>
                     <img src="../images/chevron-left-solid.svg" alt="left arrow">
-                    <label for=""><input type="number" name="page1" min="1" max="20"></label>
-                    <p>20</p>
+                    <label for="pageNumb1"><input type="number" class="pageNumb" id="pageNumb1" name="pageNumb1" min="1" max="20" value="1"></label>
+                    <p>| 20</p>
                     <img src="../images/chevron-right-solid.svg" alt="right arrow">
                 </nav>
             </section>
             
-            <section>
+            <section class="wikiGrids maxWidth">
                 <h2>Art Pieces</h2>
-                <section class="flexFold">
+                
                     <article>
                         <img src="../images/art1_low.jpg" alt="giraffe water color">
                         <h3>Girrafe</h3>
@@ -135,19 +206,18 @@
                         <h3>Smooth Art</h3>
                         <p>Ross</p>
                     </article>
-                </section>
+                
                 <nav>
                     <img src="../images/chevron-left-solid.svg" alt="left arrow">
-                    <label for=""><input type="number" name="page1" min="1" max="20"></label>
-                    <p>20</p>
+                    <label for="pageNumb2"><input type="number" class="pageNumb" id="pageNumb2" name="pageNumb2" min="1" max="20" value="1"></label>
+                    <p>| 20</p>
                     <img src="../images/chevron-right-solid.svg" alt="right arrow">
                 </nav>
             </section>
             
-            <section>
+            <section class="wikiGrids maxWidth">
                 <h2>Art History</h2>
-                <section class="flexFold">
-                    <article>
+                <article>
                         <img src="../images/history1_low.jpg" alt="old statues">
                         <h3>Still-life works</h3>
                         <p>Lisa</p>
@@ -177,14 +247,14 @@
                         <h3>Ancestral Creativity</h3>
                         <p>Paul</p>
                     </article>
-                </section>
+                
                 <nav>
                     <img src="../images/chevron-left-solid.svg" alt="left arrow">
-                    <label for=""><input type="number" name="page1" min="1" max="20"></label>
-                    <p>20</p>
+                    <label for="pageNumb3"><input type="number" class="pageNumb" id="pageNumb3" name="pageNumb3" min="1" max="20" value="1"></label>
+                    <p>| 20</p>
                     <img src="../images/chevron-right-solid.svg" alt="right arrow">
-                </nav>
-            </section>
+                </nav> 
+                </section>           
         </main>
         
         <!--FOOTER-->
@@ -208,6 +278,16 @@
         <img src="../images/crest.png" alt="yale crest">
 
         <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
-    </footer>           
+    </footer>  
+    
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>         
     </body>    
 </html>

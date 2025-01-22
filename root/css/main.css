@@ -1686,6 +1686,9 @@ a .fa-facebook {
     color: white;
     font-size: 2em;
 }
+.searchInp::placeholder {
+    color: white;
+}
 .wikiMain section article img {
     box-shadow: (1em 1em .4em rgba(0,0,0,0.5));
 }

@@ -1740,9 +1740,6 @@ a .fa-facebook {
     font-size: 1.2em;
 }
 /* WIKI SEARCH AND FILTER END */ 
-.wikiMain section article img {
-    box-shadow: 1em 1em .4em rgba(0,0,0,50%);
-}
 .wikiMain section nav {
     display: flex;
     flex-direction: row;

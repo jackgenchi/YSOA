@@ -261,20 +261,21 @@ header nav li:hover {
 
 /* SECOND TIER NAVIGATION */
 
-li.secondLevel input { 
+.secondLevel input { 
     display: none;
 }
 
-li.secondLevel input:checked  ~ ul.subMenu {
+.secondLevel input:checked  ~ ul.subMenu {
     display: block; 
     transition: all .5s;
+    z-index: 3;
 }
 
-li.secondLevel input:checked  ~ a  label .menuSecondOpen {
+.secondLevel input:checked  ~ a  label .menuSecondOpen {
    display: block; 
 }
 
-li.secondLevel input:checked  ~ a label .menuSecondClose {
+.secondLevel input:checked  ~ a label .menuSecondClose {
    display: none; 
 }
 
@@ -484,7 +485,7 @@ footer p {
         top: 4em;
         left: 88%;
         width: auto;
-        margin: 0 1em;
+        z-index: 3;
     }
     
     ul.subMenu a {
@@ -1539,17 +1540,25 @@ a .fa-facebook {
 .login img {
     max-height: 1em;
 }
+.mag {
+    max-width: 2.5em;
+}
 .wikiMain {
-    margin-top: 10em;
+    margin-top: 8em;
 }
 .searchFilt{
-    padding: 1em;
+    padding: 2em;
     background-image: linear-gradient(to top, var(--callout-color), var(--lightcallout-color) );
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 }
 .searchInp {
     background-color: transparent;
-    border-bottom: 1px solid grey;
-    justify-self: center;
+    border-bottom: 1px solid white;
+    width: 90%;
+    color: white;
+    font-size: 2em;
 }
 .wikiMain section article img {
     box-shadow: (1em 1em .4em rgba(0,0,0,0.5));
@@ -1558,25 +1567,174 @@ a .fa-facebook {
     display: flex;
     flex-direction: row;
 }
-.wikiMain .flexFold {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1em;
+.wikiMain .wikiGrids {
+    display: grid;
+    grid: min-content repeat(3,1fr) min-content / 1fr 1fr;
+    border-bottom: 1px grey solid;
 }
-.wikiMain .flexFold img {
+.wikiGrids h2 {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+.wikiGrids nav {
+    grid-row: -1/-2;
+    grid-column: 1/-1;
+    display: flex;
+}
+.wikiMain .wikiGrids img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 7%;
+    filter: drop-shadow(.5em .5em .5em grey);
+    padding-bottom: 1em;
 }
-.wikiMain section nav img[src$=".svg"] {
-    max-height: 1em;
-    margin: auto;
+.wikiMain .wikiGrids h3 {
+    padding-bottom: .25em;
 }
-.wikiMain > section {
+.wikiMain .wikiGrids article {
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid grey;
+    justify-content: center;
     
+}
+.wikiMain section nav img[src$=".svg"] {
+    max-height: 3em;
+    margin: auto;
+    width: auto;
+    filter: drop-shadow(0 0 0 grey);
+}
+input.pageNumb {
+    border-bottom: 1px black solid;
+        background-color: lightgray;
+        text-align: center;
+        margin: .2em .2em 0 0;
+        font-size: 1.5em;
+}
+input.pageNumb::-webkit-outer-spin-button,
+input.pageNumb::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+}
+
+    /* Firefox */
+input.pageNumb[type=number] {
+      -moz-appearance: textfield;        
+}
+
+#filterDrop {
+    color: white;
+    font-size: 1.5em;   
+}
+#filteringDropDown a {
+    text-decoration: none;
+}
+#filteringDropDown a label {
+    color: white;
+    font-size: 2em;
+}
+#filterDrop {
+    display: none;
+}
+#filterDrop .radioInput input {
+    display: block;
+}
+#filterDrop .radioInput li {
+    accent-color: var(--brightaccent-color);
+    width: 100%;
+}
+
+#filteringDropDown input:checked  ~ form#filterDrop {
+    display: block; 
+    transition: all .5s;
+    z-index: 3;
+    padding-top: 1.5em;
+}
+
+.menuFilterClose {
+    display: none;
+}
+
+#filteringDropDown input:checked  ~ a  label .menuFilterClose {
+   display: inline; 
+}
+
+#filteringDropDown input:checked  ~ a label .menuFilterOpen {
+   display: none; 
+}
+.filtLabel {
+    justify-self: center;
+    border-bottom: 1px darkgrey solid;
+    font-size: 2em; 
+    display: block;
+    text-align: center;
+    padding: 1em 0 .5em;
+    font-weight: bold;
+}
+.wikiMain .wikiGrids:nth-of-type(4) {
+    border-bottom: none;
+}
+.filterButtons {
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 10%;
+    padding: 1em;
+    color: white;
+}
+.darkSub {
+    background-color: var(--darkaccent-color)
+}
+.lightRes {
+    background-color: var(--brightaccent-color)
+}
+#myRange {
+    width: 90%;
+    margin: 1em 0 1em 5%;
+}
+#filterDrop .radioInput li {
+    padding-top: 2em;
+    font-size: 1.2em;
+}
+@media screen and (min-width: 720px) {
+    .login {
+        border-radius: 20%/ 40%; 
+        font-size: 1em;
+        position: unset;
+        width: unset;
+        display: flex;
+        padding: .8em .8em;
+        align-self: center;
+        flex-grow: 0;
+    }
+    .login img {
+        padding-left: .5em;
+    }
+    .wikiMain {
+        margin-top: 0;
+    }
+    .searchFilt {
+        margin-top: 1em;
+    }
+    .wikiMain .wikiGrids {
+        grid: min-content repeat(2,1fr) min-content / repeat(3,1fr);
+    }
+}
+@media screen and (min-width: 1080px) {
+    .wikiMain .wikiGrids {
+    grid: min-content 1fr min-content / repeat(6,1fr) ;
+    }
+}
+@media screen and (min-width: 1000px) {
+    main.wikiMain {
+        max-width: unset ;
+        margin: unset;
+    }
+    main.wikiMain .maxWidth {
+        max-width: 1400px;
+        margin: auto;
+    }
 }
 
 

@@ -1841,7 +1841,7 @@ input.pageNumb[type=number] {
         margin-top: 0;
     }
     .searchFilt {
-        margin-top: 1em;
+        padding-top: 1em;
     }
     .wikiMain .wikiGrids {
         grid: min-content repeat(2,1fr) min-content / repeat(3,1fr);

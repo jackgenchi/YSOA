@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stay connected with the Yale School of Art's public events! Explore exhibitions, lectures, workshops, and performances that showcase the talent and creativity of our community. Discover upcoming events and join us in celebrating the arts.">
     <title>Events - Yale School of Art</title>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <!--GOOGLE FONTS-->
@@ -12,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
     <!--FONT AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--MAIN CSS-->
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -29,40 +30,39 @@
 
 <body id="events">
     <header>
-          <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
-          <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1></a>
-           <input type="checkbox" class="navToggler" id="navToggler">
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="learning.html">Learn &amp; Collaborate</a></li>
-                    <li class="secondLevel">
-                        <input type="checkbox" id="locationSubMenu"> 
-                         <a href="#">
-                           <label for="locationSubMenu" class="secondMenu">
-                               More
-                               <i class="fa-solid fa-caret-right menuSecondClose"></i>
-                               <i class="fa-solid fa-sort-down menuSecondOpen"></i>
-                            </label>
-                         </a>
-                          <ul class="subMenu">
-                              <li><a href="careers.html">Careers</a></li>
-                              <li><a href="courses.html">Courses</a></li>
-                              <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
-                              <li><a href="wiki.html">Wiki</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="works.html">Our Works</a></li>
-                    <li><a href="resources.html">Student Resources</a></li>
-                </ul> 
-            </nav>
-            <label for="navToggler" class="navTogglerMenu" name="navToggler">
-            <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
-            <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
-        </header>
+        <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
+        <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1></a>
+         <input type="checkbox" class="navToggler" id="navToggler">
+          <nav>
+              <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="apply.html">Apply</a></li>
+                  <li><a href="learning.html">Learn &amp; Collaborate</a></li>
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="works.html">Our Works</a></li>
+                  <li class="secondLevel">
+                    <input type="checkbox" id="locationSubMenu"> 
+                     <a href="#">
+                       <label for="locationSubMenu" class="secondMenu">
+                           More Learning
+                           <i class="fa-solid fa-caret-right menuSecondClose"></i>
+                           <i class="fa-solid fa-sort-down menuSecondOpen"></i>
+                        </label>
+                     </a>
+                      <ul class="subMenu">
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="courses.html">Courses</a></li>
+                          <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
+                          <li><a href="wiki.html">Wiki</a></li>
+                      </ul>
+                </li>
+              </ul> 
+          </nav>
+          <label for="navToggler" class="navTogglerMenu" name="navToggler">
+          <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
+          <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
+      </header>
 
     <main>
         <section class="blurb">
@@ -70,7 +70,7 @@
             <p>Stay inspired and connected! Explore our calendar of exhibitions, lectures, workshops, and performances
                 showcasing the talent and creativity of our community. Whether you're a student, artist, or art
                 enthusiast,
-                there's something for everyone. <br /> <br /> Discover what's happening now and join us in celebrating
+                there's something for everyone. <br><br> Discover what's happening now and join us in celebrating
                 the arts!
             </p>
         </section>
@@ -90,7 +90,7 @@
             </select>
 
             <span class="calendarHeaderBtns">
-                <button class="subscribeBtn">Subscribe</button> <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://calendar.google.com/calendar/u/0/r?cid=webcal://api.eventcalendarapp.com/widget-subscription/5535/457d85b7-db7e-4f19-a97f-2bf0e901a90e?limit%3D750&pli=1" target="_blank" class="subscribeBtn">Subscribe</a> <a href="https://www.facebook.com/YaleSchoolofArt/events/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </span>
         </section>
 
@@ -358,11 +358,11 @@
         </ul>
         <nav>
             <ul class="footerLinks">
-                <li class="sN"><a href="#" class="schoolName" target="_blank">Yale School of Art</a></li>
+                <li class="sN"><a href="../index.html" class="schoolName" target="_blank">Yale School of Art</a></li>
                 <li><a href="https://www.art.yale.edu/about/support-the-school" target="_blank">Support the School</a></li>
                 <li><a href="https://www.art.yale.edu/about/visiting" target="_blank">Visiting</a></li>
-                <li><a href="../pages/about.html" target="_blank">Contact</a></li>
-                <li><a href="https://www.art.yale.edu/sitemap" target="_blank">Sitemap</a></li>
+                <li><a href="about.html" target="_blank">Contact</a></li>
+                <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
                 <li><a href="https://your.yale.edu/policies-procedures/policies/1605-web-accessibility-policy" target="_blank">Accessibility at Yale</a></li>
             </ul>
         </nav>

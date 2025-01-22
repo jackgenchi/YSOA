@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About - Yale School of Art</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <!--FONT AWESOME ALL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+</head>
+<!--
+    Accessibility steps:
+    Use semantic HTML markup to provide a clear and logical structure to the content and navigation.
+    Use ARIA (Accessible Rich Internet Applications) roles, states, and properties to describe the purpose and behavior of elements and components.
+    Ensure that all interactive elements, such as links, buttons, and form fields, are accessible using the keyboard and have clear focus indicators.
+    Provide keyboard shortcuts or access keys for frequently used actions or links.
+    Test the website with a keyboard-only interface or with assistive technology, such as screen readers or voice recognition software.
+-->
+
+<body id="sitemap">
+    <!--HEADER-->
+    <header>
+        <a href="../index.html"><img src="../images/crest.png" alt="Yale Crest">
+            <h1><span id="yale">Yale</span><span id="soa">School<br> of Art</span></h1>
+        </a>
+        <input type="checkbox" class="navToggler" id="navToggler">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="learning.html">Learn &amp; Collaborate</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="works.html">Our Works</a></li>
+                <li class="secondLevel">
+                    <input type="checkbox" id="locationSubMenu">
+                    <a href="#">
+                        <label for="locationSubMenu" class="secondMenu">
+                            More Learning
+                            <i class="fa-solid fa-caret-right menuSecondClose"></i>
+                            <i class="fa-solid fa-sort-down menuSecondOpen"></i>
+                        </label>
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="interdisciplinary.html">Interdisc Collabs</a></li>
+                        <li><a href="wiki.html">Wiki</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
+            <img src="../images/bars-solid.svg" class="menuOpen" alt="menu icon">
+            <img src="../images/xmark-solid.svg" class="menuClose" alt="close menu icon"></label>
+    </header>
+
+    <main>
+        <h2>Sitemap</h2>
+        <ul>
+            <li><a href="../index.html" target="_blank">Home</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+            <li><a href="apply.html" target="_blank">Apply</a></li>
+            <li><a href="learning.html" target="_blank">Learn and Collaborate</a>
+                <ul>
+                    <li><a href="careers.html" target="_blank">Careers</a></li>
+                    <li><a href="courses.html" target="_blank">Courses</a></li>
+                    <li><a href="interdisciplinary.html" target="_blank">Interdisciplinary Collaborations</a></li>
+                    <li><a href="wiki.html" target="_blank">Wiki</a></li>
+                </ul>
+            </li>
+            <li><a href="events.html" target="_blank">Events</a></li>
+            <li><a href="works.html" target="_blank">Our Works</a></li>
+        </ul>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer>
+        <a href="#" class="btt">Back to top</a>
+        <ul class="socials">
+            <li><a href="#"><img src="../images/instagram-brands-solid.svg" alt="instagram icon"></a></li>
+            <li><a href="#"><img src="../images/youtube-brands-solid.svg" alt="youtube icon"></a></li>
+            <li><a href="#"><img src="../images/facebook-brands-solid.svg" alt="facebook icon"></a></li>
+        </ul>
+        <nav>
+            <ul class="footerLinks">
+                <li class="sN"><a href="../index.html" class="schoolName" target="_blank">Yale School of Art</a></li>
+                <li><a href="https://www.art.yale.edu/about/support-the-school" target="_blank">Support the School</a></li>
+                <li><a href="https://www.art.yale.edu/about/visiting" target="_blank">Visiting</a></li>
+                <li><a href="about.html" target="_blank">Contact</a></li>
+                <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
+                <li><a href="https://your.yale.edu/policies-procedures/policies/1605-web-accessibility-policy" target="_blank">Accessibility at Yale</a></li>
+            </ul>
+        </nav>
+        <img src="../images/crest.png" alt="yale crest">
+
+        <p>Copyright &copy; 2024 Yale University<br>All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

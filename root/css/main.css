@@ -48,26 +48,7 @@ Example: .navToggler:checked ~ .navTogglerMenu .menuClose
     1. GENERAL STYLES
 *******************************************
 ***************************************** */
-/*// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-.shippori-antique-b1-regular {
-  font-family: "Shippori Antique B1", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.notable-regular {
-  font-family: "Notable", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-*/
 
 :root {
     /*Grey*/
@@ -182,7 +163,6 @@ header a img {
     padding-right: 1em;
 }
 
-/* PREVENTS SCHOOL NAME FROM GETTING CUT OFF AT VERY SMALL WIDTHS < 300PX*/
 header a h1 {
     min-width: 9em;
 }
@@ -281,7 +261,7 @@ header nav li:hover {
    display: none; 
 }
 
-label.secondMenu { /* style the menu item with a second tier option */
+label.secondMenu {
     display: flex;
     gap: .5rem;
     align-items: center;
@@ -289,7 +269,7 @@ label.secondMenu { /* style the menu item with a second tier option */
     padding-left: 1rem;
 }
 
-.menuSecondClose, .menuSecondOpen { /* style the open and close arrows */
+.menuSecondClose, .menuSecondOpen { 
     font-size: 2.6rem;
     color: var(--callout-color)
 }
@@ -310,10 +290,6 @@ ul.subMenu a {
     padding-left: 10rem;
 }
 
-ul.subMenu li {
-    /*background-color: var(--header-contrast-color);*/
-}
-
 ul.subMenu li:last-child { 
     border-bottom: none;
 }
@@ -322,7 +298,7 @@ ul.subMenu:last-child:hover {
     border-bottom: none;
 }
 
-/* END OF MOBILE NAV MENU */
+/* END OF MOBILE NAV AND SECONDARY NAV MENU */
 
 /*  FOOTER  */
 
@@ -604,7 +580,7 @@ footer p {
 *******************************************
 ***************************************** */
 
-/* global index size restriction to keep these elements uniform in mobile design */
+/* INDEX SIZING */
 .mfa,
 .bulletin,
 .mission,
@@ -941,7 +917,7 @@ article.bulletin section:nth-of-type(3) a {
         justify-self: end;
         margin-right: 1em;
     }
-
+    /* EVENTS SECTION END */
 
     img.roundBorder {
         max-height: 470px;
@@ -973,11 +949,8 @@ article.bulletin section:nth-of-type(3) a {
     }
 
     .mfa,
-    .bulletin,
-    /*.mission,*/
+    .bulletin,    
     .events
-
-    /*.about*/
         {
         max-width: 100%;
     }
@@ -988,6 +961,7 @@ article.bulletin section:nth-of-type(3) a {
 }
 
 @media screen and (min-width: 1080px) {
+    /* LARGE SCREEN BULLETIN GRID START */
     article.bulletin {
         display: grid;
         grid: repeat(2, min-content) / repeat(3, 1fr);
@@ -1012,9 +986,9 @@ article.bulletin section:nth-of-type(3) a {
         grid-column: 3/4;
         grid-row: -2/-1;
     }
+    /* LARGE SCREEN BULLETIN GRID END */
 
-
-
+    /* LARGE SCREEN EVENTS GRID START*/
     article.events {
         grid: min-content min-content / repeat(3, 1fr);
     }
@@ -1043,8 +1017,10 @@ article.bulletin section:nth-of-type(3) a {
         grid-column: -2/-1;
         grid-row: 3/4;
     }
+    /* LARGE SCREEN EVENTS GRID END*/
 }
 
+/* LARGE SCREEN GRID TWEEKS */
 @media screen and (min-width: 1350px) {
     article.mfa {
         display: grid;
@@ -1058,7 +1034,6 @@ article.bulletin section:nth-of-type(3) a {
     }
 }
 
-/* Note end */
 
 /* ****************************************
 *******************************************
@@ -1651,6 +1626,7 @@ a .fa-facebook {
     9. WIKI (Jack)
 *******************************************
 ***************************************** */
+/* LOGIN SECTION MOBILE */
 .login {
     background-color: var(--text-color);
     text-transform: uppercase;
@@ -1666,12 +1642,15 @@ a .fa-facebook {
 .login img {
     max-height: 1em;
 }
+/* LOGIN SECTION END */
+
 .mag {
     max-width: 2.5em;
 }
 .wikiMain {
     margin-top: 8em;
 }
+/* FILTER SEARCH AND DROPDOWN START*/
 .searchFilt{
     padding: 2em;
     background-image: linear-gradient(to top, var(--callout-color), var(--lightcallout-color) );
@@ -1689,69 +1668,6 @@ a .fa-facebook {
 .searchInp::placeholder {
     color: white;
 }
-.wikiMain section article img {
-    box-shadow: (1em 1em .4em rgba(0,0,0,0.5));
-}
-.wikiMain section nav {
-    display: flex;
-    flex-direction: row;
-}
-.wikiMain .wikiGrids {
-    display: grid;
-    grid: min-content repeat(3,1fr) min-content / 1fr 1fr;
-    border-bottom: 1px grey solid;
-}
-.wikiGrids h2 {
-    grid-row: 1/2;
-    grid-column: 1/-1;
-}
-.wikiGrids nav {
-    grid-row: -1/-2;
-    grid-column: 1/-1;
-    display: flex;
-}
-.wikiMain .wikiGrids img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 7%;
-    filter: drop-shadow(.5em .5em .5em grey);
-    padding-bottom: 1em;
-}
-.wikiMain .wikiGrids h3 {
-    padding-bottom: .25em;
-}
-.wikiMain .wikiGrids article {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-.wikiMain section nav img[src$=".svg"] {
-    max-height: 3em;
-    margin: auto;
-    width: auto;
-    filter: drop-shadow(0 0 0 grey);
-}
-input.pageNumb {
-    border-bottom: 1px black solid;
-        background-color: lightgray;
-        text-align: center;
-        margin: .2em .2em 0 0;
-        font-size: 1.5em;
-}
-input.pageNumb::-webkit-outer-spin-button,
-input.pageNumb::-webkit-inner-spin-button 
-{
-  -webkit-appearance: none;
-}
-
-    /* Firefox */
-input.pageNumb[type=number] {
-      -moz-appearance: textfield;        
-}
-
 #filterDrop {
     color: white;
     font-size: 1.5em;   
@@ -1800,10 +1716,7 @@ input.pageNumb[type=number] {
     text-align: center;
     padding: 1em 0 .5em;
     font-weight: bold;
-}
-.wikiMain .wikiGrids:nth-of-type(4) {
-    border-bottom: none;
-}
+} 
 .filterButtons {
     display: block;
     margin: auto;
@@ -1826,6 +1739,78 @@ input.pageNumb[type=number] {
     padding-top: 2em;
     font-size: 1.2em;
 }
+/* WIKI SEARCH AND FILTER END */ 
+.wikiMain section article img {
+    box-shadow: 1em 1em .4em rgba(0,0,0,50%);
+}
+.wikiMain section nav {
+    display: flex;
+    flex-direction: row;
+}
+
+/* MAIN GRID SETUP */
+.wikiMain .wikiGrids {
+    display: grid;
+    grid: min-content repeat(3,1fr) min-content / 1fr 1fr;
+    border-bottom: 1px grey solid;
+}
+.wikiGrids h2 {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+.wikiGrids nav {
+    grid-row: -1/-2;
+    grid-column: 1/-1;
+    display: flex;
+}
+.wikiMain .wikiGrids img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 7%;
+    filter: drop-shadow(.5em .5em .5em grey);
+    padding-bottom: 1em;
+}
+.wikiMain .wikiGrids h3 {
+    padding-bottom: .25em;
+}
+.wikiMain .wikiGrids article {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wikiMain section nav img[src$=".svg"] {
+    max-height: 3em;
+    margin: auto;
+    width: auto;
+    filter: drop-shadow(0 0 0 grey);
+}
+input.pageNumb {
+    border-bottom: 1px black solid;
+        background-color: lightgray;
+        text-align: center;
+        margin: .2em .2em 0 0;
+        font-size: 1.5em;
+}
+/* CHROME REMOVE NUMBERS ON INPUT*/
+input.pageNumb::-webkit-outer-spin-button,
+input.pageNumb::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+}
+
+/* FIREFOX REMOVE NUMBERS ON INPUT */
+input.pageNumb[type=number] {
+      -moz-appearance: textfield;        
+}
+
+
+.wikiMain .wikiGrids:nth-of-type(4) {
+    border-bottom: none;
+}
+
+/* LARGE SCREEN LOGIN AND GRID CHANGES */
 @media screen and (min-width: 720px) {
     .login {
         border-radius: 20%/ 40%; 
